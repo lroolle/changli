@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>长历 · 连续中国日历</title>
+<meta name="description" content="A continuous Chinese calendar: months, weeks and days in one uninterrupted run, with statutory 休/班, 农历 and 节气.">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<!--
+  THESIS         A planning horizon is one continuous run of days; the month is
+                 a lane on it, not a container. Refuses the month-card carousel
+                 you page through with chevrons.
+  OWN-WORLD      Almanac paper and 朱砂 vermillion on seed hue 240; Song-led
+                 numerals over a two-weight hairline rule system; four status
+                 roles carry every drop of colour and nothing else does; the
+                 節氣盤's concentric rings become stacked lanes.
+  STORY          The planner sees a whole quarter uninterrupted, trusts the
+                 休/班 marks because each traces to a gov.cn notice, and finds
+                 the three days of leave that turn a weekend into thirteen.
+  FIRST VIEWPORT Masthead over one rule; a full-year ribbon with month, 節氣 and
+                 休/班 lanes and a draggable window; then the continuous week
+                 grid filling the page, months divided by a heavy rule and a
+                 gutter label, never by a gap; ledger and 拼假 in a right rail.
+  FORM           節氣盤 unrolled -- candidate 6 of 7, roll key 3edd49ea.
+  --
+  FINISH         unreviewed is unfinished: this build ends with the review,
+                 the verdict, and DESIGN.md
+-->
+<a class="skip" href="#grid">跳到日历</a>
+
+<header class="masthead">
+  <div class="brand">
+    <h1>长历</h1>
+    <p class="brand-sub">连续日历 · 农历 · 节气 · 法定节假日</p>
+  </div>
+
+  <div class="controls">
+    <div class="ctl-group" role="group" aria-label="移动范围">
+      <button type="button" class="btn btn-icon" data-act="prev" aria-label="上一段">‹</button>
+      <button type="button" class="btn" data-act="today">今天</button>
+      <button type="button" class="btn btn-icon" data-act="next" aria-label="下一段">›</button>
+    </div>
+
+    <div class="ctl-group" role="group" aria-label="视图单位">
+      <button type="button" class="btn seg" data-unit="day">日</button>
+      <button type="button" class="btn seg" data-unit="week">周</button>
+      <button type="button" class="btn seg" data-unit="month" aria-pressed="true">月</button>
+    </div>
+
+    <label class="ctl-group count-group">
+      <span class="label">数量</span>
+      <span class="count-steps" role="group" aria-label="显示几个单位"></span>
+    </label>
+
+    <div class="ctl-group" role="group" aria-label="排版">
+      <button type="button" class="btn seg" data-layout="flow" aria-pressed="true" title="不断行，跨月连续">连续</button>
+      <button type="button" class="btn seg" data-layout="blocks" title="每月一块，并排">分块</button>
+    </div>
+
+    <button type="button" class="btn btn-icon theme-toggle" data-act="theme" aria-label="切换深浅色">
+      <span aria-hidden="true" class="theme-mark"></span>
+    </button>
+  </div>
+</header>
+
+<section class="ribbon-wrap" aria-labelledby="ribbon-h">
+  <h2 id="ribbon-h" class="vh">全年概览</h2>
+  <div class="ribbon-head">
+    <button type="button" class="btn btn-icon" data-act="year-prev" aria-label="上一年">‹</button>
+    <span class="ribbon-year" data-num></span>
+    <button type="button" class="btn btn-icon" data-act="year-next" aria-label="下一年">›</button>
+    <span class="ribbon-hint">拖动方框移动视图</span>
+  </div>
+  <div class="ribbon" id="ribbon">
+    <svg id="ribbon-svg" role="img" aria-describedby="ribbon-desc"></svg>
+    <p id="ribbon-desc" class="vh"></p>
+  </div>
+</section>
+
+<main class="stage">
+  <section class="grid-wrap" aria-labelledby="range-h">
+    <h2 id="range-h" class="range-title"><span class="range-title-main"></span><span class="range-title-sub"></span></h2>
+    <div id="grid" class="grid" tabindex="0" role="application"
+         aria-label="日历网格。方向键移动，回车选择，按住 Shift 选择区间。"></div>
+    <p class="grid-note" id="grid-note" role="status"></p>
+    <p class="keys">拖动选择区间 · <kbd>↑↓←→</kbd> 移动 · <kbd>Shift</kbd>+方向键 选区间 ·
+       <kbd>Enter</kbd> 选中 · <kbd>Esc</kbd> 取消 · <kbd>T</kbd> 回到今天 ·
+       <kbd>PgUp</kbd>/<kbd>PgDn</kbd> 翻页</p>
+  </section>
+
+  <aside class="rail" aria-label="详情与统计">
+    <section class="card day-card" id="day-card" aria-live="polite"></section>
+
+    <section class="card ledger" aria-labelledby="ledger-h">
+      <h3 id="ledger-h" class="card-h">区间统计</h3>
+      <div id="ledger"></div>
+    </section>
+
+    <section class="card bridges" aria-labelledby="bridges-h">
+      <h3 id="bridges-h" class="card-h">拼假</h3>
+      <div id="bridges"></div>
+    </section>
+
+    <section class="card legend" aria-labelledby="legend-h">
+      <h3 id="legend-h" class="card-h">图例</h3>
+      <ul class="legend-list">
+        <li><span class="swatch s-holiday" aria-hidden="true"></span>休 · 法定假日</li>
+        <li><span class="swatch s-makeup" aria-hidden="true"></span>班 · 调休上班</li>
+        <li><span class="swatch s-weekend" aria-hidden="true"></span>周末</li>
+        <li><span class="swatch s-workday" aria-hidden="true"></span>工作日</li>
+      </ul>
+      <p class="prov" id="prov"></p>
+    </section>
+  </aside>
+</main>
+
+<script type="module" src="src/ui.js"></script>
+</body>
+</html>

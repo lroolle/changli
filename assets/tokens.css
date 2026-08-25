@@ -1,0 +1,172 @@
+/* 长历 tokens -- the design-skill `industry` contract, re-seeded to the
+ * 節氣盤 world (the 24-solar-term wheel, cut and laid flat).
+ *
+ * Seed hue 240: the cool blue-grey cast of 历书 stock, which is also the ink
+ * of the 苏州石刻天文图 star chart -- so light and dark are two printings of
+ * one tradition rather than an inversion. Accent 朱砂 vermillion at hue 30,
+ * the second ink of every block-printed almanac.
+ *
+ * App code uses these variables only. A raw hex or oklch outside this file
+ * is a defect.
+ */
+
+:root {
+  /* surfaces -- almanac paper */
+  --bg:          oklch(0.972 0.005 240);
+  --surface:     oklch(0.951 0.006 240);
+  --surface-2:   oklch(0.921 0.007 240);
+  --overlay:     oklch(0.978 0.004 240);
+
+  /* text -- ink. Three steps, and the lightest one still clears 4.5:1 on the
+   * darkest field it ever sits on (the weekend tint), measured not guessed. */
+  --fg:          oklch(0.225 0.014 240);
+  --fg-2:        oklch(0.400 0.011 240);
+  --fg-3:        oklch(0.510 0.011 240);
+
+  /* lines -- two weights only, per the patent-sheet discipline */
+  --line:        oklch(0.868 0.008 240);
+  --line-strong: oklch(0.720 0.011 240);
+
+  /* accent -- 朱砂, the almanac's second ink */
+  --accent:       oklch(0.545 0.185 30);
+  --accent-hover: oklch(0.495 0.185 30);
+  --accent-fg:    oklch(0.985 0.004 30);
+  --accent-soft:  oklch(0.938 0.038 30);
+
+  /* semantic: state only, never decoration */
+  --ok:          oklch(0.53 0.11 155);
+  --ok-soft:     oklch(0.94 0.03 155);
+  --warn:        oklch(0.70 0.14 80);
+  --warn-soft:   oklch(0.95 0.04 80);
+  --danger:      oklch(0.54 0.19 25);
+  --danger-soft: oklch(0.95 0.03 25);
+  --info:        oklch(0.48 0.10 245);
+  --info-soft:   oklch(0.94 0.02 245);
+
+  --focus:       oklch(0.50 0.13 245);
+
+  /* --- the status program ------------------------------------------
+   * Four roles, one meaning each, identical in every view. Nothing else
+   * in the interface is allowed to carry colour.
+   *   休 holiday  a statutory day off, named by the State Council notice
+   *   班 makeup   a weekend the notice turns into a working day
+   *      weekend  an ordinary Saturday or Sunday
+   *      workday  everything else
+   */
+  --st-holiday-field: oklch(0.947 0.040 30);
+  --st-holiday-ink:   oklch(0.505 0.190 30);
+  --st-makeup-field:  oklch(0.944 0.006 240);
+  --st-makeup-ink:    oklch(0.400 0.014 240);
+  --st-weekend-field: oklch(0.928 0.011 240);
+  --st-weekend-ink:   oklch(0.385 0.012 240);
+  --st-workday-field: transparent;
+  --st-workday-ink:   var(--fg);
+  --st-hatch:         oklch(0.760 0.012 240);   /* the 班 section hatching */
+
+  /* type faces -- decided once.
+   * No webfont: a CJK face is 5-20 MB and this tool has to open offline and
+   * instantly. So the stacks are named explicitly, Song-led for the almanac
+   * voice and PingFang-led for controls, and the world is carried by rules,
+   * scale and the two inks instead of by a purchased face. */
+  --font-almanac: "Songti SC", STSong, "SimSun", "Source Han Serif SC",
+                  "Noto Serif SC", ui-serif, Georgia, serif;
+  --font-body:    "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+                  "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-almanac);
+  --font-cjk:     var(--font-body);
+  --font-mono:    ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* type scale: ratio 1.2, base 15px */
+  --text-xs:   0.75rem;
+  --text-sm:   0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.35rem;
+  --text-2xl:  1.62rem;
+  --text-3xl:  clamp(1.8rem, 1.5rem + 0.8vw, 1.944rem);
+  --text-4xl:  clamp(2rem, 1.6rem + 1.2vw, 2.333rem);
+
+  --leading-body:     1.45;
+  --leading-cjk:      1.75;       /* CJK never below 1.7 */
+  --leading-tight:    1.15;
+  --tracking-display: -0.01em;
+  --measure:          68ch;
+
+  /* space: 4px scale x density */
+  --density:  0.85;
+  --space-1:  calc(0.25rem * var(--density));
+  --space-2:  calc(0.5rem  * var(--density));
+  --space-3:  calc(0.75rem * var(--density));
+  --space-4:  calc(1rem    * var(--density));
+  --space-5:  calc(1.5rem  * var(--density));
+  --space-6:  calc(2rem    * var(--density));
+  --space-7:  calc(3rem    * var(--density));
+  --space-8:  calc(4rem    * var(--density));
+
+  /* shape -- one radius, near-square, because this is a ruled sheet */
+  --radius:    0.125rem;
+  --radius-sm: 0.0625rem;
+  --radius-lg: 0.25rem;
+  --line-w:    1px;
+
+  /* elevation: the side panel and menus only; regions are ruled, not floated */
+  --shadow-1: 0 1px 2px oklch(0.225 0.014 240 / 0.07), 0 2px 8px oklch(0.225 0.014 240 / 0.05);
+  --shadow-2: 0 4px 12px oklch(0.225 0.014 240 / 0.09), 0 16px 40px oklch(0.225 0.014 240 / 0.11);
+
+  /* motion: mechanical. The ribbon tracks the pointer 1:1; everything else
+   * settles fast enough to feel like paper moving, not a slide deck. */
+  --dur-micro:   60ms;
+  --dur-base:    120ms;
+  --dur-enter:   200ms;
+  --ease-out:    cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --container: 100%;
+
+  color-scheme: light dark;
+}
+
+[data-theme="dark"] {
+  /* the stone star chart: ink-blue ground, bone type, the same vermillion.
+   * A redesign of the same tradition, not an inversion of the paper. */
+  --bg:          oklch(0.175 0.020 240);
+  --surface:     oklch(0.207 0.021 240);
+  --surface-2:   oklch(0.247 0.022 240);
+  --overlay:     oklch(0.222 0.021 240);
+
+  --fg:          oklch(0.905 0.010 240);
+  --fg-2:        oklch(0.715 0.012 240);
+  --fg-3:        oklch(0.600 0.012 240);
+
+  --line:        oklch(0.298 0.018 240);
+  --line-strong: oklch(0.405 0.020 240);
+
+  --accent:       oklch(0.660 0.175 32);
+  --accent-hover: oklch(0.710 0.175 32);
+  --accent-fg:    oklch(0.160 0.018 240);
+  --accent-soft:  oklch(0.295 0.062 30);
+
+  --ok:          oklch(0.70 0.10 155);
+  --ok-soft:     oklch(0.24 0.03 155);
+  --warn:        oklch(0.82 0.13 80);
+  --warn-soft:   oklch(0.26 0.05 80);
+  --danger:      oklch(0.70 0.17 25);
+  --danger-soft: oklch(0.26 0.05 25);
+  --info:        oklch(0.72 0.08 245);
+  --info-soft:   oklch(0.24 0.03 245);
+
+  --focus:       oklch(0.72 0.11 245);
+
+  --st-holiday-field: oklch(0.283 0.055 30);
+  --st-holiday-ink:   oklch(0.735 0.150 32);
+  --st-makeup-field:  oklch(0.232 0.020 240);
+  --st-makeup-ink:    oklch(0.700 0.014 240);
+  --st-weekend-field: oklch(0.233 0.023 240);
+  --st-weekend-ink:   oklch(0.690 0.014 240);
+  --st-workday-field: transparent;
+  --st-workday-ink:   var(--fg);
+  --st-hatch:         oklch(0.400 0.020 240);
+
+  --shadow-1: 0 1px 2px oklch(0.08 0.01 240 / 0.45), 0 2px 8px oklch(0.08 0.01 240 / 0.35);
+  --shadow-2: 0 4px 12px oklch(0.08 0.01 240 / 0.50), 0 16px 40px oklch(0.08 0.01 240 / 0.55);
+}

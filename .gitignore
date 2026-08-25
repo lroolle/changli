@@ -1,0 +1,5 @@
+# ephemeris kernels are build inputs, not source (32 MB); the generator
+# caches them in ~/.cache/skyfield
+*.bsp
+.DS_Store
+node_modules/

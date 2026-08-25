@@ -1,0 +1,17 @@
+{
+  "name": "changli",
+  "version": "1.0.0",
+  "description": "A continuous Chinese calendar: months, weeks and days in one uninterrupted run, with statutory holidays, lunar dates and solar terms.",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "python3 -m http.server 8811",
+    "test": "node test/verify.js",
+    "data:holidays": "node test/gen-holidays.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thevibeworks/changli.git"
+  },
+  "homepage": "https://github.com/thevibeworks/changli"
+}
