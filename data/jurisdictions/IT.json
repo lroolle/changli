@@ -1,0 +1,314 @@
+{
+ "code": "IT",
+ "name": {
+  "en": "Italy",
+  "zh-Hans": "意大利",
+  "zh-Hant": "義大利"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "IT-32": "IT-32"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/IT"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Capodanno",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Epifania",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Pasqua",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Lunedì dell'Angelo",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Festa della Liberazione",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Festa del Lavoro",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "Lunedì di Pentecoste",
+    "t": "rest",
+    "r": [
+     "IT-32"
+    ]
+   },
+   {
+    "d": "06-02",
+    "n": "Festa della Repubblica",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Ferragosto o Assunzione",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Tutti i Santi",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Immacolata Concezione",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natale",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Santo Stefano",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Capodanno",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Epifania",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Pasqua",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Lunedì dell'Angelo",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Festa della Liberazione",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Festa del Lavoro",
+    "t": "rest"
+   },
+   {
+    "d": "06-02",
+    "n": "Festa della Repubblica",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Lunedì di Pentecoste",
+    "t": "rest",
+    "r": [
+     "IT-32"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Ferragosto o Assunzione",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Tutti i Santi",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Immacolata Concezione",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natale",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Santo Stefano",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Capodanno",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Epifania",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Pasqua",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Lunedì dell'Angelo",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Festa della Liberazione",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Festa del Lavoro",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Lunedì di Pentecoste",
+    "t": "rest",
+    "r": [
+     "IT-32"
+    ]
+   },
+   {
+    "d": "06-02",
+    "n": "Festa della Repubblica",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Ferragosto o Assunzione",
+    "t": "rest"
+   },
+   {
+    "d": "10-04",
+    "n": "San Francesco d'Assisi",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Tutti i Santi",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Immacolata Concezione",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natale",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Santo Stefano",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Capodanno",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Epifania",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Pasqua",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Lunedì dell'Angelo",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Festa della Liberazione",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Festa del Lavoro",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Lunedì di Pentecoste",
+    "t": "rest",
+    "r": [
+     "IT-32"
+    ]
+   },
+   {
+    "d": "06-02",
+    "n": "Festa della Repubblica",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Ferragosto o Assunzione",
+    "t": "rest"
+   },
+   {
+    "d": "10-04",
+    "n": "San Francesco d'Assisi",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Tutti i Santi",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Immacolata Concezione",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natale",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Santo Stefano",
+    "t": "rest"
+   }
+  ]
+ }
+}

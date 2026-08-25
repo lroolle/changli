@@ -1,0 +1,848 @@
+[
+ {
+  "code": "AT",
+  "name": {
+   "en": "Austria",
+   "zh-Hans": "奥地利",
+   "zh-Hant": "奧地利"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 9,
+  "makeupDays": 0
+ },
+ {
+  "code": "AU",
+  "name": {
+   "en": "Australia",
+   "zh-Hans": "澳大利亚",
+   "zh-Hant": "澳洲"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 8,
+  "makeupDays": 0
+ },
+ {
+  "code": "BE",
+  "name": {
+   "en": "Belgium",
+   "zh-Hans": "比利时",
+   "zh-Hant": "比利時"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "BG",
+  "name": {
+   "en": "Bulgaria",
+   "zh-Hans": "保加利亚",
+   "zh-Hant": "保加利亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "BR",
+  "name": {
+   "en": "Brazil",
+   "zh-Hans": "巴西",
+   "zh-Hant": "巴西"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 1,
+  "makeupDays": 0
+ },
+ {
+  "code": "CA",
+  "name": {
+   "en": "Canada",
+   "zh-Hans": "加拿大",
+   "zh-Hant": "加拿大"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 13,
+  "makeupDays": 0
+ },
+ {
+  "code": "CH",
+  "name": {
+   "en": "Switzerland",
+   "zh-Hans": "瑞士",
+   "zh-Hant": "瑞士"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 26,
+  "makeupDays": 0
+ },
+ {
+  "code": "CN",
+  "name": {
+   "en": "China",
+   "zh-Hans": "中国大陆",
+   "zh-Hant": "中國大陸"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2026
+  },
+  "regions": 0,
+  "makeupDays": 19
+ },
+ {
+  "code": "CY",
+  "name": {
+   "en": "Cyprus",
+   "zh-Hans": "塞浦路斯",
+   "zh-Hant": "賽普勒斯"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "CZ",
+  "name": {
+   "en": "Czechia",
+   "zh-Hans": "捷克",
+   "zh-Hant": "捷克"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "DE",
+  "name": {
+   "en": "Germany",
+   "zh-Hans": "德国",
+   "zh-Hant": "德國"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 16,
+  "makeupDays": 0
+ },
+ {
+  "code": "DK",
+  "name": {
+   "en": "Denmark",
+   "zh-Hans": "丹麦",
+   "zh-Hant": "丹麥"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "EE",
+  "name": {
+   "en": "Estonia",
+   "zh-Hans": "爱沙尼亚",
+   "zh-Hant": "愛沙尼亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "EG",
+  "name": {
+   "en": "Egypt",
+   "zh-Hans": "埃及",
+   "zh-Hant": "埃及"
+  },
+  "weekend": [
+   5,
+   6
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "ES",
+  "name": {
+   "en": "Spain",
+   "zh-Hans": "西班牙",
+   "zh-Hant": "西班牙"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 17,
+  "makeupDays": 0
+ },
+ {
+  "code": "FI",
+  "name": {
+   "en": "Finland",
+   "zh-Hans": "芬兰",
+   "zh-Hant": "芬蘭"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "FR",
+  "name": {
+   "en": "France",
+   "zh-Hans": "法国",
+   "zh-Hant": "法國"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "GB",
+  "name": {
+   "en": "United Kingdom",
+   "zh-Hans": "英国",
+   "zh-Hant": "英國"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 4,
+  "makeupDays": 0
+ },
+ {
+  "code": "GR",
+  "name": {
+   "en": "Greece",
+   "zh-Hans": "希腊",
+   "zh-Hant": "希臘"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "HK",
+  "name": {
+   "en": "Hong Kong",
+   "zh-Hans": "香港",
+   "zh-Hant": "香港"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "HR",
+  "name": {
+   "en": "Croatia",
+   "zh-Hans": "克罗地亚",
+   "zh-Hant": "克羅埃西亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "HU",
+  "name": {
+   "en": "Hungary",
+   "zh-Hans": "匈牙利",
+   "zh-Hant": "匈牙利"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "ID",
+  "name": {
+   "en": "Indonesia",
+   "zh-Hans": "印度尼西亚",
+   "zh-Hant": "印尼"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "IE",
+  "name": {
+   "en": "Ireland",
+   "zh-Hans": "爱尔兰",
+   "zh-Hant": "愛爾蘭"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "IS",
+  "name": {
+   "en": "Iceland",
+   "zh-Hans": "冰岛",
+   "zh-Hant": "冰島"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "IT",
+  "name": {
+   "en": "Italy",
+   "zh-Hans": "意大利",
+   "zh-Hant": "義大利"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 1,
+  "makeupDays": 0
+ },
+ {
+  "code": "JP",
+  "name": {
+   "en": "Japan",
+   "zh-Hans": "日本",
+   "zh-Hant": "日本"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "KR",
+  "name": {
+   "en": "South Korea",
+   "zh-Hans": "韩国",
+   "zh-Hant": "韓國"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "LT",
+  "name": {
+   "en": "Lithuania",
+   "zh-Hans": "立陶宛",
+   "zh-Hant": "立陶宛"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "LU",
+  "name": {
+   "en": "Luxembourg",
+   "zh-Hans": "卢森堡",
+   "zh-Hant": "盧森堡"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "LV",
+  "name": {
+   "en": "Latvia",
+   "zh-Hans": "拉脱维亚",
+   "zh-Hant": "拉脫維亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "MT",
+  "name": {
+   "en": "Malta",
+   "zh-Hans": "马耳他",
+   "zh-Hant": "馬爾他"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "MX",
+  "name": {
+   "en": "Mexico",
+   "zh-Hans": "墨西哥",
+   "zh-Hant": "墨西哥"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "NL",
+  "name": {
+   "en": "Netherlands",
+   "zh-Hans": "荷兰",
+   "zh-Hant": "荷蘭"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "NO",
+  "name": {
+   "en": "Norway",
+   "zh-Hans": "挪威",
+   "zh-Hant": "挪威"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "NZ",
+  "name": {
+   "en": "New Zealand",
+   "zh-Hans": "新西兰",
+   "zh-Hant": "紐西蘭"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 16,
+  "makeupDays": 0
+ },
+ {
+  "code": "PL",
+  "name": {
+   "en": "Poland",
+   "zh-Hans": "波兰",
+   "zh-Hant": "波蘭"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "PT",
+  "name": {
+   "en": "Portugal",
+   "zh-Hans": "葡萄牙",
+   "zh-Hant": "葡萄牙"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 2,
+  "makeupDays": 0
+ },
+ {
+  "code": "RO",
+  "name": {
+   "en": "Romania",
+   "zh-Hans": "罗马尼亚",
+   "zh-Hant": "羅馬尼亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "SE",
+  "name": {
+   "en": "Sweden",
+   "zh-Hans": "瑞典",
+   "zh-Hant": "瑞典"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "SG",
+  "name": {
+   "en": "Singapore",
+   "zh-Hans": "新加坡",
+   "zh-Hant": "新加坡"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "SI",
+  "name": {
+   "en": "Slovenia",
+   "zh-Hans": "斯洛文尼亚",
+   "zh-Hant": "斯洛維尼亞"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "SK",
+  "name": {
+   "en": "Slovakia",
+   "zh-Hans": "斯洛伐克",
+   "zh-Hant": "斯洛伐克"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "TW",
+  "name": {
+   "en": "Taiwan",
+   "zh-Hans": "台湾",
+   "zh-Hant": "臺灣"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 2
+ },
+ {
+  "code": "US",
+  "name": {
+   "en": "United States",
+   "zh-Hans": "美国",
+   "zh-Hant": "美國"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 45,
+  "makeupDays": 0
+ },
+ {
+  "code": "VN",
+  "name": {
+   "en": "Vietnam",
+   "zh-Hans": "越南",
+   "zh-Hant": "越南"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ },
+ {
+  "code": "ZA",
+  "name": {
+   "en": "South Africa",
+   "zh-Hans": "南非",
+   "zh-Hant": "南非"
+  },
+  "weekend": [
+   6,
+   7
+  ],
+  "coverage": {
+   "from": 2024,
+   "to": 2027
+  },
+  "regions": 0,
+  "makeupDays": 0
+ }
+]

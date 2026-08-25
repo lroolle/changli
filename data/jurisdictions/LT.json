@@ -1,0 +1,309 @@
+{
+ "code": "LT",
+ "name": {
+  "en": "Lithuania",
+  "zh-Hans": "立陶宛",
+  "zh-Hant": "立陶宛"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/LT"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Naujieji metai",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Lietuvos valstybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-11",
+    "n": "Lietuvos nepriklausomybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Velykos",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Antroji Velykų diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Tarptautinė darbo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Joninės, Rasos",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Valstybės diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Žolinė",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Visų šventųjų diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Vėlinės",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Šv. Kūčios",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Naujieji metai",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Lietuvos valstybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-11",
+    "n": "Lietuvos nepriklausomybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Velykos",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Antroji Velykų diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Tarptautinė darbo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Joninės, Rasos",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Valstybės diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Žolinė",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Visų šventųjų diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Vėlinės",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Šv. Kūčios",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Naujieji metai",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Lietuvos valstybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-11",
+    "n": "Lietuvos nepriklausomybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Velykos",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Antroji Velykų diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Tarptautinė darbo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Joninės, Rasos",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Valstybės diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Žolinė",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Visų šventųjų diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Vėlinės",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Šv. Kūčios",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Naujieji metai",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Lietuvos valstybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-11",
+    "n": "Lietuvos nepriklausomybės atkūrimo diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Velykos",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Antroji Velykų diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Tarptautinė darbo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Joninės, Rasos",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Valstybės diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Žolinė",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Visų šventųjų diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Vėlinės",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Šv. Kūčios",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Šv. Kalėdos",
+    "t": "rest"
+   }
+  ]
+ }
+}

@@ -1,0 +1,309 @@
+{
+ "code": "DK",
+ "name": {
+  "en": "Denmark",
+  "zh-Hans": "丹麦",
+  "zh-Hant": "丹麥"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/DK"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Nytårsdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Skærtorsdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Langfredag",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "2. Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Kristi Himmelfartsdag",
+    "t": "rest"
+   },
+   {
+    "d": "05-10",
+    "n": "Banklukkedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-19",
+    "n": "Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "2. Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "06-05",
+    "n": "Grundlovsdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Juleaftensdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Juledag / 1. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Nytårsaftensdag",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Nytårsdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-17",
+    "n": "Skærtorsdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Langfredag",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "2. Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-29",
+    "n": "Kristi Himmelfartsdag",
+    "t": "rest"
+   },
+   {
+    "d": "05-30",
+    "n": "Banklukkedag",
+    "t": "rest"
+   },
+   {
+    "d": "06-05",
+    "n": "Grundlovsdag",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "2. Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Juleaftensdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Juledag / 1. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Nytårsaftensdag",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Nytårsdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-02",
+    "n": "Skærtorsdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Langfredag",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "2. Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-14",
+    "n": "Kristi Himmelfartsdag",
+    "t": "rest"
+   },
+   {
+    "d": "05-15",
+    "n": "Banklukkedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-24",
+    "n": "Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "2. Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "06-05",
+    "n": "Grundlovsdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Juleaftensdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Juledag / 1. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Nytårsaftensdag",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Nytårsdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Skærtorsdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Langfredag",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "2. Påskedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Kristi Himmelfartsdag",
+    "t": "rest"
+   },
+   {
+    "d": "05-07",
+    "n": "Banklukkedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-16",
+    "n": "Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "2. Pinsedag",
+    "t": "rest"
+   },
+   {
+    "d": "06-05",
+    "n": "Grundlovsdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Juleaftensdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Juledag / 1. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. juledag",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Nytårsaftensdag",
+    "t": "rest"
+   }
+  ]
+ }
+}

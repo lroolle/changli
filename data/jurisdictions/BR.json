@@ -1,0 +1,344 @@
+{
+ "code": "BR",
+ "name": {
+  "en": "Brazil",
+  "zh-Hans": "巴西",
+  "zh-Hant": "巴西"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "BR-SP": "BR-SP"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/BR"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Confraternização Universal",
+    "t": "rest"
+   },
+   {
+    "d": "02-12",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "02-13",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Dia de Tiradentes",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "05-30",
+    "n": "Corpus Christi",
+    "t": "rest"
+   },
+   {
+    "d": "07-09",
+    "n": "Revolução Constitucionalista de 1932",
+    "t": "rest",
+    "r": [
+     "BR-SP"
+    ]
+   },
+   {
+    "d": "09-07",
+    "n": "Dia da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Nossa Senhora Aparecida",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Dia de Finados",
+    "t": "rest"
+   },
+   {
+    "d": "11-15",
+    "n": "Proclamação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-20",
+    "n": "Dia da Consciência Negra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Confraternização Universal",
+    "t": "rest"
+   },
+   {
+    "d": "03-03",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "03-04",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Dia de Tiradentes",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Corpus Christi",
+    "t": "rest"
+   },
+   {
+    "d": "07-09",
+    "n": "Revolução Constitucionalista de 1932",
+    "t": "rest",
+    "r": [
+     "BR-SP"
+    ]
+   },
+   {
+    "d": "09-07",
+    "n": "Dia da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Nossa Senhora Aparecida",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Dia de Finados",
+    "t": "rest"
+   },
+   {
+    "d": "11-15",
+    "n": "Proclamação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-20",
+    "n": "Dia da Consciência Negra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Confraternização Universal",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "02-17",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Dia de Tiradentes",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "06-04",
+    "n": "Corpus Christi",
+    "t": "rest"
+   },
+   {
+    "d": "07-09",
+    "n": "Revolução Constitucionalista de 1932",
+    "t": "rest",
+    "r": [
+     "BR-SP"
+    ]
+   },
+   {
+    "d": "09-07",
+    "n": "Dia da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Nossa Senhora Aparecida",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Dia de Finados",
+    "t": "rest"
+   },
+   {
+    "d": "11-15",
+    "n": "Proclamação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-20",
+    "n": "Dia da Consciência Negra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Confraternização Universal",
+    "t": "rest"
+   },
+   {
+    "d": "02-08",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "02-09",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Dia de Tiradentes",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "05-27",
+    "n": "Corpus Christi",
+    "t": "rest"
+   },
+   {
+    "d": "07-09",
+    "n": "Revolução Constitucionalista de 1932",
+    "t": "rest",
+    "r": [
+     "BR-SP"
+    ]
+   },
+   {
+    "d": "09-07",
+    "n": "Dia da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Nossa Senhora Aparecida",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Dia de Finados",
+    "t": "rest"
+   },
+   {
+    "d": "11-15",
+    "n": "Proclamação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-20",
+    "n": "Dia da Consciência Negra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   }
+  ]
+ }
+}

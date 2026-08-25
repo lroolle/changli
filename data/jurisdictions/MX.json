@@ -1,0 +1,214 @@
+{
+ "code": "MX",
+ "name": {
+  "en": "Mexico",
+  "zh-Hans": "墨西哥",
+  "zh-Hant": "墨西哥"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/MX"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "02-05",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "03-18",
+    "n": "Natalicio de Benito Juárez",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Jueves Santo",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Día del Trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "09-16",
+    "n": "Día de la Independencia",
+    "t": "rest"
+   },
+   {
+    "d": "10-01",
+    "n": "Transmisión del Poder Ejecutivo Federal",
+    "t": "rest"
+   },
+   {
+    "d": "11-18",
+    "n": "Día de la Revolución",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "02-03",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Natalicio de Benito Juárez",
+    "t": "rest"
+   },
+   {
+    "d": "04-17",
+    "n": "Jueves Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Día del Trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "09-16",
+    "n": "Día de la Independencia",
+    "t": "rest"
+   },
+   {
+    "d": "11-17",
+    "n": "Día de la Revolución",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "02-02",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "03-16",
+    "n": "Natalicio de Benito Juárez",
+    "t": "rest"
+   },
+   {
+    "d": "04-02",
+    "n": "Jueves Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Día del Trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "09-16",
+    "n": "Día de la Independencia",
+    "t": "rest"
+   },
+   {
+    "d": "11-16",
+    "n": "Día de la Revolución",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "02-01",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "03-15",
+    "n": "Natalicio de Benito Juárez",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Jueves Santo",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Día del Trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "09-16",
+    "n": "Día de la Independencia",
+    "t": "rest"
+   },
+   {
+    "d": "11-15",
+    "n": "Día de la Revolución",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   }
+  ]
+ }
+}

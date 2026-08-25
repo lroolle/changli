@@ -1,0 +1,1036 @@
+{
+ "code": "ES",
+ "name": {
+  "en": "Spain",
+  "zh-Hans": "西班牙",
+  "zh-Hant": "西班牙"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "ES-AN": "ES-AN",
+  "ES-IB": "ES-IB",
+  "ES-AR": "ES-AR",
+  "ES-CL": "ES-CL",
+  "ES-CM": "ES-CM",
+  "ES-CN": "ES-CN",
+  "ES-EX": "ES-EX",
+  "ES-GA": "ES-GA",
+  "ES-RI": "ES-RI",
+  "ES-MD": "ES-MD",
+  "ES-MC": "ES-MC",
+  "ES-NC": "ES-NC",
+  "ES-AS": "ES-AS",
+  "ES-PV": "ES-PV",
+  "ES-CB": "ES-CB",
+  "ES-CT": "ES-CT",
+  "ES-VC": "ES-VC"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/ES"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Día de Reyes / Epifanía del Señor",
+    "t": "rest"
+   },
+   {
+    "d": "02-28",
+    "n": "Día de Andalucía",
+    "t": "rest",
+    "r": [
+     "ES-AN"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Dia de les Illes Balears",
+    "t": "rest",
+    "r": [
+     "ES-IB"
+    ]
+   },
+   {
+    "d": "03-28",
+    "n": "Jueves Santo",
+    "t": "rest",
+    "r": [
+     "ES-AN",
+     "ES-AR",
+     "ES-CL",
+     "ES-CM",
+     "ES-CN",
+     "ES-EX",
+     "ES-GA",
+     "ES-IB",
+     "ES-RI",
+     "ES-MD",
+     "ES-MC",
+     "ES-NC",
+     "ES-AS",
+     "ES-PV",
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Lunes de Pascua",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-IB",
+     "ES-RI",
+     "ES-NC",
+     "ES-PV",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Día de Castilla y León",
+    "t": "rest",
+    "r": [
+     "ES-CL"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "San Jorge (Día de Aragón)",
+    "t": "rest",
+    "r": [
+     "ES-AR"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Fiesta del trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "Fiesta de la Comunidad de Madrid",
+    "t": "rest",
+    "r": [
+     "ES-MD"
+    ]
+   },
+   {
+    "d": "05-17",
+    "n": "Día das Letras Galegas",
+    "t": "rest",
+    "r": [
+     "ES-GA"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Corpus Christi",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Día de Canarias",
+    "t": "rest",
+    "r": [
+     "ES-CN"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Día de la Región Castilla-La Mancha",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de La Rioja",
+    "t": "rest",
+    "r": [
+     "ES-RI"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de la Región de Murcia",
+    "t": "rest",
+    "r": [
+     "ES-MC"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Sant Joan",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "07-25",
+    "n": "Santiago Apóstol",
+    "t": "rest",
+    "r": [
+     "ES-GA",
+     "ES-PV"
+    ]
+   },
+   {
+    "d": "07-28",
+    "n": "Día de las Instituciones de Cantabria",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Asunción",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Asturias",
+    "t": "rest",
+    "r": [
+     "ES-AS"
+    ]
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Extremadura",
+    "t": "rest",
+    "r": [
+     "ES-EX"
+    ]
+   },
+   {
+    "d": "09-11",
+    "n": "Diada Nacional de Catalunya",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   },
+   {
+    "d": "09-15",
+    "n": "Festividad de la Bien Aparecida",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "10-09",
+    "n": "Dia de la Comunitat Valenciana",
+    "t": "rest",
+    "r": [
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "10-12",
+    "n": "Fiesta Nacional de España",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Día de todos los Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-06",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Inmaculada Concepción",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Feast of Saint Stephen",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Día de Reyes / Epifanía del Señor",
+    "t": "rest"
+   },
+   {
+    "d": "02-28",
+    "n": "Día de Andalucía",
+    "t": "rest",
+    "r": [
+     "ES-AN"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Dia de les Illes Balears",
+    "t": "rest",
+    "r": [
+     "ES-IB"
+    ]
+   },
+   {
+    "d": "04-17",
+    "n": "Jueves Santo",
+    "t": "rest",
+    "r": [
+     "ES-AN",
+     "ES-AR",
+     "ES-CL",
+     "ES-CM",
+     "ES-CN",
+     "ES-EX",
+     "ES-GA",
+     "ES-IB",
+     "ES-RI",
+     "ES-MD",
+     "ES-MC",
+     "ES-NC",
+     "ES-AS",
+     "ES-PV",
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Lunes de Pascua",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-IB",
+     "ES-RI",
+     "ES-NC",
+     "ES-PV",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Día de Castilla y León",
+    "t": "rest",
+    "r": [
+     "ES-CL"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "San Jorge (Día de Aragón)",
+    "t": "rest",
+    "r": [
+     "ES-AR"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Fiesta del trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "Fiesta de la Comunidad de Madrid",
+    "t": "rest",
+    "r": [
+     "ES-MD"
+    ]
+   },
+   {
+    "d": "05-17",
+    "n": "Día das Letras Galegas",
+    "t": "rest",
+    "r": [
+     "ES-GA"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Día de Canarias",
+    "t": "rest",
+    "r": [
+     "ES-CN"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Día de la Región Castilla-La Mancha",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de La Rioja",
+    "t": "rest",
+    "r": [
+     "ES-RI"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de la Región de Murcia",
+    "t": "rest",
+    "r": [
+     "ES-MC"
+    ]
+   },
+   {
+    "d": "06-19",
+    "n": "Corpus Christi",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Sant Joan",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "07-25",
+    "n": "Santiago Apóstol",
+    "t": "rest",
+    "r": [
+     "ES-GA",
+     "ES-PV"
+    ]
+   },
+   {
+    "d": "07-28",
+    "n": "Día de las Instituciones de Cantabria",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Asunción",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Asturias",
+    "t": "rest",
+    "r": [
+     "ES-AS"
+    ]
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Extremadura",
+    "t": "rest",
+    "r": [
+     "ES-EX"
+    ]
+   },
+   {
+    "d": "09-11",
+    "n": "Diada Nacional de Catalunya",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   },
+   {
+    "d": "09-15",
+    "n": "Festividad de la Bien Aparecida",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "10-09",
+    "n": "Dia de la Comunitat Valenciana",
+    "t": "rest",
+    "r": [
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "10-12",
+    "n": "Fiesta Nacional de España",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Día de todos los Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-06",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Inmaculada Concepción",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Feast of Saint Stephen",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Día de Reyes / Epifanía del Señor",
+    "t": "rest"
+   },
+   {
+    "d": "02-28",
+    "n": "Día de Andalucía",
+    "t": "rest",
+    "r": [
+     "ES-AN"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Dia de les Illes Balears",
+    "t": "rest",
+    "r": [
+     "ES-IB"
+    ]
+   },
+   {
+    "d": "04-02",
+    "n": "Jueves Santo",
+    "t": "rest",
+    "r": [
+     "ES-AN",
+     "ES-AR",
+     "ES-CL",
+     "ES-CM",
+     "ES-CN",
+     "ES-EX",
+     "ES-GA",
+     "ES-IB",
+     "ES-RI",
+     "ES-MD",
+     "ES-MC",
+     "ES-NC",
+     "ES-AS",
+     "ES-PV",
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Lunes de Pascua",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-IB",
+     "ES-RI",
+     "ES-NC",
+     "ES-PV",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Día de Castilla y León",
+    "t": "rest",
+    "r": [
+     "ES-CL"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "San Jorge (Día de Aragón)",
+    "t": "rest",
+    "r": [
+     "ES-AR"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Fiesta del trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "Fiesta de la Comunidad de Madrid",
+    "t": "rest",
+    "r": [
+     "ES-MD"
+    ]
+   },
+   {
+    "d": "05-17",
+    "n": "Día das Letras Galegas",
+    "t": "rest",
+    "r": [
+     "ES-GA"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Día de Canarias",
+    "t": "rest",
+    "r": [
+     "ES-CN"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Día de la Región Castilla-La Mancha",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-04",
+    "n": "Corpus Christi",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de La Rioja",
+    "t": "rest",
+    "r": [
+     "ES-RI"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de la Región de Murcia",
+    "t": "rest",
+    "r": [
+     "ES-MC"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Sant Joan",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "07-25",
+    "n": "Santiago Apóstol",
+    "t": "rest",
+    "r": [
+     "ES-GA",
+     "ES-PV"
+    ]
+   },
+   {
+    "d": "07-28",
+    "n": "Día de las Instituciones de Cantabria",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Asunción",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Asturias",
+    "t": "rest",
+    "r": [
+     "ES-AS"
+    ]
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Extremadura",
+    "t": "rest",
+    "r": [
+     "ES-EX"
+    ]
+   },
+   {
+    "d": "09-11",
+    "n": "Diada Nacional de Catalunya",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   },
+   {
+    "d": "09-15",
+    "n": "Festividad de la Bien Aparecida",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "10-09",
+    "n": "Dia de la Comunitat Valenciana",
+    "t": "rest",
+    "r": [
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "10-12",
+    "n": "Fiesta Nacional de España",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Día de todos los Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-06",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Inmaculada Concepción",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Feast of Saint Stephen",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Año Nuevo",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Día de Reyes / Epifanía del Señor",
+    "t": "rest"
+   },
+   {
+    "d": "02-28",
+    "n": "Día de Andalucía",
+    "t": "rest",
+    "r": [
+     "ES-AN"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Dia de les Illes Balears",
+    "t": "rest",
+    "r": [
+     "ES-IB"
+    ]
+   },
+   {
+    "d": "03-25",
+    "n": "Jueves Santo",
+    "t": "rest",
+    "r": [
+     "ES-AN",
+     "ES-AR",
+     "ES-CL",
+     "ES-CM",
+     "ES-CN",
+     "ES-EX",
+     "ES-GA",
+     "ES-IB",
+     "ES-RI",
+     "ES-MD",
+     "ES-MC",
+     "ES-NC",
+     "ES-AS",
+     "ES-PV",
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Viernes Santo",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Lunes de Pascua",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-IB",
+     "ES-RI",
+     "ES-NC",
+     "ES-PV",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Día de Castilla y León",
+    "t": "rest",
+    "r": [
+     "ES-CL"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "San Jorge (Día de Aragón)",
+    "t": "rest",
+    "r": [
+     "ES-AR"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Fiesta del trabajo",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "Fiesta de la Comunidad de Madrid",
+    "t": "rest",
+    "r": [
+     "ES-MD"
+    ]
+   },
+   {
+    "d": "05-17",
+    "n": "Día das Letras Galegas",
+    "t": "rest",
+    "r": [
+     "ES-GA"
+    ]
+   },
+   {
+    "d": "05-27",
+    "n": "Corpus Christi",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Día de Canarias",
+    "t": "rest",
+    "r": [
+     "ES-CN"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Día de la Región Castilla-La Mancha",
+    "t": "rest",
+    "r": [
+     "ES-CM"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de La Rioja",
+    "t": "rest",
+    "r": [
+     "ES-RI"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Día de la Región de Murcia",
+    "t": "rest",
+    "r": [
+     "ES-MC"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Sant Joan",
+    "t": "rest",
+    "r": [
+     "ES-CT",
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "07-25",
+    "n": "Santiago Apóstol",
+    "t": "rest",
+    "r": [
+     "ES-GA",
+     "ES-PV"
+    ]
+   },
+   {
+    "d": "07-28",
+    "n": "Día de las Instituciones de Cantabria",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Asunción",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Asturias",
+    "t": "rest",
+    "r": [
+     "ES-AS"
+    ]
+   },
+   {
+    "d": "09-08",
+    "n": "Día de Extremadura",
+    "t": "rest",
+    "r": [
+     "ES-EX"
+    ]
+   },
+   {
+    "d": "09-11",
+    "n": "Diada Nacional de Catalunya",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   },
+   {
+    "d": "09-15",
+    "n": "Festividad de la Bien Aparecida",
+    "t": "rest",
+    "r": [
+     "ES-CB"
+    ]
+   },
+   {
+    "d": "10-09",
+    "n": "Dia de la Comunitat Valenciana",
+    "t": "rest",
+    "r": [
+     "ES-VC"
+    ]
+   },
+   {
+    "d": "10-12",
+    "n": "Fiesta Nacional de España",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Día de todos los Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-06",
+    "n": "Día de la Constitución",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Inmaculada Concepción",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Navidad",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Feast of Saint Stephen",
+    "t": "rest",
+    "r": [
+     "ES-CT"
+    ]
+   }
+  ]
+ }
+}

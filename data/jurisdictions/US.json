@@ -1,0 +1,756 @@
+{
+ "code": "US",
+ "name": {
+  "en": "United States",
+  "zh-Hans": "美国",
+  "zh-Hant": "美國"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "US-CA": "US-CA",
+  "US-CT": "US-CT",
+  "US-IL": "US-IL",
+  "US-IN": "US-IN",
+  "US-KY": "US-KY",
+  "US-MI": "US-MI",
+  "US-NY": "US-NY",
+  "US-MO": "US-MO",
+  "US-OH": "US-OH",
+  "US-DE": "US-DE",
+  "US-HI": "US-HI",
+  "US-LA": "US-LA",
+  "US-NC": "US-NC",
+  "US-ND": "US-ND",
+  "US-NJ": "US-NJ",
+  "US-TN": "US-TN",
+  "US-TX": "US-TX",
+  "US-AL": "US-AL",
+  "US-AZ": "US-AZ",
+  "US-CO": "US-CO",
+  "US-GA": "US-GA",
+  "US-ID": "US-ID",
+  "US-IA": "US-IA",
+  "US-KS": "US-KS",
+  "US-ME": "US-ME",
+  "US-MD": "US-MD",
+  "US-MA": "US-MA",
+  "US-MS": "US-MS",
+  "US-MT": "US-MT",
+  "US-NE": "US-NE",
+  "US-NH": "US-NH",
+  "US-NM": "US-NM",
+  "US-OK": "US-OK",
+  "US-PA": "US-PA",
+  "US-RI": "US-RI",
+  "US-SC": "US-SC",
+  "US-UT": "US-UT",
+  "US-VA": "US-VA",
+  "US-WV": "US-WV",
+  "US-AK": "US-AK",
+  "US-MN": "US-MN",
+  "US-OR": "US-OR",
+  "US-SD": "US-SD",
+  "US-VT": "US-VT",
+  "US-WI": "US-WI"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/US"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-15",
+    "n": "Martin Luther King, Jr. Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-12",
+    "n": "Lincoln's Birthday",
+    "t": "rest",
+    "r": [
+     "US-CA",
+     "US-CT",
+     "US-IL",
+     "US-IN",
+     "US-KY",
+     "US-MI",
+     "US-NY",
+     "US-MO",
+     "US-OH"
+    ]
+   },
+   {
+    "d": "02-19",
+    "n": "Washington's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-CT",
+     "US-DE",
+     "US-HI",
+     "US-IN",
+     "US-KY",
+     "US-LA",
+     "US-NC",
+     "US-ND",
+     "US-NJ",
+     "US-TN"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-TX"
+    ]
+   },
+   {
+    "d": "05-08",
+    "n": "Truman Day",
+    "t": "rest",
+    "r": [
+     "US-MO"
+    ]
+   },
+   {
+    "d": "05-27",
+    "n": "Memorial Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Juneteenth National Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-02",
+    "n": "Labor Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-14",
+    "n": "Columbus Day",
+    "t": "rest",
+    "r": [
+     "US-AL",
+     "US-AZ",
+     "US-CO",
+     "US-CT",
+     "US-GA",
+     "US-ID",
+     "US-IL",
+     "US-IN",
+     "US-IA",
+     "US-KS",
+     "US-KY",
+     "US-LA",
+     "US-ME",
+     "US-MD",
+     "US-MA",
+     "US-MS",
+     "US-MO",
+     "US-MT",
+     "US-NE",
+     "US-NH",
+     "US-NJ",
+     "US-NM",
+     "US-NY",
+     "US-NC",
+     "US-OH",
+     "US-OK",
+     "US-PA",
+     "US-RI",
+     "US-SC",
+     "US-TN",
+     "US-UT",
+     "US-VA",
+     "US-WV"
+    ]
+   },
+   {
+    "d": "10-14",
+    "n": "Columbus Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-14",
+    "n": "Indigenous Peoples' Day",
+    "t": "rest",
+    "r": [
+     "US-AK",
+     "US-AL",
+     "US-CA",
+     "US-HI",
+     "US-IA",
+     "US-LA",
+     "US-ME",
+     "US-MI",
+     "US-MN",
+     "US-NC",
+     "US-NE",
+     "US-NM",
+     "US-OK",
+     "US-OR",
+     "US-SD",
+     "US-TX",
+     "US-VA",
+     "US-VT",
+     "US-WI"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Veterans Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-28",
+    "n": "Thanksgiving Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "Martin Luther King, Jr. Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-12",
+    "n": "Lincoln's Birthday",
+    "t": "rest",
+    "r": [
+     "US-CA",
+     "US-CT",
+     "US-IL",
+     "US-IN",
+     "US-KY",
+     "US-MI",
+     "US-NY",
+     "US-MO",
+     "US-OH"
+    ]
+   },
+   {
+    "d": "02-17",
+    "n": "Washington's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-CT",
+     "US-DE",
+     "US-HI",
+     "US-IN",
+     "US-KY",
+     "US-LA",
+     "US-NC",
+     "US-ND",
+     "US-NJ",
+     "US-TN"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-TX"
+    ]
+   },
+   {
+    "d": "05-08",
+    "n": "Truman Day",
+    "t": "rest",
+    "r": [
+     "US-MO"
+    ]
+   },
+   {
+    "d": "05-26",
+    "n": "Memorial Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Juneteenth National Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-01",
+    "n": "Labor Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-13",
+    "n": "Columbus Day",
+    "t": "rest",
+    "r": [
+     "US-AL",
+     "US-AZ",
+     "US-CO",
+     "US-CT",
+     "US-GA",
+     "US-ID",
+     "US-IL",
+     "US-IN",
+     "US-IA",
+     "US-KS",
+     "US-KY",
+     "US-LA",
+     "US-ME",
+     "US-MD",
+     "US-MA",
+     "US-MS",
+     "US-MO",
+     "US-MT",
+     "US-NE",
+     "US-NH",
+     "US-NJ",
+     "US-NM",
+     "US-NY",
+     "US-NC",
+     "US-OH",
+     "US-OK",
+     "US-PA",
+     "US-RI",
+     "US-SC",
+     "US-TN",
+     "US-UT",
+     "US-VA",
+     "US-WV"
+    ]
+   },
+   {
+    "d": "10-13",
+    "n": "Columbus Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-13",
+    "n": "Indigenous Peoples' Day",
+    "t": "rest",
+    "r": [
+     "US-AK",
+     "US-AL",
+     "US-CA",
+     "US-HI",
+     "US-IA",
+     "US-LA",
+     "US-ME",
+     "US-MI",
+     "US-MN",
+     "US-NC",
+     "US-NE",
+     "US-NM",
+     "US-OK",
+     "US-OR",
+     "US-SD",
+     "US-TX",
+     "US-VA",
+     "US-VT",
+     "US-WI"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Veterans Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-27",
+    "n": "Thanksgiving Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-19",
+    "n": "Martin Luther King, Jr. Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-12",
+    "n": "Lincoln's Birthday",
+    "t": "rest",
+    "r": [
+     "US-CA",
+     "US-CT",
+     "US-IL",
+     "US-IN",
+     "US-KY",
+     "US-MI",
+     "US-NY",
+     "US-MO",
+     "US-OH"
+    ]
+   },
+   {
+    "d": "02-16",
+    "n": "Washington's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-CT",
+     "US-DE",
+     "US-HI",
+     "US-IN",
+     "US-KY",
+     "US-LA",
+     "US-NC",
+     "US-ND",
+     "US-NJ",
+     "US-TN"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-TX"
+    ]
+   },
+   {
+    "d": "05-08",
+    "n": "Truman Day",
+    "t": "rest",
+    "r": [
+     "US-MO"
+    ]
+   },
+   {
+    "d": "05-25",
+    "n": "Memorial Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Juneteenth National Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-03",
+    "n": "Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-07",
+    "n": "Labor Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Columbus Day",
+    "t": "rest",
+    "r": [
+     "US-AL",
+     "US-AZ",
+     "US-CO",
+     "US-CT",
+     "US-GA",
+     "US-ID",
+     "US-IL",
+     "US-IN",
+     "US-IA",
+     "US-KS",
+     "US-KY",
+     "US-LA",
+     "US-ME",
+     "US-MD",
+     "US-MA",
+     "US-MS",
+     "US-MO",
+     "US-MT",
+     "US-NE",
+     "US-NH",
+     "US-NJ",
+     "US-NM",
+     "US-NY",
+     "US-NC",
+     "US-OH",
+     "US-OK",
+     "US-PA",
+     "US-RI",
+     "US-SC",
+     "US-TN",
+     "US-UT",
+     "US-VA",
+     "US-WV"
+    ]
+   },
+   {
+    "d": "10-12",
+    "n": "Columbus Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Indigenous Peoples' Day",
+    "t": "rest",
+    "r": [
+     "US-AK",
+     "US-AL",
+     "US-CA",
+     "US-HI",
+     "US-IA",
+     "US-LA",
+     "US-ME",
+     "US-MI",
+     "US-MN",
+     "US-NC",
+     "US-NE",
+     "US-NM",
+     "US-OK",
+     "US-OR",
+     "US-SD",
+     "US-TX",
+     "US-VA",
+     "US-VT",
+     "US-WI"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Veterans Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-26",
+    "n": "Thanksgiving Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-18",
+    "n": "Martin Luther King, Jr. Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-12",
+    "n": "Lincoln's Birthday",
+    "t": "rest",
+    "r": [
+     "US-CA",
+     "US-CT",
+     "US-IL",
+     "US-IN",
+     "US-KY",
+     "US-MI",
+     "US-NY",
+     "US-MO",
+     "US-OH"
+    ]
+   },
+   {
+    "d": "02-15",
+    "n": "Washington's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-CT",
+     "US-DE",
+     "US-HI",
+     "US-IN",
+     "US-KY",
+     "US-LA",
+     "US-NC",
+     "US-ND",
+     "US-NJ",
+     "US-TN"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest",
+    "r": [
+     "US-TX"
+    ]
+   },
+   {
+    "d": "05-08",
+    "n": "Truman Day",
+    "t": "rest",
+    "r": [
+     "US-MO"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Memorial Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-18",
+    "n": "Juneteenth National Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-05",
+    "n": "Independence Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-06",
+    "n": "Labor Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-11",
+    "n": "Columbus Day",
+    "t": "rest",
+    "r": [
+     "US-AL",
+     "US-AZ",
+     "US-CO",
+     "US-CT",
+     "US-GA",
+     "US-ID",
+     "US-IL",
+     "US-IN",
+     "US-IA",
+     "US-KS",
+     "US-KY",
+     "US-LA",
+     "US-ME",
+     "US-MD",
+     "US-MA",
+     "US-MS",
+     "US-MO",
+     "US-MT",
+     "US-NE",
+     "US-NH",
+     "US-NJ",
+     "US-NM",
+     "US-NY",
+     "US-NC",
+     "US-OH",
+     "US-OK",
+     "US-PA",
+     "US-RI",
+     "US-SC",
+     "US-TN",
+     "US-UT",
+     "US-VA",
+     "US-WV"
+    ]
+   },
+   {
+    "d": "10-11",
+    "n": "Columbus Day",
+    "t": "rest"
+   },
+   {
+    "d": "10-11",
+    "n": "Indigenous Peoples' Day",
+    "t": "rest",
+    "r": [
+     "US-AK",
+     "US-AL",
+     "US-CA",
+     "US-HI",
+     "US-IA",
+     "US-LA",
+     "US-ME",
+     "US-MI",
+     "US-MN",
+     "US-NC",
+     "US-NE",
+     "US-NM",
+     "US-OK",
+     "US-OR",
+     "US-SD",
+     "US-TX",
+     "US-VA",
+     "US-VT",
+     "US-WI"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Veterans Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-25",
+    "n": "Thanksgiving Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Christmas Day",
+    "t": "rest"
+   }
+  ]
+ }
+}

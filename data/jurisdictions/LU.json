@@ -1,0 +1,269 @@
+{
+ "code": "LU",
+ "name": {
+  "en": "Luxembourg",
+  "zh-Hans": "卢森堡",
+  "zh-Hant": "盧森堡"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/LU"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Neijoerschdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Karfreideg",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Ouschterméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dag vun der Aarbecht",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Christi Himmelfaart",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Europadag",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "Péngschtméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Groussherzogsgebuertsdag",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Léiffrawëschdag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerhellgen",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Chrëschtdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stiefesdag",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Neijoerschdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Karfreideg",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Ouschterméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dag vun der Aarbecht",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Europadag",
+    "t": "rest"
+   },
+   {
+    "d": "05-29",
+    "n": "Christi Himmelfaart",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Péngschtméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Groussherzogsgebuertsdag",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Léiffrawëschdag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerhellgen",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Chrëschtdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stiefesdag",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Neijoerschdag",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Karfreideg",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Ouschterméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dag vun der Aarbecht",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Europadag",
+    "t": "rest"
+   },
+   {
+    "d": "05-14",
+    "n": "Christi Himmelfaart",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Péngschtméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Groussherzogsgebuertsdag",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Léiffrawëschdag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerhellgen",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Chrëschtdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stiefesdag",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Neijoerschdag",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Karfreideg",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Ouschterméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dag vun der Aarbecht",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Christi Himmelfaart",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Europadag",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Péngschtméindeg",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Groussherzogsgebuertsdag",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Léiffrawëschdag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerhellgen",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Chrëschtdag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stiefesdag",
+    "t": "rest"
+   }
+  ]
+ }
+}

@@ -1,0 +1,269 @@
+{
+ "code": "EE",
+ "name": {
+  "en": "Estonia",
+  "zh-Hans": "爱沙尼亚",
+  "zh-Hant": "愛沙尼亞"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/EE"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "uusaasta",
+    "t": "rest"
+   },
+   {
+    "d": "02-24",
+    "n": "iseseisvuspäev",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "suur reede",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "ülestõusmispühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "kevadpüha",
+    "t": "rest"
+   },
+   {
+    "d": "05-19",
+    "n": "nelipühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "võidupüha and jaanilaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "jaanipäev",
+    "t": "rest"
+   },
+   {
+    "d": "08-20",
+    "n": "taasiseseisvumispäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "jõululaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "esimene jõulupüha",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "teine jõulupüha",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "uusaasta",
+    "t": "rest"
+   },
+   {
+    "d": "02-24",
+    "n": "iseseisvuspäev",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "suur reede",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "ülestõusmispühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "kevadpüha",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "nelipühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "võidupüha and jaanilaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "jaanipäev",
+    "t": "rest"
+   },
+   {
+    "d": "08-20",
+    "n": "taasiseseisvumispäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "jõululaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "esimene jõulupüha",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "teine jõulupüha",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "uusaasta",
+    "t": "rest"
+   },
+   {
+    "d": "02-24",
+    "n": "iseseisvuspäev",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "suur reede",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "ülestõusmispühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "kevadpüha",
+    "t": "rest"
+   },
+   {
+    "d": "05-24",
+    "n": "nelipühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "võidupüha and jaanilaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "jaanipäev",
+    "t": "rest"
+   },
+   {
+    "d": "08-20",
+    "n": "taasiseseisvumispäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "jõululaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "esimene jõulupüha",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "teine jõulupüha",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "uusaasta",
+    "t": "rest"
+   },
+   {
+    "d": "02-24",
+    "n": "iseseisvuspäev",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "suur reede",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "ülestõusmispühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "kevadpüha",
+    "t": "rest"
+   },
+   {
+    "d": "05-16",
+    "n": "nelipühade 1. püha",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "võidupüha and jaanilaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "jaanipäev",
+    "t": "rest"
+   },
+   {
+    "d": "08-20",
+    "n": "taasiseseisvumispäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "jõululaupäev",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "esimene jõulupüha",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "teine jõulupüha",
+    "t": "rest"
+   }
+  ]
+ }
+}

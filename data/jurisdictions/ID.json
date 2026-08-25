@@ -1,0 +1,189 @@
+{
+ "code": "ID",
+ "name": {
+  "en": "Indonesia",
+  "zh-Hans": "印度尼西亚",
+  "zh-Hant": "印尼"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/ID"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Tahun Baru Masehi",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Wafat Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Paskah",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Hari Buruh Internasional",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Kenaikan Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Hari Lahir Pancasila",
+    "t": "rest"
+   },
+   {
+    "d": "08-17",
+    "n": "Hari Ulang Tahun Kemerdekaan Republik Indonesia",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Hari Raya Natal",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Tahun Baru Masehi",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Wafat Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Paskah",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Hari Buruh Internasional",
+    "t": "rest"
+   },
+   {
+    "d": "05-29",
+    "n": "Kenaikan Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Hari Lahir Pancasila",
+    "t": "rest"
+   },
+   {
+    "d": "08-17",
+    "n": "Hari Ulang Tahun Kemerdekaan Republik Indonesia",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Hari Raya Natal",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Tahun Baru Masehi",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Wafat Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Paskah",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Hari Buruh Internasional",
+    "t": "rest"
+   },
+   {
+    "d": "05-14",
+    "n": "Kenaikan Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Hari Lahir Pancasila",
+    "t": "rest"
+   },
+   {
+    "d": "08-17",
+    "n": "Hari Ulang Tahun Kemerdekaan Republik Indonesia",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Hari Raya Natal",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Tahun Baru Masehi",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Wafat Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Paskah",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Hari Buruh Internasional",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Kenaikan Isa Almasih",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Hari Lahir Pancasila",
+    "t": "rest"
+   },
+   {
+    "d": "08-17",
+    "n": "Hari Ulang Tahun Kemerdekaan Republik Indonesia",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Hari Raya Natal",
+    "t": "rest"
+   }
+  ]
+ }
+}

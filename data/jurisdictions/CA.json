@@ -1,0 +1,1028 @@
+{
+ "code": "CA",
+ "name": {
+  "en": "Canada",
+  "zh-Hans": "加拿大",
+  "zh-Hant": "加拿大"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "CA-MB": "CA-MB",
+  "CA-PE": "CA-PE",
+  "CA-NS": "CA-NS",
+  "CA-AB": "CA-AB",
+  "CA-BC": "CA-BC",
+  "CA-NB": "CA-NB",
+  "CA-ON": "CA-ON",
+  "CA-SK": "CA-SK",
+  "CA-NL": "CA-NL",
+  "CA-QC": "CA-QC",
+  "CA-NT": "CA-NT",
+  "CA-NU": "CA-NU",
+  "CA-YT": "CA-YT"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/CA"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-19",
+    "n": "Louis Riel Day",
+    "t": "rest",
+    "r": [
+     "CA-MB"
+    ]
+   },
+   {
+    "d": "02-19",
+    "n": "Islander Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "02-19",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "02-19",
+    "n": "Family Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-ON",
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Saint George's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "05-20",
+    "n": "National Patriots' Day",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "05-20",
+    "n": "Victoria Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "National Aboriginal Day",
+    "t": "rest",
+    "r": [
+     "CA-NT"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Fête nationale du Québec",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "07-01",
+    "n": "Canada Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Orangemen's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Civic Holiday",
+    "t": "rest",
+    "r": [
+     "CA-MB",
+     "CA-NL",
+     "CA-NT",
+     "CA-NU",
+     "CA-ON"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "British Columbia Day",
+    "t": "rest",
+    "r": [
+     "CA-BC"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "New Brunswick Day",
+    "t": "rest",
+    "r": [
+     "CA-NB"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Natal Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Saskatchewan Day",
+    "t": "rest",
+    "r": [
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "08-19",
+    "n": "Gold Cup Parade Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "08-19",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "09-02",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-30",
+    "n": "National Day for Truth and Reconciliation",
+    "t": "rest"
+   },
+   {
+    "d": "10-14",
+    "n": "Thanksgiving",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Remembrance Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-NT",
+     "CA-NS",
+     "CA-NU",
+     "CA-PE",
+     "CA-SK",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-NB",
+     "CA-NS",
+     "CA-ON",
+     "CA-PE"
+    ]
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-17",
+    "n": "Louis Riel Day",
+    "t": "rest",
+    "r": [
+     "CA-MB"
+    ]
+   },
+   {
+    "d": "02-17",
+    "n": "Islander Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "02-17",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "02-17",
+    "n": "Family Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-ON",
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Saint George's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "05-19",
+    "n": "National Patriots' Day",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "05-19",
+    "n": "Victoria Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "National Aboriginal Day",
+    "t": "rest",
+    "r": [
+     "CA-NT"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Fête nationale du Québec",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "07-01",
+    "n": "Canada Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Orangemen's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Civic Holiday",
+    "t": "rest",
+    "r": [
+     "CA-MB",
+     "CA-NL",
+     "CA-NT",
+     "CA-NU",
+     "CA-ON"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "British Columbia Day",
+    "t": "rest",
+    "r": [
+     "CA-BC"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "New Brunswick Day",
+    "t": "rest",
+    "r": [
+     "CA-NB"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Natal Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Saskatchewan Day",
+    "t": "rest",
+    "r": [
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "08-18",
+    "n": "Gold Cup Parade Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "08-18",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "09-01",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-30",
+    "n": "National Day for Truth and Reconciliation",
+    "t": "rest"
+   },
+   {
+    "d": "10-13",
+    "n": "Thanksgiving",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Remembrance Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-NT",
+     "CA-NS",
+     "CA-NU",
+     "CA-PE",
+     "CA-SK",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-NB",
+     "CA-NS",
+     "CA-ON",
+     "CA-PE"
+    ]
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-16",
+    "n": "Louis Riel Day",
+    "t": "rest",
+    "r": [
+     "CA-MB"
+    ]
+   },
+   {
+    "d": "02-16",
+    "n": "Islander Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "02-16",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "02-16",
+    "n": "Family Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-ON",
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Saint George's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "05-18",
+    "n": "National Patriots' Day",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "05-18",
+    "n": "Victoria Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "National Aboriginal Day",
+    "t": "rest",
+    "r": [
+     "CA-NT"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Fête nationale du Québec",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "07-01",
+    "n": "Canada Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Orangemen's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Civic Holiday",
+    "t": "rest",
+    "r": [
+     "CA-MB",
+     "CA-NL",
+     "CA-NT",
+     "CA-NU",
+     "CA-ON"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "British Columbia Day",
+    "t": "rest",
+    "r": [
+     "CA-BC"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "New Brunswick Day",
+    "t": "rest",
+    "r": [
+     "CA-NB"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Natal Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Saskatchewan Day",
+    "t": "rest",
+    "r": [
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "08-17",
+    "n": "Gold Cup Parade Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "08-17",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "09-07",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-30",
+    "n": "National Day for Truth and Reconciliation",
+    "t": "rest"
+   },
+   {
+    "d": "10-12",
+    "n": "Thanksgiving",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Remembrance Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-NT",
+     "CA-NS",
+     "CA-NU",
+     "CA-PE",
+     "CA-SK",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-NB",
+     "CA-NS",
+     "CA-ON",
+     "CA-PE"
+    ]
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "02-15",
+    "n": "Louis Riel Day",
+    "t": "rest",
+    "r": [
+     "CA-MB"
+    ]
+   },
+   {
+    "d": "02-15",
+    "n": "Islander Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "02-15",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "02-15",
+    "n": "Family Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-ON",
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "04-23",
+    "n": "Saint George's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "05-24",
+    "n": "National Patriots' Day",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "05-24",
+    "n": "Victoria Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "National Aboriginal Day",
+    "t": "rest",
+    "r": [
+     "CA-NT"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "06-24",
+    "n": "Fête nationale du Québec",
+    "t": "rest",
+    "r": [
+     "CA-QC"
+    ]
+   },
+   {
+    "d": "07-01",
+    "n": "Canada Day",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Orangemen's Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Civic Holiday",
+    "t": "rest",
+    "r": [
+     "CA-MB",
+     "CA-NL",
+     "CA-NT",
+     "CA-NU",
+     "CA-ON"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "British Columbia Day",
+    "t": "rest",
+    "r": [
+     "CA-BC"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Heritage Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "New Brunswick Day",
+    "t": "rest",
+    "r": [
+     "CA-NB"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Natal Day",
+    "t": "rest",
+    "r": [
+     "CA-NS"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Saskatchewan Day",
+    "t": "rest",
+    "r": [
+     "CA-SK"
+    ]
+   },
+   {
+    "d": "08-16",
+    "n": "Gold Cup Parade Day",
+    "t": "rest",
+    "r": [
+     "CA-PE"
+    ]
+   },
+   {
+    "d": "08-16",
+    "n": "Discovery Day",
+    "t": "rest",
+    "r": [
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "09-06",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "09-30",
+    "n": "National Day for Truth and Reconciliation",
+    "t": "rest"
+   },
+   {
+    "d": "10-11",
+    "n": "Thanksgiving",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice Day",
+    "t": "rest",
+    "r": [
+     "CA-NL"
+    ]
+   },
+   {
+    "d": "11-11",
+    "n": "Remembrance Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-BC",
+     "CA-NB",
+     "CA-NT",
+     "CA-NS",
+     "CA-NU",
+     "CA-PE",
+     "CA-SK",
+     "CA-YT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest",
+    "r": [
+     "CA-AB",
+     "CA-NB",
+     "CA-NS",
+     "CA-ON",
+     "CA-PE"
+    ]
+   }
+  ]
+ }
+}

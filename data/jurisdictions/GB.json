@@ -1,0 +1,427 @@
+{
+ "code": "GB",
+ "name": {
+  "en": "United Kingdom",
+  "zh-Hans": "英国",
+  "zh-Hant": "英國"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "GB-ENG": "GB-ENG",
+  "GB-NIR": "GB-NIR",
+  "GB-SCT": "GB-SCT",
+  "GB-WLS": "GB-WLS"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/GB"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-NIR",
+     "GB-SCT",
+     "GB-WLS"
+    ]
+   },
+   {
+    "d": "01-02",
+    "n": "2 January",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "03-18",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "05-06",
+    "n": "Early May Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "05-27",
+    "n": "Spring Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Battle of the Boyne",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "08-26",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "12-02",
+    "n": "Saint Andrew's Day",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-NIR",
+     "GB-SCT",
+     "GB-WLS"
+    ]
+   },
+   {
+    "d": "01-02",
+    "n": "2 January",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "05-05",
+    "n": "Early May Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "05-26",
+    "n": "Spring Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "07-14",
+    "n": "Battle of the Boyne",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "08-25",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "12-01",
+    "n": "Saint Andrew's Day",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-NIR",
+     "GB-SCT",
+     "GB-WLS"
+    ]
+   },
+   {
+    "d": "01-02",
+    "n": "2 January",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "05-04",
+    "n": "Early May Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Spring Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "06-15",
+    "n": "World Cup Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "07-13",
+    "n": "Battle of the Boyne",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "08-31",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "11-30",
+    "n": "Saint Andrew's Day",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-NIR",
+     "GB-SCT",
+     "GB-WLS"
+    ]
+   },
+   {
+    "d": "01-02",
+    "n": "2 January",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "03-17",
+    "n": "Saint Patrick's Day",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Easter Monday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "05-03",
+    "n": "Early May Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "05-31",
+    "n": "Spring Bank Holiday",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Battle of the Boyne",
+    "t": "rest",
+    "r": [
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "08-30",
+    "n": "Summer Bank Holiday",
+    "t": "rest",
+    "r": [
+     "GB-ENG",
+     "GB-WLS",
+     "GB-NIR"
+    ]
+   },
+   {
+    "d": "11-30",
+    "n": "Saint Andrew's Day",
+    "t": "rest",
+    "r": [
+     "GB-SCT"
+    ]
+   },
+   {
+    "d": "12-27",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ]
+ }
+}

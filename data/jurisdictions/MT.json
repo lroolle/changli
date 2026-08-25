@@ -1,0 +1,309 @@
+{
+ "code": "MT",
+ "name": {
+  "en": "Malta",
+  "zh-Hans": "马耳他",
+  "zh-Hant": "馬爾他"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/MT"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "L-Ewwel tas-Sena",
+    "t": "rest"
+   },
+   {
+    "d": "02-10",
+    "n": "In-Nawfraġju ta’ San Pawl",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "San Ġużepp",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Il-Ġimgħa l-Kbira",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Jum il-Ħelsien",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Jum il-Ħaddiem",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "Sette Giugno",
+    "t": "rest"
+   },
+   {
+    "d": "06-29",
+    "n": "L-Imnarja",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Santa Marija",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Il-Vittorja",
+    "t": "rest"
+   },
+   {
+    "d": "09-21",
+    "n": "L-Indipendenza",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "L-Immakulata Kunċizzjoni",
+    "t": "rest"
+   },
+   {
+    "d": "12-13",
+    "n": "Jum ir-Repubblika",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Il-Milied",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "L-Ewwel tas-Sena",
+    "t": "rest"
+   },
+   {
+    "d": "02-10",
+    "n": "In-Nawfraġju ta’ San Pawl",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "San Ġużepp",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Jum il-Ħelsien",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Il-Ġimgħa l-Kbira",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Jum il-Ħaddiem",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "Sette Giugno",
+    "t": "rest"
+   },
+   {
+    "d": "06-29",
+    "n": "L-Imnarja",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Santa Marija",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Il-Vittorja",
+    "t": "rest"
+   },
+   {
+    "d": "09-21",
+    "n": "L-Indipendenza",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "L-Immakulata Kunċizzjoni",
+    "t": "rest"
+   },
+   {
+    "d": "12-13",
+    "n": "Jum ir-Repubblika",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Il-Milied",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "L-Ewwel tas-Sena",
+    "t": "rest"
+   },
+   {
+    "d": "02-10",
+    "n": "In-Nawfraġju ta’ San Pawl",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "San Ġużepp",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Jum il-Ħelsien",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Il-Ġimgħa l-Kbira",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Jum il-Ħaddiem",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "Sette Giugno",
+    "t": "rest"
+   },
+   {
+    "d": "06-29",
+    "n": "L-Imnarja",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Santa Marija",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Il-Vittorja",
+    "t": "rest"
+   },
+   {
+    "d": "09-21",
+    "n": "L-Indipendenza",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "L-Immakulata Kunċizzjoni",
+    "t": "rest"
+   },
+   {
+    "d": "12-13",
+    "n": "Jum ir-Repubblika",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Il-Milied",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "L-Ewwel tas-Sena",
+    "t": "rest"
+   },
+   {
+    "d": "02-10",
+    "n": "In-Nawfraġju ta’ San Pawl",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "San Ġużepp",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Il-Ġimgħa l-Kbira",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Jum il-Ħelsien",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Jum il-Ħaddiem",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "Sette Giugno",
+    "t": "rest"
+   },
+   {
+    "d": "06-29",
+    "n": "L-Imnarja",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Santa Marija",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Il-Vittorja",
+    "t": "rest"
+   },
+   {
+    "d": "09-21",
+    "n": "L-Indipendenza",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "L-Immakulata Kunċizzjoni",
+    "t": "rest"
+   },
+   {
+    "d": "12-13",
+    "n": "Jum ir-Repubblika",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Il-Milied",
+    "t": "rest"
+   }
+  ]
+ }
+}

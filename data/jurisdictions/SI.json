@@ -1,0 +1,449 @@
+{
+ "code": "SI",
+ "name": {
+  "en": "Slovenia",
+  "zh-Hans": "斯洛文尼亚",
+  "zh-Hant": "斯洛維尼亞"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/SI"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "02-08",
+    "n": "Prešernov dan",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "dan upora proti okupatorju",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "dan Primoža Trubarja",
+    "t": "rest"
+   },
+   {
+    "d": "05-19",
+    "n": "binkoštna nedelja",
+    "t": "rest"
+   },
+   {
+    "d": "06-25",
+    "n": "dan državnosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-14",
+    "n": "dan suverenosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Marijino vnebovzetje",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "združitev prekmurskih Slovencev z matičnim narodom",
+    "t": "rest"
+   },
+   {
+    "d": "09-15",
+    "n": "priključitev Primorske k matični domovini",
+    "t": "rest"
+   },
+   {
+    "d": "09-23",
+    "n": "dan slovenskega športa",
+    "t": "rest"
+   },
+   {
+    "d": "10-31",
+    "n": "dan reformacije",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "dan spomina na mrtve",
+    "t": "rest"
+   },
+   {
+    "d": "11-23",
+    "n": "dan Rudolfa Maistra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "božič",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "dan samostojnosti in enotnosti",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "02-08",
+    "n": "Prešernov dan",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "dan upora proti okupatorju",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "dan Primoža Trubarja",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "binkoštna nedelja",
+    "t": "rest"
+   },
+   {
+    "d": "06-25",
+    "n": "dan državnosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-14",
+    "n": "dan suverenosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Marijino vnebovzetje",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "združitev prekmurskih Slovencev z matičnim narodom",
+    "t": "rest"
+   },
+   {
+    "d": "09-15",
+    "n": "priključitev Primorske k matični domovini",
+    "t": "rest"
+   },
+   {
+    "d": "09-23",
+    "n": "dan slovenskega športa",
+    "t": "rest"
+   },
+   {
+    "d": "10-31",
+    "n": "dan reformacije",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "dan spomina na mrtve",
+    "t": "rest"
+   },
+   {
+    "d": "11-23",
+    "n": "dan Rudolfa Maistra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "božič",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "dan samostojnosti in enotnosti",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "02-08",
+    "n": "Prešernov dan",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "dan upora proti okupatorju",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "dan Primoža Trubarja",
+    "t": "rest"
+   },
+   {
+    "d": "05-24",
+    "n": "binkoštna nedelja",
+    "t": "rest"
+   },
+   {
+    "d": "06-25",
+    "n": "dan državnosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-14",
+    "n": "dan suverenosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Marijino vnebovzetje",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "združitev prekmurskih Slovencev z matičnim narodom",
+    "t": "rest"
+   },
+   {
+    "d": "09-15",
+    "n": "priključitev Primorske k matični domovini",
+    "t": "rest"
+   },
+   {
+    "d": "09-23",
+    "n": "dan slovenskega športa",
+    "t": "rest"
+   },
+   {
+    "d": "10-31",
+    "n": "dan reformacije",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "dan spomina na mrtve",
+    "t": "rest"
+   },
+   {
+    "d": "11-23",
+    "n": "dan Rudolfa Maistra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "božič",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "dan samostojnosti in enotnosti",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "novo leto",
+    "t": "rest"
+   },
+   {
+    "d": "02-08",
+    "n": "Prešernov dan",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "velikonočna nedelja in ponedeljek",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "dan upora proti okupatorju",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "praznik dela",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "dan Primoža Trubarja",
+    "t": "rest"
+   },
+   {
+    "d": "05-16",
+    "n": "binkoštna nedelja",
+    "t": "rest"
+   },
+   {
+    "d": "06-25",
+    "n": "dan državnosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-14",
+    "n": "dan suverenosti",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Marijino vnebovzetje",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "združitev prekmurskih Slovencev z matičnim narodom",
+    "t": "rest"
+   },
+   {
+    "d": "09-15",
+    "n": "priključitev Primorske k matični domovini",
+    "t": "rest"
+   },
+   {
+    "d": "09-23",
+    "n": "dan slovenskega športa",
+    "t": "rest"
+   },
+   {
+    "d": "10-31",
+    "n": "dan reformacije",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "dan spomina na mrtve",
+    "t": "rest"
+   },
+   {
+    "d": "11-23",
+    "n": "dan Rudolfa Maistra",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "božič",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "dan samostojnosti in enotnosti",
+    "t": "rest"
+   }
+  ]
+ }
+}

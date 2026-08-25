@@ -1,0 +1,249 @@
+{
+ "code": "FR",
+ "name": {
+  "en": "France",
+  "zh-Hans": "法国",
+  "zh-Hant": "法國"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/FR"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Jour de l'an",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Lundi de Pâques",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Fête du Travail",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Victoire 1945",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Ascension",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "Lundi de Pentecôte",
+    "t": "rest"
+   },
+   {
+    "d": "07-14",
+    "n": "Fête nationale",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Assomption",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Toussaint",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice 1918",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Noël",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Jour de l'an",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Lundi de Pâques",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Fête du Travail",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Victoire 1945",
+    "t": "rest"
+   },
+   {
+    "d": "05-29",
+    "n": "Ascension",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Lundi de Pentecôte",
+    "t": "rest"
+   },
+   {
+    "d": "07-14",
+    "n": "Fête nationale",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Assomption",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Toussaint",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice 1918",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Noël",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Jour de l'an",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Lundi de Pâques",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Fête du Travail",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Victoire 1945",
+    "t": "rest"
+   },
+   {
+    "d": "05-14",
+    "n": "Ascension",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Lundi de Pentecôte",
+    "t": "rest"
+   },
+   {
+    "d": "07-14",
+    "n": "Fête nationale",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Assomption",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Toussaint",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice 1918",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Noël",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Jour de l'an",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Lundi de Pâques",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Fête du Travail",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Ascension",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Victoire 1945",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Lundi de Pentecôte",
+    "t": "rest"
+   },
+   {
+    "d": "07-14",
+    "n": "Fête nationale",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Assomption",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Toussaint",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Armistice 1918",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Noël",
+    "t": "rest"
+   }
+  ]
+ }
+}

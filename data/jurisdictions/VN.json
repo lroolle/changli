@@ -1,0 +1,109 @@
+{
+ "code": "VN",
+ "name": {
+  "en": "Vietnam",
+  "zh-Hans": "越南",
+  "zh-Hant": "越南"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/VN"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Tết dương lịch",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Ngày Giải phóng miền Nam, thống nhất đất nước",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ngày Quốc tế lao động",
+    "t": "rest"
+   },
+   {
+    "d": "09-02",
+    "n": "Quốc khánh",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Tết dương lịch",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Ngày Giải phóng miền Nam, thống nhất đất nước",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ngày Quốc tế lao động",
+    "t": "rest"
+   },
+   {
+    "d": "09-02",
+    "n": "Quốc khánh",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Tết dương lịch",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Ngày Giải phóng miền Nam, thống nhất đất nước",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ngày Quốc tế lao động",
+    "t": "rest"
+   },
+   {
+    "d": "09-02",
+    "n": "Quốc khánh",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Tết dương lịch",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Ngày Giải phóng miền Nam, thống nhất đất nước",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ngày Quốc tế lao động",
+    "t": "rest"
+   },
+   {
+    "d": "09-02",
+    "n": "Quốc khánh",
+    "t": "rest"
+   }
+  ]
+ }
+}

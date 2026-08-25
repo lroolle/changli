@@ -1,0 +1,289 @@
+{
+ "code": "CZ",
+ "name": {
+  "en": "Czechia",
+  "zh-Hans": "捷克",
+  "zh-Hant": "捷克"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/CZ"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Den obnovy samostatného českého státu; Nový rok",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Velký pátek",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Velikonoční pondělí",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Svátek práce",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Den vítězství",
+    "t": "rest"
+   },
+   {
+    "d": "07-05",
+    "n": "Den slovanských věrozvěstů Cyrila a Metoděje",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Den upálení mistra Jana Husa",
+    "t": "rest"
+   },
+   {
+    "d": "09-28",
+    "n": "Den české státnosti",
+    "t": "rest"
+   },
+   {
+    "d": "10-28",
+    "n": "Den vzniku samostatného československého státu",
+    "t": "rest"
+   },
+   {
+    "d": "11-17",
+    "n": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Štědrý den",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "1. svátek vánoční",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. svátek vánoční",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Den obnovy samostatného českého státu; Nový rok",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Velký pátek",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Velikonoční pondělí",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Svátek práce",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Den vítězství",
+    "t": "rest"
+   },
+   {
+    "d": "07-05",
+    "n": "Den slovanských věrozvěstů Cyrila a Metoděje",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Den upálení mistra Jana Husa",
+    "t": "rest"
+   },
+   {
+    "d": "09-28",
+    "n": "Den české státnosti",
+    "t": "rest"
+   },
+   {
+    "d": "10-28",
+    "n": "Den vzniku samostatného československého státu",
+    "t": "rest"
+   },
+   {
+    "d": "11-17",
+    "n": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Štědrý den",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "1. svátek vánoční",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. svátek vánoční",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Den obnovy samostatného českého státu; Nový rok",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Velký pátek",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Velikonoční pondělí",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Svátek práce",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Den vítězství",
+    "t": "rest"
+   },
+   {
+    "d": "07-05",
+    "n": "Den slovanských věrozvěstů Cyrila a Metoděje",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Den upálení mistra Jana Husa",
+    "t": "rest"
+   },
+   {
+    "d": "09-28",
+    "n": "Den české státnosti",
+    "t": "rest"
+   },
+   {
+    "d": "10-28",
+    "n": "Den vzniku samostatného československého státu",
+    "t": "rest"
+   },
+   {
+    "d": "11-17",
+    "n": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Štědrý den",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "1. svátek vánoční",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. svátek vánoční",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Den obnovy samostatného českého státu; Nový rok",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Velký pátek",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Velikonoční pondělí",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Svátek práce",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Den vítězství",
+    "t": "rest"
+   },
+   {
+    "d": "07-05",
+    "n": "Den slovanských věrozvěstů Cyrila a Metoděje",
+    "t": "rest"
+   },
+   {
+    "d": "07-06",
+    "n": "Den upálení mistra Jana Husa",
+    "t": "rest"
+   },
+   {
+    "d": "09-28",
+    "n": "Den české státnosti",
+    "t": "rest"
+   },
+   {
+    "d": "10-28",
+    "n": "Den vzniku samostatného československého státu",
+    "t": "rest"
+   },
+   {
+    "d": "11-17",
+    "n": "Den boje za svobodu a demokracii a Mezinárodní den studentstva",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Štědrý den",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "1. svátek vánoční",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "2. svátek vánoční",
+    "t": "rest"
+   }
+  ]
+ }
+}

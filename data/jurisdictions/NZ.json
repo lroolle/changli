@@ -1,0 +1,671 @@
+{
+ "code": "NZ",
+ "name": {
+  "en": "New Zealand",
+  "zh-Hans": "新西兰",
+  "zh-Hant": "紐西蘭"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "NZ-WGN": "NZ-WGN",
+  "NZ-MWT": "NZ-MWT",
+  "NZ-AUK": "NZ-AUK",
+  "NZ-NTL": "NZ-NTL",
+  "NZ-WKO": "NZ-WKO",
+  "NZ-GIS": "NZ-GIS",
+  "NZ-BOP": "NZ-BOP",
+  "NZ-NSN": "NZ-NSN",
+  "NZ-TKI": "NZ-TKI",
+  "NZ-OTA": "NZ-OTA",
+  "NZ-STL": "NZ-STL",
+  "NZ-CAN": "NZ-CAN",
+  "NZ-HKB": "NZ-HKB",
+  "NZ-MBH": "NZ-MBH",
+  "NZ-CIT": "NZ-CIT",
+  "NZ-WTC": "NZ-WTC"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/NZ"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Day after New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-22",
+    "n": "Wellington Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WGN",
+     "NZ-MWT"
+    ]
+   },
+   {
+    "d": "01-29",
+    "n": "Auckland/Northland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-AUK",
+     "NZ-NTL",
+     "NZ-WKO",
+     "NZ-GIS",
+     "NZ-BOP"
+    ]
+   },
+   {
+    "d": "01-29",
+    "n": "Nelson Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-NSN"
+    ]
+   },
+   {
+    "d": "02-06",
+    "n": "Waitangi Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-11",
+    "n": "Taranaki Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-TKI"
+    ]
+   },
+   {
+    "d": "03-25",
+    "n": "Otago Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-OTA"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-02",
+    "n": "Southland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-STL"
+    ]
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-03",
+    "n": "King's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "06-28",
+    "n": "Matariki",
+    "t": "rest"
+   },
+   {
+    "d": "09-23",
+    "n": "Dominion Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "10-25",
+    "n": "Hawke's Bay Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-HKB"
+    ]
+   },
+   {
+    "d": "10-28",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-04",
+    "n": "Marlborough Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-MBH"
+    ]
+   },
+   {
+    "d": "11-15",
+    "n": "Canterbury (North & Central) Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "12-02",
+    "n": "Chatham Islands Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CIT"
+    ]
+   },
+   {
+    "d": "12-02",
+    "n": "Westland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WTC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Day after New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "Wellington Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WGN",
+     "NZ-MWT"
+    ]
+   },
+   {
+    "d": "01-27",
+    "n": "Auckland/Northland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-AUK",
+     "NZ-NTL",
+     "NZ-WKO",
+     "NZ-GIS",
+     "NZ-BOP"
+    ]
+   },
+   {
+    "d": "02-03",
+    "n": "Nelson Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-NSN"
+    ]
+   },
+   {
+    "d": "02-06",
+    "n": "Waitangi Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-10",
+    "n": "Taranaki Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-TKI"
+    ]
+   },
+   {
+    "d": "03-24",
+    "n": "Otago Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-OTA"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-22",
+    "n": "Southland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-STL"
+    ]
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-02",
+    "n": "King's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "06-20",
+    "n": "Matariki",
+    "t": "rest"
+   },
+   {
+    "d": "09-22",
+    "n": "Dominion Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "10-24",
+    "n": "Hawke's Bay Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-HKB"
+    ]
+   },
+   {
+    "d": "10-27",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-03",
+    "n": "Marlborough Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-MBH"
+    ]
+   },
+   {
+    "d": "11-14",
+    "n": "Canterbury (North & Central) Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "12-01",
+    "n": "Chatham Islands Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CIT"
+    ]
+   },
+   {
+    "d": "12-01",
+    "n": "Westland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WTC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Day after New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-19",
+    "n": "Wellington Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WGN",
+     "NZ-MWT"
+    ]
+   },
+   {
+    "d": "01-26",
+    "n": "Auckland/Northland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-AUK",
+     "NZ-NTL",
+     "NZ-WKO",
+     "NZ-GIS",
+     "NZ-BOP"
+    ]
+   },
+   {
+    "d": "02-02",
+    "n": "Nelson Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-NSN"
+    ]
+   },
+   {
+    "d": "02-06",
+    "n": "Waitangi Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-09",
+    "n": "Taranaki Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-TKI"
+    ]
+   },
+   {
+    "d": "03-23",
+    "n": "Otago Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-OTA"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-07",
+    "n": "Southland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-STL"
+    ]
+   },
+   {
+    "d": "04-27",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "King's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "07-10",
+    "n": "Matariki",
+    "t": "rest"
+   },
+   {
+    "d": "09-28",
+    "n": "Dominion Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "10-23",
+    "n": "Hawke's Bay Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-HKB"
+    ]
+   },
+   {
+    "d": "10-26",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-02",
+    "n": "Marlborough Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-MBH"
+    ]
+   },
+   {
+    "d": "11-13",
+    "n": "Canterbury (North & Central) Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "11-30",
+    "n": "Chatham Islands Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CIT"
+    ]
+   },
+   {
+    "d": "11-30",
+    "n": "Westland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WTC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-04",
+    "n": "Day after New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-25",
+    "n": "Wellington Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WGN",
+     "NZ-MWT"
+    ]
+   },
+   {
+    "d": "02-01",
+    "n": "Auckland/Northland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-AUK",
+     "NZ-NTL",
+     "NZ-WKO",
+     "NZ-GIS",
+     "NZ-BOP"
+    ]
+   },
+   {
+    "d": "02-01",
+    "n": "Nelson Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-NSN"
+    ]
+   },
+   {
+    "d": "02-08",
+    "n": "Waitangi Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-08",
+    "n": "Taranaki Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-TKI"
+    ]
+   },
+   {
+    "d": "03-22",
+    "n": "Otago Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-OTA"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "03-30",
+    "n": "Southland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-STL"
+    ]
+   },
+   {
+    "d": "04-26",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "King's Birthday",
+    "t": "rest"
+   },
+   {
+    "d": "06-25",
+    "n": "Matariki",
+    "t": "rest"
+   },
+   {
+    "d": "09-27",
+    "n": "Dominion Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "10-22",
+    "n": "Hawke's Bay Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-HKB"
+    ]
+   },
+   {
+    "d": "10-25",
+    "n": "Labour Day",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Marlborough Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-MBH"
+    ]
+   },
+   {
+    "d": "11-12",
+    "n": "Canterbury (North & Central) Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CAN"
+    ]
+   },
+   {
+    "d": "11-29",
+    "n": "Chatham Islands Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-CIT"
+    ]
+   },
+   {
+    "d": "11-29",
+    "n": "Westland Anniversary Day",
+    "t": "rest",
+    "r": [
+     "NZ-WTC"
+    ]
+   },
+   {
+    "d": "12-27",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ]
+ }
+}

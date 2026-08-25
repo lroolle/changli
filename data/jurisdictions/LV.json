@@ -1,0 +1,999 @@
+{
+ "code": "LV",
+ "name": {
+  "en": "Latvia",
+  "zh-Hans": "拉脱维亚",
+  "zh-Hant": "拉脫維亞"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/LV"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Jaungada diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "1991. gada barikāžu aizstāvju atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Latvijas Republikas starptautiskās (de jure) atzīšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-02",
+    "n": "Nacionālo partizānu bruņotās pretošanās atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-08",
+    "n": "Starptautiskā sieviešu diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Nacionālās pretošanās kustības piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Lielā Piektdiena",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Pirmās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Otrās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "Latgales kongresa diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Darba svētki",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Latvijas Republikas Satversmes sapulces sasaukšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Latvijas Republikas Neatkarības atjaunošanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Nacisma sagrāves diena un Otrā pasaules kara upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Eiropas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-12",
+    "n": "Mātes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-15",
+    "n": "Starptautiskā ģimenes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Ugunsdzēsēju un glābēju diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-19",
+    "n": "Vasarsvētki",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Starptautiskā bērnu aizsardzības diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-14",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-16",
+    "n": "Medicīnas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-17",
+    "n": "Latvijas Republikas okupācijas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-22",
+    "n": "Varoņu piemiņas diena (Cēsu kaujas atceres diena)",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Līgo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Jāņu diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Ebreju tautas genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-13",
+    "n": "Jūras svētku diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-11",
+    "n": "Latvijas brīvības cīnītāju piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-21",
+    "n": "Konstitucionālā likuma “Par Latvijas Republikas valstisko statusu” pieņemšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-23",
+    "n": "Staļinisma un nacisma upuru atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-01",
+    "n": "Zinību diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-08",
+    "n": "Tēva diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-22",
+    "n": "Baltu vienības diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-01",
+    "n": "Starptautiskā senioru diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Skolotāju diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-15",
+    "n": "Valsts valodas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-07",
+    "n": "Robežsargu diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Lāčplēša diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-18",
+    "n": "Latvijas Republikas Proklamēšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-21",
+    "n": "2013. gada 21. novembra traģēdijas atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-05",
+    "n": "Policijas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Ziemassvētku vakars",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Pirmie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Otrie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Vecgada diena",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Jaungada diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "1991. gada barikāžu aizstāvju atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Latvijas Republikas starptautiskās (de jure) atzīšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-02",
+    "n": "Nacionālo partizānu bruņotās pretošanās atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-08",
+    "n": "Starptautiskā sieviešu diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Nacionālās pretošanās kustības piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Lielā Piektdiena",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Pirmās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Otrās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "Latgales kongresa diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Darba svētki",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Latvijas Republikas Satversmes sapulces sasaukšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-05",
+    "n": "Latvijas Republikas Neatkarības atjaunošanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Nacisma sagrāves diena un Otrā pasaules kara upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Eiropas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-11",
+    "n": "Mātes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-15",
+    "n": "Starptautiskā ģimenes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Ugunsdzēsēju un glābēju diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Starptautiskā bērnu aizsardzības diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "Vasarsvētki",
+    "t": "rest"
+   },
+   {
+    "d": "06-14",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-15",
+    "n": "Medicīnas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-17",
+    "n": "Latvijas Republikas okupācijas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-22",
+    "n": "Varoņu piemiņas diena (Cēsu kaujas atceres diena)",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Līgo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Jāņu diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Ebreju tautas genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-12",
+    "n": "Jūras svētku diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-11",
+    "n": "Latvijas brīvības cīnītāju piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-21",
+    "n": "Konstitucionālā likuma “Par Latvijas Republikas valstisko statusu” pieņemšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-23",
+    "n": "Staļinisma un nacisma upuru atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-01",
+    "n": "Zinību diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-14",
+    "n": "Tēva diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-22",
+    "n": "Baltu vienības diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-01",
+    "n": "Starptautiskā senioru diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Skolotāju diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-15",
+    "n": "Valsts valodas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-07",
+    "n": "Robežsargu diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Lāčplēša diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-18",
+    "n": "Latvijas Republikas Proklamēšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-21",
+    "n": "2013. gada 21. novembra traģēdijas atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-05",
+    "n": "Policijas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-07",
+    "n": "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Ziemassvētku vakars",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Pirmie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Otrie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Vecgada diena",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Jaungada diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "1991. gada barikāžu aizstāvju atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Latvijas Republikas starptautiskās (de jure) atzīšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "02-27",
+    "n": "Starptautisko nevalstisko organizāciju diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-02",
+    "n": "Nacionālo partizānu bruņotās pretošanās atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-08",
+    "n": "Starptautiskā sieviešu diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Nacionālās pretošanās kustības piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Lielā Piektdiena",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Pirmās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Otrās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "Latgales kongresa diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Darba svētki",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Latvijas Republikas Satversmes sapulces sasaukšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Latvijas Republikas Neatkarības atjaunošanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Nacisma sagrāves diena un Otrā pasaules kara upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Eiropas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-10",
+    "n": "Mātes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-15",
+    "n": "Starptautiskā ģimenes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Ugunsdzēsēju un glābēju diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-24",
+    "n": "Vasarsvētki",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Starptautiskā bērnu aizsardzības diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-14",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-17",
+    "n": "Latvijas Republikas okupācijas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "Medicīnas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-22",
+    "n": "Varoņu piemiņas diena (Cēsu kaujas atceres diena)",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Līgo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Jāņu diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Ebreju tautas genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-11",
+    "n": "Jūras svētku diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-11",
+    "n": "Latvijas brīvības cīnītāju piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-21",
+    "n": "Konstitucionālā likuma “Par Latvijas Republikas valstisko statusu” pieņemšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-23",
+    "n": "Staļinisma un nacisma upuru atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-01",
+    "n": "Zinību diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-13",
+    "n": "Tēva diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-22",
+    "n": "Baltu vienības diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-01",
+    "n": "Starptautiskā senioru diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Skolotāju diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-15",
+    "n": "Valsts valodas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-07",
+    "n": "Robežsargu diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Lāčplēša diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-18",
+    "n": "Latvijas Republikas Proklamēšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-21",
+    "n": "2013. gada 21. novembra traģēdijas atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-05",
+    "n": "Policijas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-06",
+    "n": "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Ziemassvētku vakars",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Pirmie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Otrie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Vecgada diena",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Jaungada diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-20",
+    "n": "1991. gada barikāžu aizstāvju atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Latvijas Republikas starptautiskās (de jure) atzīšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "02-27",
+    "n": "Starptautisko nevalstisko organizāciju diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-02",
+    "n": "Nacionālo partizānu bruņotās pretošanās atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-08",
+    "n": "Starptautiskā sieviešu diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Nacionālās pretošanās kustības piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-25",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Lielā Piektdiena",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Pirmās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Otrās Lieldienas",
+    "t": "rest"
+   },
+   {
+    "d": "04-27",
+    "n": "Latgales kongresa diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Darba svētki",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Latvijas Republikas Satversmes sapulces sasaukšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Latvijas Republikas Neatkarības atjaunošanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-08",
+    "n": "Nacisma sagrāves diena un Otrā pasaules kara upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Mātes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-09",
+    "n": "Eiropas diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-15",
+    "n": "Starptautiskā ģimenes diena",
+    "t": "rest"
+   },
+   {
+    "d": "05-16",
+    "n": "Vasarsvētki",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Ugunsdzēsēju un glābēju diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Starptautiskā bērnu aizsardzības diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-14",
+    "n": "Komunistiskā genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-17",
+    "n": "Latvijas Republikas okupācijas diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-20",
+    "n": "Medicīnas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-22",
+    "n": "Varoņu piemiņas diena (Cēsu kaujas atceres diena)",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Līgo diena",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Jāņu diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-04",
+    "n": "Ebreju tautas genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "07-10",
+    "n": "Jūras svētku diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-11",
+    "n": "Latvijas brīvības cīnītāju piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-21",
+    "n": "Konstitucionālā likuma “Par Latvijas Republikas valstisko statusu” pieņemšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "08-23",
+    "n": "Staļinisma un nacisma upuru atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-01",
+    "n": "Zinību diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-12",
+    "n": "Tēva diena",
+    "t": "rest"
+   },
+   {
+    "d": "09-22",
+    "n": "Baltu vienības diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-01",
+    "n": "Starptautiskā senioru diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Skolotāju diena",
+    "t": "rest"
+   },
+   {
+    "d": "10-15",
+    "n": "Valsts valodas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-07",
+    "n": "Robežsargu diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Lāčplēša diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-18",
+    "n": "Latvijas Republikas Proklamēšanas diena",
+    "t": "rest"
+   },
+   {
+    "d": "11-21",
+    "n": "2013. gada 21. novembra traģēdijas atceres diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-05",
+    "n": "Policijas darbinieku diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-05",
+    "n": "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena",
+    "t": "rest"
+   },
+   {
+    "d": "12-24",
+    "n": "Ziemassvētku vakars",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Pirmie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Otrie Ziemassvētki",
+    "t": "rest"
+   },
+   {
+    "d": "12-31",
+    "n": "Vecgada diena",
+    "t": "rest"
+   }
+  ]
+ }
+}

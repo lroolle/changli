@@ -6,12 +6,31 @@
   "license": "MIT",
   "scripts": {
     "start": "python3 -m http.server 8811",
-    "test": "node test/verify.js",
-    "data:holidays": "node test/gen-holidays.mjs"
+    "test": "node test/verify.js && node test/verify-rules.mjs",
+    "test:astro": "node test/verify.js",
+    "test:rules": "node test/verify-rules.mjs",
+    "mcp": "node mcp/server.mjs",
+    "data:holidays": "node test/gen-holidays.mjs",
+    "data:jurisdictions": "node test/gen-jurisdictions.mjs"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/thevibeworks/changli.git"
   },
-  "homepage": "https://github.com/thevibeworks/changli"
+  "homepage": "https://github.com/thevibeworks/changli",
+  "bin": {
+    "changli-mcp": "./mcp/server.mjs"
+  },
+  "keywords": [
+    "calendar",
+    "holidays",
+    "lunar-calendar",
+    "chinese-calendar",
+    "schengen",
+    "mcp",
+    "agentic",
+    "拼假",
+    "农历",
+    "调休"
+  ]
 }

@@ -1,0 +1,249 @@
+{
+ "code": "IE",
+ "name": {
+  "en": "Ireland",
+  "zh-Hans": "爱尔兰",
+  "zh-Hant": "愛爾蘭"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/IE"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Lá Caille",
+    "t": "rest"
+   },
+   {
+    "d": "02-05",
+    "n": "Lá Fhéile Bríde",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Lá Fhéile Pádraig",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Aoine an Chéasta",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Luan Cásca",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Lá Bealtaine",
+    "t": "rest"
+   },
+   {
+    "d": "06-03",
+    "n": "Lá Saoire i mí an Mheithimh",
+    "t": "rest"
+   },
+   {
+    "d": "08-05",
+    "n": "Lá Saoire i mí Lúnasa",
+    "t": "rest"
+   },
+   {
+    "d": "10-28",
+    "n": "Lá Saoire i mí Dheireadh Fómhair",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Lá Nollag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Lá Fhéile Stiofáin",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Lá Caille",
+    "t": "rest"
+   },
+   {
+    "d": "02-03",
+    "n": "Lá Fhéile Bríde",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Lá Fhéile Pádraig",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Aoine an Chéasta",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Luan Cásca",
+    "t": "rest"
+   },
+   {
+    "d": "05-05",
+    "n": "Lá Bealtaine",
+    "t": "rest"
+   },
+   {
+    "d": "06-02",
+    "n": "Lá Saoire i mí an Mheithimh",
+    "t": "rest"
+   },
+   {
+    "d": "08-04",
+    "n": "Lá Saoire i mí Lúnasa",
+    "t": "rest"
+   },
+   {
+    "d": "10-27",
+    "n": "Lá Saoire i mí Dheireadh Fómhair",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Lá Nollag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Lá Fhéile Stiofáin",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Lá Caille",
+    "t": "rest"
+   },
+   {
+    "d": "02-02",
+    "n": "Lá Fhéile Bríde",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Lá Fhéile Pádraig",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Aoine an Chéasta",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Luan Cásca",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Lá Bealtaine",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Lá Saoire i mí an Mheithimh",
+    "t": "rest"
+   },
+   {
+    "d": "08-03",
+    "n": "Lá Saoire i mí Lúnasa",
+    "t": "rest"
+   },
+   {
+    "d": "10-26",
+    "n": "Lá Saoire i mí Dheireadh Fómhair",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Lá Nollag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Lá Fhéile Stiofáin",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Lá Caille",
+    "t": "rest"
+   },
+   {
+    "d": "02-01",
+    "n": "Lá Fhéile Bríde",
+    "t": "rest"
+   },
+   {
+    "d": "03-17",
+    "n": "Lá Fhéile Pádraig",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Aoine an Chéasta",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Luan Cásca",
+    "t": "rest"
+   },
+   {
+    "d": "05-03",
+    "n": "Lá Bealtaine",
+    "t": "rest"
+   },
+   {
+    "d": "06-07",
+    "n": "Lá Saoire i mí an Mheithimh",
+    "t": "rest"
+   },
+   {
+    "d": "08-02",
+    "n": "Lá Saoire i mí Lúnasa",
+    "t": "rest"
+   },
+   {
+    "d": "10-25",
+    "n": "Lá Saoire i mí Dheireadh Fómhair",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Lá Nollag",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Lá Fhéile Stiofáin",
+    "t": "rest"
+   }
+  ]
+ }
+}

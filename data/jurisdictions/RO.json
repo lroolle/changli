@@ -1,0 +1,369 @@
+{
+ "code": "RO",
+ "name": {
+  "en": "Romania",
+  "zh-Hans": "罗马尼亚",
+  "zh-Hant": "羅馬尼亞"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/RO"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Bobotează",
+    "t": "rest"
+   },
+   {
+    "d": "01-07",
+    "n": "Sfântul Ion",
+    "t": "rest"
+   },
+   {
+    "d": "01-24",
+    "n": "Unirea Principatelor Române/Mica Unire",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ziua Muncii",
+    "t": "rest"
+   },
+   {
+    "d": "05-03",
+    "n": "Vinerea mare",
+    "t": "rest"
+   },
+   {
+    "d": "05-05",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Ziua Copilului",
+    "t": "rest"
+   },
+   {
+    "d": "06-23",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "06-24",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Adormirea Maicii Domnului/Sfânta Maria Mare",
+    "t": "rest"
+   },
+   {
+    "d": "11-30",
+    "n": "Sfântul Andrei",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Ziua Națională/Marea Unire",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Crăciunul",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Crăciunul",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Bobotează",
+    "t": "rest"
+   },
+   {
+    "d": "01-07",
+    "n": "Sfântul Ion",
+    "t": "rest"
+   },
+   {
+    "d": "01-24",
+    "n": "Unirea Principatelor Române/Mica Unire",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Vinerea mare",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ziua Muncii",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Ziua Copilului",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Adormirea Maicii Domnului/Sfânta Maria Mare",
+    "t": "rest"
+   },
+   {
+    "d": "11-30",
+    "n": "Sfântul Andrei",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Ziua Națională/Marea Unire",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Crăciunul",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Crăciunul",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Bobotează",
+    "t": "rest"
+   },
+   {
+    "d": "01-07",
+    "n": "Sfântul Ion",
+    "t": "rest"
+   },
+   {
+    "d": "01-24",
+    "n": "Unirea Principatelor Române/Mica Unire",
+    "t": "rest"
+   },
+   {
+    "d": "04-10",
+    "n": "Vinerea mare",
+    "t": "rest"
+   },
+   {
+    "d": "04-12",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "04-13",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ziua Muncii",
+    "t": "rest"
+   },
+   {
+    "d": "05-31",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Ziua Copilului",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Adormirea Maicii Domnului/Sfânta Maria Mare",
+    "t": "rest"
+   },
+   {
+    "d": "11-30",
+    "n": "Sfântul Andrei",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Ziua Națională/Marea Unire",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Crăciunul",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Crăciunul",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Anul Nou",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Bobotează",
+    "t": "rest"
+   },
+   {
+    "d": "01-07",
+    "n": "Sfântul Ion",
+    "t": "rest"
+   },
+   {
+    "d": "01-24",
+    "n": "Unirea Principatelor Române/Mica Unire",
+    "t": "rest"
+   },
+   {
+    "d": "04-30",
+    "n": "Vinerea mare",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Ziua Muncii",
+    "t": "rest"
+   },
+   {
+    "d": "05-02",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "05-03",
+    "n": "Paștele",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Ziua Copilului",
+    "t": "rest"
+   },
+   {
+    "d": "06-20",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "06-21",
+    "n": "Rusaliile",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Adormirea Maicii Domnului/Sfânta Maria Mare",
+    "t": "rest"
+   },
+   {
+    "d": "11-30",
+    "n": "Sfântul Andrei",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Ziua Națională/Marea Unire",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Crăciunul",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Crăciunul",
+    "t": "rest"
+   }
+  ]
+ }
+}

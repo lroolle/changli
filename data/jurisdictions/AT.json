@@ -1,0 +1,516 @@
+{
+ "code": "AT",
+ "name": {
+  "en": "Austria",
+  "zh-Hans": "奥地利",
+  "zh-Hant": "奧地利"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "AT-2": "AT-2",
+  "AT-6": "AT-6",
+  "AT-7": "AT-7",
+  "AT-8": "AT-8",
+  "AT-4": "AT-4",
+  "AT-5": "AT-5",
+  "AT-1": "AT-1",
+  "AT-3": "AT-3",
+  "AT-9": "AT-9"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/AT"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "AT-2",
+     "AT-6",
+     "AT-7",
+     "AT-8"
+    ]
+   },
+   {
+    "d": "03-31",
+    "n": "Ostersonntag",
+    "t": "rest"
+   },
+   {
+    "d": "04-01",
+    "n": "Ostermontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Staatsfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Florianitag",
+    "t": "rest",
+    "r": [
+     "AT-4"
+    ]
+   },
+   {
+    "d": "05-09",
+    "n": "Christi Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-19",
+    "n": "Pfingstsonntag",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "Pfingstmontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-30",
+    "n": "Fronleichnam",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "09-24",
+    "n": "Rupertitag",
+    "t": "rest",
+    "r": [
+     "AT-5"
+    ]
+   },
+   {
+    "d": "10-26",
+    "n": "Nationalfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Martinstag",
+    "t": "rest",
+    "r": [
+     "AT-1"
+    ]
+   },
+   {
+    "d": "11-15",
+    "n": "Leopolditag",
+    "t": "rest",
+    "r": [
+     "AT-3",
+     "AT-9"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stefanitag",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "AT-2",
+     "AT-6",
+     "AT-7",
+     "AT-8"
+    ]
+   },
+   {
+    "d": "04-20",
+    "n": "Ostersonntag",
+    "t": "rest"
+   },
+   {
+    "d": "04-21",
+    "n": "Ostermontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Staatsfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Florianitag",
+    "t": "rest",
+    "r": [
+     "AT-4"
+    ]
+   },
+   {
+    "d": "05-29",
+    "n": "Christi Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "06-08",
+    "n": "Pfingstsonntag",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Pfingstmontag",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Fronleichnam",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "09-24",
+    "n": "Rupertitag",
+    "t": "rest",
+    "r": [
+     "AT-5"
+    ]
+   },
+   {
+    "d": "10-26",
+    "n": "Nationalfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Martinstag",
+    "t": "rest",
+    "r": [
+     "AT-1"
+    ]
+   },
+   {
+    "d": "11-15",
+    "n": "Leopolditag",
+    "t": "rest",
+    "r": [
+     "AT-3",
+     "AT-9"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stefanitag",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "AT-2",
+     "AT-6",
+     "AT-7",
+     "AT-8"
+    ]
+   },
+   {
+    "d": "04-05",
+    "n": "Ostersonntag",
+    "t": "rest"
+   },
+   {
+    "d": "04-06",
+    "n": "Ostermontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Staatsfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Florianitag",
+    "t": "rest",
+    "r": [
+     "AT-4"
+    ]
+   },
+   {
+    "d": "05-14",
+    "n": "Christi Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-24",
+    "n": "Pfingstsonntag",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Pfingstmontag",
+    "t": "rest"
+   },
+   {
+    "d": "06-04",
+    "n": "Fronleichnam",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "09-24",
+    "n": "Rupertitag",
+    "t": "rest",
+    "r": [
+     "AT-5"
+    ]
+   },
+   {
+    "d": "10-26",
+    "n": "Nationalfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Martinstag",
+    "t": "rest",
+    "r": [
+     "AT-1"
+    ]
+   },
+   {
+    "d": "11-15",
+    "n": "Leopolditag",
+    "t": "rest",
+    "r": [
+     "AT-3",
+     "AT-9"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stefanitag",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest"
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "AT-2",
+     "AT-6",
+     "AT-7",
+     "AT-8"
+    ]
+   },
+   {
+    "d": "03-28",
+    "n": "Ostersonntag",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Ostermontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Staatsfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "05-04",
+    "n": "Florianitag",
+    "t": "rest",
+    "r": [
+     "AT-4"
+    ]
+   },
+   {
+    "d": "05-06",
+    "n": "Christi Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-16",
+    "n": "Pfingstsonntag",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Pfingstmontag",
+    "t": "rest"
+   },
+   {
+    "d": "05-27",
+    "n": "Fronleichnam",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest"
+   },
+   {
+    "d": "09-24",
+    "n": "Rupertitag",
+    "t": "rest",
+    "r": [
+     "AT-5"
+    ]
+   },
+   {
+    "d": "10-26",
+    "n": "Nationalfeiertag",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest"
+   },
+   {
+    "d": "11-11",
+    "n": "Martinstag",
+    "t": "rest",
+    "r": [
+     "AT-1"
+    ]
+   },
+   {
+    "d": "11-15",
+    "n": "Leopolditag",
+    "t": "rest",
+    "r": [
+     "AT-3",
+     "AT-9"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stefanitag",
+    "t": "rest"
+   }
+  ]
+ }
+}

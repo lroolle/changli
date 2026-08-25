@@ -1,0 +1,1659 @@
+{
+ "code": "CH",
+ "name": {
+  "en": "Switzerland",
+  "zh-Hans": "瑞士",
+  "zh-Hant": "瑞士"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "CH-BE": "CH-BE",
+  "CH-FR": "CH-FR",
+  "CH-SH": "CH-SH",
+  "CH-AG": "CH-AG",
+  "CH-TG": "CH-TG",
+  "CH-VD": "CH-VD",
+  "CH-TI": "CH-TI",
+  "CH-UR": "CH-UR",
+  "CH-SZ": "CH-SZ",
+  "CH-NE": "CH-NE",
+  "CH-VS": "CH-VS",
+  "CH-LU": "CH-LU",
+  "CH-NW": "CH-NW",
+  "CH-ZH": "CH-ZH",
+  "CH-OW": "CH-OW",
+  "CH-GL": "CH-GL",
+  "CH-ZG": "CH-ZG",
+  "CH-SO": "CH-SO",
+  "CH-BS": "CH-BS",
+  "CH-BL": "CH-BL",
+  "CH-AR": "CH-AR",
+  "CH-AI": "CH-AI",
+  "CH-SG": "CH-SG",
+  "CH-GR": "CH-GR",
+  "CH-GE": "CH-GE",
+  "CH-JU": "CH-JU"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/CH"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Berchtoldstag",
+    "t": "rest",
+    "r": [
+     "CH-BE",
+     "CH-FR",
+     "CH-SH",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Jahrestag der Ausrufung der Republik",
+    "t": "rest",
+    "r": [
+     "CH-NE"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-SZ",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-NW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Karfreitag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-NE",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-01",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-01",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "04-04",
+    "n": "Näfelser Fahrt",
+    "t": "rest",
+    "r": [
+     "CH-GL"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-NE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-TG",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-09",
+    "n": "Auffahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-20",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-20",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AI",
+     "CH-AG",
+     "CH-VS",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-30",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-29",
+    "n": "Peter und Paul",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "08-01",
+    "n": "Bundesfeier",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "09-05",
+    "n": "Jeûne genevois",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   },
+   {
+    "d": "09-15",
+    "n": "Eidgenössischer Dank-, Buss- und Bettag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR"
+    ]
+   },
+   {
+    "d": "09-16",
+    "n": "Bettagsmontag",
+    "t": "rest",
+    "r": [
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-SG",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-AG",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU",
+     "CH-LU",
+     "CH-SZ",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-AR",
+     "CH-AI"
+    ]
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "12-31",
+    "n": "Restauration de la République",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Berchtoldstag",
+    "t": "rest",
+    "r": [
+     "CH-BE",
+     "CH-FR",
+     "CH-SH",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Jahrestag der Ausrufung der Republik",
+    "t": "rest",
+    "r": [
+     "CH-NE"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-SZ",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-NW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "04-04",
+    "n": "Näfelser Fahrt",
+    "t": "rest",
+    "r": [
+     "CH-GL"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Karfreitag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-NE",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-21",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-21",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-NE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-TG",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-29",
+    "n": "Auffahrt",
+    "t": "rest"
+   },
+   {
+    "d": "06-09",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-19",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AI",
+     "CH-AG",
+     "CH-VS",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "06-19",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-29",
+    "n": "Peter und Paul",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "08-01",
+    "n": "Bundesfeier",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "09-11",
+    "n": "Jeûne genevois",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   },
+   {
+    "d": "09-21",
+    "n": "Eidgenössischer Dank-, Buss- und Bettag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR"
+    ]
+   },
+   {
+    "d": "09-22",
+    "n": "Bettagsmontag",
+    "t": "rest",
+    "r": [
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-SG",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-AG",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU",
+     "CH-LU",
+     "CH-SZ",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-AR",
+     "CH-AI"
+    ]
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "12-31",
+    "n": "Restauration de la République",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Berchtoldstag",
+    "t": "rest",
+    "r": [
+     "CH-BE",
+     "CH-FR",
+     "CH-SH",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Jahrestag der Ausrufung der Republik",
+    "t": "rest",
+    "r": [
+     "CH-NE"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-SZ",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-NW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Karfreitag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-NE",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-04",
+    "n": "Näfelser Fahrt",
+    "t": "rest",
+    "r": [
+     "CH-GL"
+    ]
+   },
+   {
+    "d": "04-06",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "04-06",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-NE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-TG",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-14",
+    "n": "Auffahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-25",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-25",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-04",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AI",
+     "CH-AG",
+     "CH-VS",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "06-04",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-29",
+    "n": "Peter und Paul",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "08-01",
+    "n": "Bundesfeier",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "09-10",
+    "n": "Jeûne genevois",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   },
+   {
+    "d": "09-20",
+    "n": "Eidgenössischer Dank-, Buss- und Bettag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR"
+    ]
+   },
+   {
+    "d": "09-21",
+    "n": "Bettagsmontag",
+    "t": "rest",
+    "r": [
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-SG",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-AG",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU",
+     "CH-LU",
+     "CH-SZ",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "12-31",
+    "n": "Restauration de la République",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Neujahr",
+    "t": "rest"
+   },
+   {
+    "d": "01-02",
+    "n": "Berchtoldstag",
+    "t": "rest",
+    "r": [
+     "CH-BE",
+     "CH-FR",
+     "CH-SH",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "01-06",
+    "n": "Heilige Drei Könige",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ"
+    ]
+   },
+   {
+    "d": "03-01",
+    "n": "Jahrestag der Ausrufung der Republik",
+    "t": "rest",
+    "r": [
+     "CH-NE"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-SZ",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "03-19",
+    "n": "Josefstag",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-NW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Karfreitag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-NE",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Ostermontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "04-04",
+    "n": "Näfelser Fahrt",
+    "t": "rest",
+    "r": [
+     "CH-GL"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-NE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-01",
+    "n": "Tag der Arbeit",
+    "t": "rest",
+    "r": [
+     "CH-TG",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-06",
+    "n": "Auffahrt",
+    "t": "rest"
+   },
+   {
+    "d": "05-17",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-AR",
+     "CH-AI",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-VD",
+     "CH-GE",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-17",
+    "n": "Pfingstmontag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "05-27",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AI",
+     "CH-AG",
+     "CH-VS",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "05-27",
+    "n": "Fronleichnam",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "06-29",
+    "n": "Peter und Paul",
+    "t": "rest",
+    "r": [
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "08-01",
+    "n": "Bundesfeier",
+    "t": "rest"
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Maria Himmelfahrt",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "09-09",
+    "n": "Jeûne genevois",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   },
+   {
+    "d": "09-19",
+    "n": "Eidgenössischer Dank-, Buss- und Bettag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-SO",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR"
+    ]
+   },
+   {
+    "d": "09-20",
+    "n": "Bettagsmontag",
+    "t": "rest",
+    "r": [
+     "CH-VD"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-LU",
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW",
+     "CH-NW",
+     "CH-GL",
+     "CH-ZG",
+     "CH-FR",
+     "CH-SO",
+     "CH-SG",
+     "CH-AG",
+     "CH-TI",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "11-01",
+    "n": "Allerheiligen",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-OW",
+     "CH-NW",
+     "CH-ZG",
+     "CH-FR",
+     "CH-AG",
+     "CH-VS"
+    ]
+   },
+   {
+    "d": "12-08",
+    "n": "Mariä Empfängnis",
+    "t": "rest",
+    "r": [
+     "CH-AI",
+     "CH-JU",
+     "CH-LU",
+     "CH-SZ",
+     "CH-TI"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Weihnachten",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-ZH",
+     "CH-BE",
+     "CH-LU",
+     "CH-GL",
+     "CH-FR",
+     "CH-BS",
+     "CH-BL",
+     "CH-SH",
+     "CH-SG",
+     "CH-GR",
+     "CH-AG",
+     "CH-TG",
+     "CH-TI",
+     "CH-AR",
+     "CH-AI"
+    ]
+   },
+   {
+    "d": "12-26",
+    "n": "Stephanstag",
+    "t": "rest",
+    "r": [
+     "CH-UR",
+     "CH-SZ",
+     "CH-OW"
+    ]
+   },
+   {
+    "d": "12-31",
+    "n": "Restauration de la République",
+    "t": "rest",
+    "r": [
+     "CH-GE"
+    ]
+   }
+  ]
+ }
+}

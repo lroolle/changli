@@ -1,0 +1,409 @@
+{
+ "code": "PT",
+ "name": {
+  "en": "Portugal",
+  "zh-Hans": "葡萄牙",
+  "zh-Hant": "葡萄牙"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "PT-20": "PT-20",
+  "PT-30": "PT-30"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/PT"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "Ano Novo",
+    "t": "rest"
+   },
+   {
+    "d": "02-13",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "03-29",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "03-31",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Dia da Liberdade",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "05-30",
+    "n": "Corpo de Deus",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Dia dos Açores",
+    "t": "rest",
+    "r": [
+     "PT-20"
+    ]
+   },
+   {
+    "d": "06-10",
+    "n": "Dia de Portugal, de Camões e das Comunidades Portuguesas",
+    "t": "rest"
+   },
+   {
+    "d": "07-01",
+    "n": "Dia da Madeira",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Assunção de Nossa Senhora",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Implantação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Dia de Todos-os-Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Restauração da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Imaculada Conceição",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Primeira Oitava",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "Ano Novo",
+    "t": "rest"
+   },
+   {
+    "d": "03-04",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "04-18",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "04-20",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Dia da Liberdade",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Dia dos Açores",
+    "t": "rest",
+    "r": [
+     "PT-20"
+    ]
+   },
+   {
+    "d": "06-10",
+    "n": "Dia de Portugal, de Camões e das Comunidades Portuguesas",
+    "t": "rest"
+   },
+   {
+    "d": "06-19",
+    "n": "Corpo de Deus",
+    "t": "rest"
+   },
+   {
+    "d": "07-01",
+    "n": "Dia da Madeira",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Assunção de Nossa Senhora",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Implantação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Dia de Todos-os-Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Restauração da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Imaculada Conceição",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Primeira Oitava",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "Ano Novo",
+    "t": "rest"
+   },
+   {
+    "d": "02-17",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "04-03",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "04-05",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Dia da Liberdade",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Dia dos Açores",
+    "t": "rest",
+    "r": [
+     "PT-20"
+    ]
+   },
+   {
+    "d": "06-04",
+    "n": "Corpo de Deus",
+    "t": "rest"
+   },
+   {
+    "d": "06-10",
+    "n": "Dia de Portugal, de Camões e das Comunidades Portuguesas",
+    "t": "rest"
+   },
+   {
+    "d": "07-01",
+    "n": "Dia da Madeira",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Assunção de Nossa Senhora",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Implantação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Dia de Todos-os-Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Restauração da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Imaculada Conceição",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Primeira Oitava",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "Ano Novo",
+    "t": "rest"
+   },
+   {
+    "d": "02-09",
+    "n": "Carnaval",
+    "t": "rest"
+   },
+   {
+    "d": "03-26",
+    "n": "Sexta-feira Santa",
+    "t": "rest"
+   },
+   {
+    "d": "03-28",
+    "n": "Domingo de Páscoa",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Dia da Liberdade",
+    "t": "rest"
+   },
+   {
+    "d": "05-01",
+    "n": "Dia do Trabalhador",
+    "t": "rest"
+   },
+   {
+    "d": "05-27",
+    "n": "Corpo de Deus",
+    "t": "rest"
+   },
+   {
+    "d": "06-01",
+    "n": "Dia dos Açores",
+    "t": "rest",
+    "r": [
+     "PT-20"
+    ]
+   },
+   {
+    "d": "06-10",
+    "n": "Dia de Portugal, de Camões e das Comunidades Portuguesas",
+    "t": "rest"
+   },
+   {
+    "d": "07-01",
+    "n": "Dia da Madeira",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   },
+   {
+    "d": "08-15",
+    "n": "Assunção de Nossa Senhora",
+    "t": "rest"
+   },
+   {
+    "d": "10-05",
+    "n": "Implantação da República",
+    "t": "rest"
+   },
+   {
+    "d": "11-01",
+    "n": "Dia de Todos-os-Santos",
+    "t": "rest"
+   },
+   {
+    "d": "12-01",
+    "n": "Restauração da Independência",
+    "t": "rest"
+   },
+   {
+    "d": "12-08",
+    "n": "Imaculada Conceição",
+    "t": "rest"
+   },
+   {
+    "d": "12-25",
+    "n": "Natal",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Primeira Oitava",
+    "t": "rest",
+    "r": [
+     "PT-30"
+    ]
+   }
+  ]
+ }
+}

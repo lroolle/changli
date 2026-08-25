@@ -1,0 +1,875 @@
+{
+ "code": "AU",
+ "name": {
+  "en": "Australia",
+  "zh-Hans": "澳大利亚",
+  "zh-Hant": "澳洲"
+ },
+ "weekend": [
+  6,
+  7
+ ],
+ "regions": {
+  "AU-WA": "AU-WA",
+  "AU-ACT": "AU-ACT",
+  "AU-SA": "AU-SA",
+  "AU-TAS": "AU-TAS",
+  "AU-VIC": "AU-VIC",
+  "AU-NSW": "AU-NSW",
+  "AU-NT": "AU-NT",
+  "AU-QLD": "AU-QLD"
+ },
+ "sources": [
+  "https://date.nager.at/api/v3/PublicHolidays/{year}/AU"
+ ],
+ "coverage": {
+  "from": 2024,
+  "to": 2027
+ },
+ "years": {
+  "2024": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Australia Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-04",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "03-11",
+    "n": "Canberra Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "03-11",
+    "n": "Adelaide Cup Day",
+    "t": "rest",
+    "r": [
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "03-11",
+    "n": "Eight Hours Day",
+    "t": "rest",
+    "r": [
+     "AU-TAS"
+    ]
+   },
+   {
+    "d": "03-11",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "03-30",
+    "n": "Easter Eve",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "03-31",
+    "n": "Easter Sunday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "04-01",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "05-06",
+    "n": "May Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "05-06",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "05-27",
+    "n": "Reconciliation Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "06-03",
+    "n": "Western Australia Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "06-10",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "08-05",
+    "n": "Picnic Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "09-27",
+    "n": "Friday before AFL Grand Final",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "09-30",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "10-07",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "10-07",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "11-05",
+    "n": "Melbourne Cup",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2025": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-27",
+    "n": "Australia Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-03",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "03-10",
+    "n": "Canberra Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "03-10",
+    "n": "Adelaide Cup Day",
+    "t": "rest",
+    "r": [
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "03-10",
+    "n": "Eight Hours Day",
+    "t": "rest",
+    "r": [
+     "AU-TAS"
+    ]
+   },
+   {
+    "d": "03-10",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-18",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-19",
+    "n": "Easter Eve",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-20",
+    "n": "Easter Sunday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "04-21",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest"
+   },
+   {
+    "d": "05-05",
+    "n": "May Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "05-05",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "06-02",
+    "n": "Reconciliation Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "06-02",
+    "n": "Western Australia Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "06-09",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "08-04",
+    "n": "Picnic Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "09-26",
+    "n": "Friday before AFL Grand Final",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "09-29",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "10-06",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "10-06",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "11-04",
+    "n": "Melbourne Cup",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-26",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2026": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Australia Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-02",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "03-09",
+    "n": "Canberra Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "03-09",
+    "n": "Adelaide Cup Day",
+    "t": "rest",
+    "r": [
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "03-09",
+    "n": "Eight Hours Day",
+    "t": "rest",
+    "r": [
+     "AU-TAS"
+    ]
+   },
+   {
+    "d": "03-09",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-03",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "04-04",
+    "n": "Easter Eve",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-05",
+    "n": "Easter Sunday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "04-06",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-27",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-NSW",
+     "AU-ACT",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-NT",
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "05-04",
+    "n": "May Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "05-04",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "06-01",
+    "n": "Reconciliation Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "06-01",
+    "n": "Western Australia Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "06-08",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "08-03",
+    "n": "Picnic Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "09-25",
+    "n": "Friday before AFL Grand Final",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "09-28",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "10-05",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "10-05",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "11-03",
+    "n": "Melbourne Cup",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "12-25",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ],
+  "2027": [
+   {
+    "d": "01-01",
+    "n": "New Year's Day",
+    "t": "rest"
+   },
+   {
+    "d": "01-26",
+    "n": "Australia Day",
+    "t": "rest"
+   },
+   {
+    "d": "03-01",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "03-08",
+    "n": "Canberra Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "03-08",
+    "n": "Adelaide Cup Day",
+    "t": "rest",
+    "r": [
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "03-08",
+    "n": "Eight Hours Day",
+    "t": "rest",
+    "r": [
+     "AU-TAS"
+    ]
+   },
+   {
+    "d": "03-08",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "03-26",
+    "n": "Good Friday",
+    "t": "rest"
+   },
+   {
+    "d": "03-27",
+    "n": "Easter Eve",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "03-28",
+    "n": "Easter Sunday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-QLD",
+     "AU-SA",
+     "AU-VIC",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "03-29",
+    "n": "Easter Monday",
+    "t": "rest"
+   },
+   {
+    "d": "04-25",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "04-26",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-NSW",
+     "AU-ACT",
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "04-26",
+    "n": "Anzac Day",
+    "t": "rest",
+    "r": [
+     "AU-NT",
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "05-03",
+    "n": "May Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "05-03",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "05-31",
+    "n": "Reconciliation Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT"
+    ]
+   },
+   {
+    "d": "06-07",
+    "n": "Western Australia Day",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "06-14",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-NT",
+     "AU-SA",
+     "AU-TAS",
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "08-02",
+    "n": "Picnic Day",
+    "t": "rest",
+    "r": [
+     "AU-NT"
+    ]
+   },
+   {
+    "d": "09-24",
+    "n": "Friday before AFL Grand Final (Tentative Date)",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "09-27",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-WA"
+    ]
+   },
+   {
+    "d": "10-04",
+    "n": "Labour Day",
+    "t": "rest",
+    "r": [
+     "AU-ACT",
+     "AU-NSW",
+     "AU-SA"
+    ]
+   },
+   {
+    "d": "10-04",
+    "n": "King's Birthday",
+    "t": "rest",
+    "r": [
+     "AU-QLD"
+    ]
+   },
+   {
+    "d": "11-02",
+    "n": "Melbourne Cup",
+    "t": "rest",
+    "r": [
+     "AU-VIC"
+    ]
+   },
+   {
+    "d": "12-27",
+    "n": "Christmas Day",
+    "t": "rest"
+   },
+   {
+    "d": "12-28",
+    "n": "Boxing Day",
+    "t": "rest"
+   }
+  ]
+ }
+}
