@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thevibeworks/changli.git"
+    "url": "https://github.com/lroolle/changli.git"
   },
-  "homepage": "https://github.com/thevibeworks/changli",
+  "homepage": "https://github.com/lroolle/changli",
   "bin": {
     "changli-mcp": "./mcp/server.mjs"
   },
