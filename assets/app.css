@@ -101,10 +101,16 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 .controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
 
 /* --- the ribbon: the 節氣盤 unrolled ------------------------------------ */
+/* The ribbon holds its place under the masthead. On an endless sheet a minimap
+ * that scrolls away is gone exactly when it is wanted: this lane is how the
+ * reader sees the whole year at once and how they glide to another part of it,
+ * so it stays and the sheet moves underneath. --chrome-h is measured in ui.js,
+ * because this bar's height changes with the viewport. */
 .ribbon-wrap {
   padding: var(--space-3) var(--space-5) var(--space-2);
   border-bottom: var(--line-w) solid var(--line);
   background: var(--surface);
+  position: sticky; top: var(--masthead-h, 3.9rem); z-index: 11;
 }
 .ribbon-head {
   display: flex; align-items: center; gap: var(--space-2);
@@ -188,12 +194,12 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 .gh {
   grid-column: 2 / span 7;
   display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
-  position: sticky; top: 3.9rem; z-index: 8;
+  position: sticky; top: var(--sheet-top, 3.9rem); z-index: 8;
   background: var(--bg);
   border-bottom: var(--line-w) solid var(--line-strong);
 }
 .gh-gutter {
-  position: sticky; top: 3.9rem; z-index: 8;
+  position: sticky; top: var(--sheet-top, 3.9rem); z-index: 8;
   background: var(--bg); border-bottom: var(--line-w) solid var(--line-strong);
 }
 .gh span {
@@ -215,7 +221,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 }
 .gutter[data-band="1"] { background: var(--surface-2); }
 .gutter b {
-  position: sticky; top: 6.6rem;
+  position: sticky; top: calc(var(--sheet-top, 3.9rem) + 2.7rem);
   display: block; padding: var(--space-2) 0;
   font-family: var(--font-almanac); font-weight: 600;
   font-size: var(--text-xs); color: var(--fg-2);
@@ -356,8 +362,16 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
   border: var(--line-w) solid var(--line);
   border-left: 2px solid var(--mark-edge);
 }
-/* One height whether it is hinting or acting, so the sheet below never moves. */
-.markbar { min-height: 2.6rem; }
+/* One height whether it is hinting or acting, so the sheet below never moves --
+ * and pinned under the ribbon, because the sheet is endless. Selecting days
+ * four screens down the year is useless if the labels stayed at the top of the
+ * document: the reader drags, nothing appears to happen, and the chips they
+ * needed are a thousand pixels above. Sticky keeps its place in the flow, so
+ * pinning it costs no shift. */
+.markbar {
+  min-height: 2.6rem;
+  position: sticky; top: var(--chrome-h, 3.9rem); z-index: 9;
+}
 .mb-live { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); flex: 1; }
 .mb-live[hidden], .mb-hint[hidden] { display: none; }
 .mb-hint { font-size: var(--text-xs); color: var(--fg-3); }
@@ -592,6 +606,9 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 }
 @media (max-width: 720px) {
   .masthead { position: static; padding-inline: var(--space-3); }
+  .ribbon-wrap { position: static; }
+  /* the bar still pins on a phone: it is the only way to reach the labels */
+  .markbar { top: 0; }
   .brand { margin-inline-end: 0; width: 100%; }
   .controls { width: 100%; gap: var(--space-2); }
   .ribbon-wrap { padding-inline: var(--space-3); }

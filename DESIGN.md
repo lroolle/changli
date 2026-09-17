@@ -99,6 +99,14 @@ weekday columns, and every row is a real consecutive week.
   rule that makes the band agree with the label instead of fighting it.
 - `blocks` layout exists for people who want the familiar month card and
   reuses the same cells; it is the only place a blank pad cell may appear.
+- The chrome **stays**: masthead, ribbon, mark bar and weekday header are all
+  sticky, stacked in that order, and the sheet glides beneath them. On an
+  endless surface anything that scrolls away is gone exactly when it is wanted
+  -- the ribbon is how a whole year is read and how the reader travels, and the
+  mark bar is how a selection becomes a mark. A selection made four screens
+  down is useless if its labels stayed at the top of the document. Offsets are
+  measured into `--masthead-h` / `--chrome-h` / `--sheet-top` by `ui.js`,
+  because each bar's height changes with the viewport.
 - Every cell reserves a **lane** at its bottom edge (`--lane`) whether or not it
   carries a mark. A ruled diary leaves one; here it also means writing a label
   never grows a row, which the scrolling sheet depends on.

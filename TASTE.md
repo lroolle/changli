@@ -3,6 +3,26 @@
 One entry per real rejection, with the mechanism. A scar without a why is a
 ban, and bans fossilize. Delete a scar the moment its expiry arrives.
 
+## 2026-09-16 rejected: chrome that scrolls away on an endless sheet
+
+Why: making `flow` scroll forever quietly broke two things that had been fine
+when the view was a bounded page. The ribbon -- the whole year at a glance, and
+the handle you drag to travel -- scrolled off after one flick, so the minimap
+was gone exactly when there was finally something to navigate. Worse, the mark
+bar went with it: selecting days four screens into next year left the labels a
+thousand pixels above the fold, so the reader dragged, saw nothing happen, and
+concluded marking was broken. It was, in the only sense that counts.
+
+Reuse: when a surface becomes endless, every control that acts on it has to be
+re-sited. Sticky keeps an element's place in the flow, so pinning the mark bar
+costs no shift -- the reason its height was already reserved. Offsets stack
+masthead -> ribbon -> mark bar -> weekday header and are measured at runtime,
+never hardcoded, because each bar changes height with the viewport.
+
+Expires: never. The trade is real -- the stack costs about 270px of a 900px
+viewport -- and it is the right trade: nine rows you can act on beat thirteen
+you cannot.
+
 ## 2026-09-16 rejected: the mark bar that appears when you select
 
 Why: the bar holding the label chips was hidden until days were selected --

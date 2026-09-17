@@ -953,6 +953,27 @@ function goTo(day) {
 }
 
 /**
+ * Glide: the same travel, but cheap enough to do on every pointermove.
+ *
+ * Dragging the ribbon asks for a new date sixty times a second. Rebuilding the
+ * sheet each time is both wasteful and visibly stuttery, and the ribbon is
+ * supposed to track the pointer 1:1. So when the target week is already in the
+ * DOM -- which it is for most of a drag, the spine being far wider than the
+ * viewport -- just scroll to it. Only a drag that leaves the built sheet pays
+ * for a rebuild.
+ */
+function glideTo(day) {
+  if (!scrolling()) {
+    const a = anchorFor(day);
+    if (a !== state.anchor) { state.anchor = a; render(); }
+    return;
+  }
+  const week = weekStart(day);
+  if (rowEl(week)) { scrollRowToTop(week); syncView(); }
+  else goTo(day);
+}
+
+/**
  * What is on screen, from the scroll position.
  *
  * Binary search over the rows rather than dividing by a row height: a week
@@ -1374,17 +1395,12 @@ document.addEventListener('click', (e) => {
     // Grab inside the window: carry it. Outside: jump the window here first.
     const inside = day >= r.from && day <= r.to;
     rdrag = { offset: inside ? day - r.from : 0 };
-    if (!inside) goTo(day);
+    if (!inside) glideTo(day);
   });
 
   svg.addEventListener('pointermove', (e) => {
     if (!rdrag) return;
-    const target = dayAt(e.clientX) - rdrag.offset;
-    if (scrolling()) goTo(target);
-    else {
-      const a = anchorFor(target);
-      if (a !== state.anchor) { state.anchor = a; render(); }
-    }
+    glideTo(dayAt(e.clientX) - rdrag.offset);
   });
 
   const endDrag = (e) => {
@@ -1399,12 +1415,42 @@ document.addEventListener('click', (e) => {
   svg.addEventListener('pointercancel', endDrag);
 }
 
+/**
+ * Measure the fixed chrome: masthead, then masthead + ribbon.
+ *
+ * The weekday header and the month label stick *below* the ribbon, and the
+ * ribbon's height changes with the viewport (the svg is shorter on a phone,
+ * the controls wrap). Hardcoding the offsets meant the header either floated
+ * over the ribbon or left a gap under it, so they are measured and published
+ * as --masthead-h / --chrome-h.
+ */
+function measureChrome() {
+  const masthead = $('.masthead');
+  const ribbon = $('.ribbon-wrap');
+  const root = document.documentElement;
+  // Static below 720px: the offsets are only meaningful while they are sticky.
+  const stuck = getComputedStyle(masthead).position === 'sticky';
+  const mh = stuck ? masthead.offsetHeight : 0;
+  const chrome = stuck ? mh + ribbon.offsetHeight : 0;
+  root.style.setProperty('--masthead-h', `${mh}px`);
+  root.style.setProperty('--chrome-h', `${chrome}px`);
+  // The sheet's own header stacks below the mark bar, which pins in both
+  // layouts -- on a phone it is the only way to reach the labels at all.
+  root.style.setProperty('--sheet-top',
+    `${chrome + ($('#markbar')?.offsetHeight || 0)}px`);
+}
+
 // keep the ribbon honest when the viewport changes
 let ro;
 if (window.ResizeObserver) {
-  ro = new ResizeObserver(() => renderRibbon());
+  ro = new ResizeObserver(() => { renderRibbon(); measureChrome(); });
   ro.observe($('#ribbon'));
+  ro.observe($('.masthead'));
+  // the bar changes height when the chips wrap at a narrow width
+  ro.observe($('#markbar'));
 }
+addEventListener('resize', measureChrome);
 
 buildChips();
+measureChrome();
 render();
