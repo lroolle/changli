@@ -12,8 +12,10 @@ $ changli plan-leave CN 2026-08-01 2026-10-31
   Burn 3 days (Sep 28, 29, 30) -> 13 consecutive days off, Sep 25 to Oct 7.
 ```
 
-Two halves: a **continuous calendar** you can actually plan a quarter in, and a
-**deterministic rules engine** over 47 jurisdictions, exposed to agents over MCP.
+Three parts: a **continuous calendar** you can actually plan a quarter in and
+scroll forever, **marks** you write on it and export to Google or Apple
+Calendar, and a **deterministic rules engine** over 47 jurisdictions, exposed to
+agents over MCP.
 
 ![the three-month view](docs/shot-1440.png)
 
@@ -34,6 +36,40 @@ divided by a rule and a gutter label, never by a gap.
 ```
 python3 -m http.server 8811    # then open http://localhost:8811
 ```
+
+## Marking, exporting, subscribing
+
+Drag across the days you are taking. Hold <kbd>⌘</kbd> and drag again to add a
+second run somewhere else in the year. Double-click any day to select the whole
+run it belongs to -- the entire 国庆 break, or the stretch of workdays between
+two of them. Click a month in the gutter to take the month.
+
+Then write a label across what you selected: 年假, 调休, 病假, 事假, 出差, 纪念,
+or your own text. <kbd>1</kbd>–<kbd>6</kbd> do it from the keyboard, <kbd>0</kbd>
+takes it back off. A 拼假 suggestion selects the days you would burn, so
+accepting one is two clicks: the suggestion, then the label.
+
+Marks are runs, not days -- "年假 9月28日—10月7日" is one thing you decided once.
+They are drawn in graphite in the lane under each day, never in a colour,
+because the four status colours on this sheet mean 休 / 班 / 周末 / 工作日 and
+nothing else. They live in this browser's localStorage and go nowhere else.
+
+```
+导出我的标记 .ics        one all-day event per run, built in the tab
+导出本视图法定假日 .ics   the 休/班 of the years you are looking at
+```
+
+And two feeds your calendar re-reads on its own, so 2027's 调休 arrives without
+you doing anything:
+
+```
+webcal://changli.claw-lab.com/feed/cn-holidays.ics   休 runs + every 调休 workday
+webcal://changli.claw-lab.com/feed/cn-terms.ics      24 节气 + traditional festivals
+```
+
+Policy and astronomy stay in separate feeds on purpose: one is published a year
+at a time and can change, the other is computed and will not. Regenerate both
+with `npm run data:ics`.
 
 ## The rules engine
 
@@ -106,6 +142,10 @@ npm test
   1970–2070: **0 differences in 36,890 days and 2,424 solar terms.**
 - **39 solver anchors**, every one computable by hand. If the solver and a
   pencil disagree, the solver is wrong.
+- **77 mark and export anchors**: where a run algebra loses a day at its edges,
+  and the three things that decide whether a calendar app accepts a file at all
+  -- the exclusive `DTEND`, folding at 75 *octets* rather than characters, and
+  CRLF everywhere.
 
 ## Running and deploying
 
@@ -135,10 +175,12 @@ through `.github/workflows/deploy.yml`, which runs `npm test` first.
 ```
 npm run data:jurisdictions    # 47 jurisdictions from three sources
 npm run data:holidays         # CN, from the published notices
+npm run data:ics              # the two subscribable feeds in feed/
 python3 test/gen-ephemeris.py # JPL DE440s (needs skyfield)
 ```
 
-The ephemeris regenerates byte-identical. Holiday sources are cited per year in
+The ephemeris and the feeds both regenerate byte-identical -- the feeds carry a
+pinned `DTSTAMP`, so a regeneration with no data change produces no diff. Holiday sources are cited per year in
 each jurisdiction file.
 
 ## Layout
@@ -152,7 +194,10 @@ src/holidays.js       GENERATED: State Council notices, 2015-2026
 src/calendar.js       day records, the status program, 拼假
 src/rules.js          the multi-jurisdiction solver
 src/schengen.js       the 90/180 rule
-src/ui.js             views, selection, the ribbon
+src/ui.js             views, selection, the scrolling spine, the ribbon
+src/marks.js          run algebra and the mark store -- pure, no DOM
+src/ics.js            RFC 5545 out: exclusive DTEND, 75-octet folds, CRLF
+feed/*.ics            GENERATED: the subscribable calendars
 data/jurisdictions/   the rules corpus, 47 jurisdictions
 mcp/server.mjs        MCP server, 8 tools, zero deps
 DESIGN.md             the material contract — read before touching the UI
@@ -161,9 +206,11 @@ docs/product-brief.md where this is going
 
 ## Status
 
-The web UI currently renders the CN calendar; the multi-jurisdiction engine is
-complete, tested and reachable through MCP and the JS API, and is being wired
-into the UI next. See `docs/product-brief.md`.
+The web UI renders the CN calendar, scrolls continuously, and takes marks you
+can export or subscribe to. The multi-jurisdiction engine is complete, tested
+and reachable through MCP and the JS API, and is being wired into the UI next.
+Marks are per-browser; there is no account and no sync back from a calendar
+app. See `docs/product-brief.md`.
 
 ## Credits
 

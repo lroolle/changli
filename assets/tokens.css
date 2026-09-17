@@ -63,6 +63,18 @@
   --st-workday-ink:   var(--fg);
   --st-hatch:         oklch(0.760 0.012 240);   /* the 班 section hatching */
 
+  /* --- the reader's hand -------------------------------------------
+   * Marks are not a fifth status role and carry no hue. The sheet is what
+   * the State Council and the sky decided; a mark is what *you* decided, so
+   * it is drawn in a different material -- graphite over print -- and the
+   * status program keeps every drop of colour. Neutral, never chroma 0,
+   * because nothing on this paper is.
+   */
+  --mark-ink:   oklch(0.405 0.014 240);   /* the written label */
+  --mark-rule:  oklch(0.620 0.013 240);   /* the lane's hairline */
+  --mark-field: oklch(0.888 0.010 240);   /* the lane itself */
+  --mark-edge:  oklch(0.330 0.016 240);   /* the brace at a run's ends */
+
   /* type faces -- decided once.
    * No webfont: a CJK face is 5-20 MB and this tool has to open offline and
    * instantly. So the stacks are named explicitly, Song-led for the almanac
@@ -166,6 +178,12 @@
   --st-workday-field: transparent;
   --st-workday-ink:   var(--fg);
   --st-hatch:         oklch(0.400 0.020 240);
+
+  /* the hand, in the stone rubbing: chalk on ink rather than graphite on paper */
+  --mark-ink:   oklch(0.815 0.013 240);
+  --mark-rule:  oklch(0.480 0.020 240);
+  --mark-field: oklch(0.292 0.023 240);
+  --mark-edge:  oklch(0.880 0.012 240);
 
   --shadow-1: 0 1px 2px oklch(0.08 0.01 240 / 0.45), 0 2px 8px oklch(0.08 0.01 240 / 0.35);
   --shadow-2: 0 4px 12px oklch(0.08 0.01 240 / 0.50), 0 16px 40px oklch(0.08 0.01 240 / 0.55);

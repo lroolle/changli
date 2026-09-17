@@ -3,6 +3,71 @@
 One entry per real rejection, with the mechanism. A scar without a why is a
 ban, and bans fossilize. Delete a scar the moment its expiry arrives.
 
+## 2026-09-16 rejected: the mark bar that appears when you select
+
+Why: the bar holding the label chips was hidden until days were selected --
+correct-looking, and a correctness bug. It sits above the sheet, so un-hiding it
+on the first pointerdown pushed every row down by its own height, mid-drag,
+under a pointer that had not moved. A drag from 9月7日 to 9月16日 selected three
+days: the rows had travelled a row's worth while the reader held still.
+
+Reuse: the bar is always present and swaps its contents -- hint when idle,
+span and chips when acting. Anything above the grid that can appear must
+instead reserve its space. Same family as the 2026-08-24 re-render scar: **the
+surface must not move under a drag**, whether it is rebuilt or merely reflowed.
+
+Expires: never.
+
+## 2026-09-16 rejected: compensating every prepend on the scrolling sheet
+
+Why: the sheet inserts weeks above the viewport when the reader scrolls up and
+corrects the scroll by the height it inserted. Two things were wrong with doing
+that unconditionally.
+
+First, the browser already does it: `overflow-anchor` is on by default, so both
+compensators fired and every prepend shoved the sheet down eight rows -- 今天
+pressed from 2027 landed two months late. `.gsheet` now sets
+`overflow-anchor: none`; the compensator that knows what it inserted is the one
+that keeps the job.
+
+Second, correcting the scroll is only right when the insertion lands *above*
+what the reader is looking at. While the sheet's first row is still on screen
+the insertion point is on screen too, and compensating for it walks the view
+backwards a chunk at a time: a jump to the top of a year-long sheet landed in
+May instead of at the first row. Backward extension now waits until the sheet's
+top edge has left the screen.
+
+Reuse: for any virtualised list, state which side of the viewport an insertion
+lands on before deciding to correct for it, and check whether the platform is
+already correcting. Two fixes for one problem is a bug, not a belt and braces.
+
+Expires: never.
+
+## 2026-09-16 rejected: a colour per label for personal marks
+
+Why: the first shape for marks gave 年假 / 病假 / 出差 a hue each, because that
+is what every calendar app does. On this sheet it broke the one promise the
+whole surface is built on -- four status roles carry every drop of colour -- and
+it broke it worse than the 节气 blue did: six hues, none of which means work or
+rest, laid over four that do. A reader scanning a quarter for red would have
+been filtering seven chromatic signals to find the one that means 休.
+
+The second shape made marks a fifth status role with one accent tint. That
+fails differently and more quietly: it makes *your* leave and *the state's*
+holiday the same kind of fact. They are not. One is published in a notice you
+can link to; the other is a decision you made this morning and can undo.
+
+Reuse: marks are drawn in a different **material**, not a different colour --
+graphite over print, in a lane every cell reserves, with the label written at
+the run's start and again on each Monday it continues into. Runs get a brace at
+their ends so ten marked cells read as one ten-day thing. This is what the
+2026-08-24 节气 ruling meant by "must earn a token in the program, not a stray
+colour": `--mark-ink/-rule/-field/-edge`, neutral, no hue, in both themes.
+
+Expires: never for the hue. The material may be revisited if marks ever need to
+carry a second dimension (a status of their own -- requested, approved) that
+ink strength cannot hold.
+
 ## 2026-08-24 rejected: the month band painted on the cells
 
 Why: `box-shadow: inset 0 0 0 100vmax` on alternating months painted *over*

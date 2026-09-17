@@ -4,6 +4,12 @@
 // and every view is a different way of drawing the same continuous run. The
 // unit and count only decide where the run starts and stops; they never chop
 // it into cards. That is why 8/31 and 9/1 land side by side.
+//
+// Three things the reader does here, and the order matters: they scroll a
+// continuous sheet (the spine), they select runs of days on it, and they write
+// a label across what they selected (a mark). Selection is transient and lives
+// in memory; a mark is durable and lives in localStorage; an export is a file
+// they own. Nothing here ever leaves the machine on its own.
 
 import {
   dayInfo, todayDayNumber, cstDayNumber, fromDayNumber,
@@ -12,10 +18,22 @@ import {
   hasHolidayData, holidayPaper, STATUS, isRest,
 } from './calendar.js';
 import { EPHEMERIS_RANGE } from './ephemeris.js';
+import {
+  LABELS, labelOf, labelName, normalize, addRun, subtractRun, toggleRun,
+  runsContain, runAt, totalDays, runLength,
+  putMarks, clearRuns, markIndex, totals, marksWithin,
+  loadMarks, saveMarks,
+} from './marks.js';
+import { icsFromMarks, icsFromStatutory } from './ics.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const WEEKDAYS = ['一', '二', '三', '四', '五', '六', '日'];
 const COUNTS = { day: [1, 3, 7, 14], week: [1, 2, 4, 8], month: [1, 2, 3, 6, 12] };
+
+/** Text from a mark's note reaches the DOM; it is the reader's, so it escapes. */
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 // --- state --------------------------------------------------------------
 const today = todayDayNumber();
@@ -25,14 +43,43 @@ const state = {
   anchor: monthStart(today),
   layout: 'flow',
   focus: today,          // the day the rail describes
-  sel: null,             // { from, to } or null
+  runs: [],              // selection: sorted, merged, non-overlapping runs
+  marks: [],             // durable, labelled runs
+  spine: null,           // { from, to } -- the weeks currently in the DOM
+  view: null,            // { from, to } -- the weeks actually on screen
   ribbonYear: fromDayNumber(today).y,
   theme: localStorage.getItem('changli-theme')
     || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'),
 };
 
-/** The visible run of days, [from, to]. */
-function range() {
+state.marks = loadMarks(localStorage);
+let markIdx = markIndex(state.marks);
+
+function commitMarks(next) {
+  state.marks = next;
+  markIdx = markIndex(next);
+  saveMarks(localStorage, next);
+  paintMarks();
+  renderMarksCard();
+  renderLedger();
+  renderRibbon();
+}
+
+// --- the spine: one sheet, scrolled ------------------------------------
+// The flow layout is not a page of N months; it is a continuous sheet that
+// grows at whichever end the reader approaches. `spine` is what exists in the
+// DOM, `view` is what their eyes are on, and the nav follows `view`.
+
+const SPINE_CHUNK = 8;     // weeks added per extension
+const SPINE_MAX = 260;     // weeks kept in the DOM -- five years, then prune
+const RUNWAY = 1400;       // px of unseen sheet kept ahead of the scroll
+
+const scrolling = () => state.layout === 'flow' && state.unit !== 'day';
+
+/** The page: what the anchor and 数量 say. The bounded layouts use it whole,
+ *  and the scrolling sheet uses it to decide where to start and how far a
+ *  press of ‹ or › travels. */
+function pageRange() {
   const { unit, count, anchor } = state;
   if (unit === 'day') return { from: anchor, to: anchor + count - 1 };
   if (unit === 'week') {
@@ -43,20 +90,38 @@ function range() {
   return { from, to: addMonths(from, count) - 1 };
 }
 
+/** What the reader is looking at -- the span every statistic is about. */
+function range() {
+  return scrolling() && state.view ? state.view : pageRange();
+}
+
 /** Move the range by whole units. */
 function step(dir) {
   const { unit, count } = state;
+  if (scrolling()) {
+    const from = range().from;
+    const target = unit === 'week'
+      ? weekStart(from) + dir * count * 7
+      : addMonths(monthStart(from), dir * count);
+    goTo(target);
+    return;
+  }
   if (unit === 'day') state.anchor += dir * count;
   else if (unit === 'week') state.anchor = weekStart(state.anchor) + dir * count * 7;
   else state.anchor = addMonths(state.anchor, dir * count);
   render();
 }
 
-/** Put `day` inside the visible range, moving the range as little as needed. */
+/** Put `day` in front of the reader, moving as little as possible. */
 function reveal(day) {
+  if (scrolling()) {
+    const v = range();
+    if (day < v.from || day > v.to) goTo(day);
+    return;
+  }
   let guard = 0;
-  while (day < range().from && guard++ < 400) step(-1);
-  while (day > range().to && guard++ < 400) step(1);
+  while (day < pageRange().from && guard++ < 400) step(-1);
+  while (day > pageRange().to && guard++ < 400) step(1);
 }
 
 // --- formatting ---------------------------------------------------------
@@ -71,9 +136,21 @@ function rangeTitle(from, to) {
   return `${a.y} 年 ${a.m} 月 — ${b.y} 年 ${b.m} 月`;
 }
 
+/**
+ * "9月28日 — 10月7日". With several runs it is the reach of the whole
+ * selection, first day to last: the count of pieces is already said by
+ * whatever labels this text, and saying it twice reads as a stutter.
+ */
+function spanText(runs) {
+  if (!runs.length) return '';
+  const from = runs[0].from, to = runs[runs.length - 1].to;
+  return from === to ? mdOf(from) : `${mdOf(from)} — ${mdOf(to)}`;
+}
+
 // --- render: the grid ---------------------------------------------------
 function cellHTML(n, opts) {
   const info = dayInfo(n);
+  const mk = markIdx.get(n);
   const attrs = [
     `data-day="${n}"`,
     `data-st="${info.status}"`,
@@ -83,10 +160,16 @@ function cellHTML(n, opts) {
   if (opts.monthRule) attrs.push('data-mrule="1"');
   if (opts.outside) attrs.push('data-outside="1"');
   if (state.focus === n) attrs.push('data-cursor="1"');
-  if (state.sel && n >= state.sel.from && n <= state.sel.to) {
+  if (runsContain(state.runs, n)) {
     attrs.push('data-sel="1"');
-    if (n === state.sel.from) attrs.push('data-sel-start="1"');
-    if (n === state.sel.to) attrs.push('data-sel-end="1"');
+    const r = runAt(state.runs, n);
+    if (n === r.from) attrs.push('data-sel-start="1"');
+    if (n === r.to) attrs.push('data-sel-end="1"');
+  }
+  if (mk) {
+    attrs.push(`data-mark="${mk.label}"`);
+    if (n === mk.from) attrs.push('data-mark-start="1"');
+    if (n === mk.to) attrs.push('data-mark-end="1"');
   }
 
   let mark = '';
@@ -100,12 +183,27 @@ function cellHTML(n, opts) {
       : info.status === STATUS.MAKEUP ? `调休上班 ${info.holidayName}`
       : info.isWeekend ? '周末' : '工作日',
     ...info.festivals,
-  ].join(' ');
+    mk ? `标记 ${labelName(mk)}` : '',
+  ].filter(Boolean).join(' ');
 
-  return `<div class="cell" role="gridcell" tabindex="-1" ${attrs.join(' ')} aria-label="${aria}">
+  return `<div class="cell" role="gridcell" tabindex="-1" ${attrs.join(' ')} aria-label="${esc(aria)}">
     ${mark}<b class="d-num">${info.d}</b>
     <span class="d-label is-${info.labelKind}">${info.label}</span>
+    ${mk ? `<span class="d-tag">${esc(tagTextFor(n, mk, info))}</span>` : ''}
   </div>`;
+}
+
+/**
+ * A mark's label is written at the start of its run, and again on the Monday
+ * of every row it continues into.
+ *
+ * A run of leave usually spans two or three week rows. Labelling only the
+ * first cell leaves the rest of the run as an unexplained grey lane; labelling
+ * every cell is a stutter. A continued footnote is the printed convention and
+ * it is the one that reads.
+ */
+function tagTextFor(n, mk, info) {
+  return n === mk.from || info.weekday === 1 ? labelName(mk) : '';
 }
 
 function headerHTML(withGutter) {
@@ -114,30 +212,45 @@ function headerHTML(withGutter) {
   return (withGutter ? '<div class="gh-gutter"></div>' : '') + `<div class="gh" role="row">${cells}</div>`;
 }
 
+/**
+ * One week row: the gutter cell plus seven days.
+ *
+ * Returned as a unit so the sheet can be *extended* rather than rebuilt. A
+ * drag must never rebuild the surface it is being dragged across (TASTE.md,
+ * 2026-08-24), and neither must a scroll -- insertAdjacentHTML leaves every
+ * existing node, and every pointer capture on it, exactly where it was.
+ */
+function weekRowHTML(w, prevMonth, opts = {}) {
+  // A week row belongs to whichever month owns its Thursday -- the rule that
+  // makes the band agree with the label instead of fighting it.
+  const band = dayInfo(w + 3);
+  const label = band.m === prevMonth ? '' : `${band.m}月`;
+  let html = `<div class="gutter" role="rowheader" data-week="${w}" data-month="${band.m}" `
+    + `data-band="${band.m % 2}">${label ? `<b>${label}</b>` : ''}</div>`;
+  let past = false;
+  for (let i = 0; i < 7; i++) {
+    const n = w + i;
+    const first = dayInfo(n).d === 1;
+    if (first) past = true;
+    html += cellHTML(n, {
+      monthStart: first,
+      monthRule: past && !opts.firstRow,
+      outside: opts.from !== undefined && (n < opts.from || n > opts.to),
+    });
+  }
+  return { html, month: band.m };
+}
+
 /** The continuous sheet: whole weeks, no gaps, month boundaries as rules. */
 function renderFlow(from, to) {
   const start = weekStart(from);
   const end = weekStart(to) + 6;
   let html = `<div class="gsheet" role="grid">${headerHTML(true)}`;
-  let lastBand = null;
+  let prevMonth = null;
   for (let w = start; w <= end; w += 7) {
-    // A week row belongs to whichever month owns its Thursday -- the rule that
-    // makes the band agree with the label instead of fighting it.
-    const band = dayInfo(w + 3);
-    const label = band.m === lastBand ? '' : `${band.m}月`;
-    lastBand = band.m;
-    html += `<div class="gutter" role="rowheader" data-band="${band.m % 2}">${label ? `<b>${label}</b>` : ''}</div>`;
-    let past = false;
-    for (let i = 0; i < 7; i++) {
-      const n = w + i;
-      const first = dayInfo(n).d === 1;
-      if (first) past = true;
-      html += cellHTML(n, {
-        monthStart: first,
-        monthRule: past && w !== start,
-        outside: n < from || n > to,
-      });
-    }
+    const row = weekRowHTML(w, prevMonth, { firstRow: w === start });
+    html += row.html;
+    prevMonth = row.month;
   }
   return html + '</div>';
 }
@@ -167,15 +280,18 @@ function renderDays(from, to) {
   for (let n = from; n <= to; n++) {
     const info = dayInfo(n);
     const tc = termContext(n);
+    const mk = markIdx.get(n);
     const attrs = [`data-day="${n}"`, `data-st="${info.status}"`];
     if (n === today) attrs.push('data-today="1"');
-    if (state.sel && n >= state.sel.from && n <= state.sel.to) attrs.push('data-sel="1"');
+    if (runsContain(state.runs, n)) attrs.push('data-sel="1"');
+    if (mk) attrs.push(`data-mark="${mk.label}"`);
     const mark = info.status === STATUS.HOLIDAY ? '<span class="d-mark rest">休</span>'
       : info.status === STATUS.MAKEUP ? '<span class="d-mark work">班</span>' : '';
     const fests = info.festivals.length
       ? `<span class="dr-fest">${info.festivals.join(' · ')}</span>` : '';
     const term = info.term ? `<span class="dr-term">${info.term.name}</span>`
       : tc.current ? `<span class="dr-term">${tc.current.name} 第 ${tc.current.nth} 天</span>` : '';
+    const tag = mk ? `<span class="dr-tag">${esc(labelName(mk))}</span>` : '';
     html += `<div class="dayrow" role="listitem" tabindex="-1" ${attrs.join(' ')}>
       <span class="dr-date">
         <b class="dr-n">${info.d}</b>
@@ -183,7 +299,7 @@ function renderDays(from, to) {
       </span>
       <span class="dr-mid">
         <span class="dr-lunar">${info.lunar.monthName}${info.lunar.dayName}</span>
-        ${term}${fests}
+        ${term}${fests}${tag}
       </span>
       <span class="dr-mark">${mark}</span>
     </div>`;
@@ -205,10 +321,11 @@ function renderRibbon() {
   const x = (n) => PAD + ((n - y0) / days) * (W - PAD * 2);
   const wide = W > 560;
 
-  // three lanes, the concentric rings laid flat
+  // four lanes, the concentric rings laid flat. The fourth is the reader's own.
   const L1 = { y: 2, h: 14 };                 // 月建
-  const L2 = { y: 20, h: H - 20 - 26 };       // 節氣
-  const L3 = { y: H - 24, h: 20 };            // 休/班
+  const L2 = { y: 20, h: H - 20 - 30 };       // 節氣
+  const L3 = { y: H - 28, h: 18 };            // 休/班
+  const L4 = { y: H - 8, h: 5 };              // 标记
 
   const p = [];
   p.push(`<rect class="rb-lane-bg" x="0" y="0" width="${W}" height="${H}"/>`);
@@ -260,7 +377,7 @@ function renderRibbon() {
   // lane 3: the statutory year
   if (!hasHolidayData(year)) {
     p.push(`<rect class="rb-unknown" x="${PAD}" y="${L3.y}" width="${W - PAD * 2}" height="${L3.h}"/>`);
-    p.push(`<text class="rb-month-label" x="${W / 2}" y="${L3.y + 14}" text-anchor="middle">${year} 年放假安排尚未公布</text>`);
+    p.push(`<text class="rb-month-label" x="${W / 2}" y="${L3.y + 13}" text-anchor="middle">${year} 年放假安排尚未公布</text>`);
   } else {
     // Only runs the notice actually names. An ordinary weekend at year scale
     // is noise, and this lane is meant to read as the statutory year.
@@ -272,13 +389,20 @@ function renderRibbon() {
       if (w > 6) p.push(`<rect class="rb-holiday-edge" x="${a}" y="${L3.y}" width="${w}" height="${L3.h}"/>`);
       const short = run.name.length > 2 ? run.name.slice(0, 2) : run.name;
       if (w > 24) {
-        p.push(`<text class="rb-holiday-name" x="${a + w / 2}" y="${L3.y + 13.5}" text-anchor="middle">${short}</text>`);
+        p.push(`<text class="rb-holiday-name" x="${a + w / 2}" y="${L3.y + 12.5}" text-anchor="middle">${short}</text>`);
       }
     }
     for (let n = y0; n <= y1; n++) {
       if (dayInfo(n).status !== STATUS.MAKEUP) continue;
       p.push(`<rect class="rb-makeup" x="${x(n)}" y="${L3.y + L3.h - 5}" width="${Math.max(x(n + 1) - x(n), 1.5)}" height="5"/>`);
     }
+  }
+
+  // lane 4: the reader's marks, at year scale. This is the answer to "how much
+  // leave have I actually spent" before any number is read.
+  for (const m of marksWithin(state.marks, y0, y1)) {
+    const a = x(m.from), b = x(m.to + 1);
+    p.push(`<rect class="rb-mark" x="${a}" y="${L4.y}" width="${Math.max(b - a, 2)}" height="${L4.h}"/>`);
   }
 
   // today
@@ -292,8 +416,8 @@ function renderRibbon() {
   const wb = x(Math.min(r.to, y1) + 1);
   if (r.to >= y0 && r.from <= y1) {
     p.push(`<rect class="rb-window" id="rb-window" x="${wa}" y="1" width="${Math.max(wb - wa, 3)}" height="${H - 2}" rx="2"/>`);
-    p.push(`<rect class="rb-window-grip" x="${wa}" y="1" width="2" height="${H - 2}"/>`);
-    p.push(`<rect class="rb-window-grip" x="${wb - 2}" y="1" width="2" height="${H - 2}"/>`);
+    p.push(`<rect class="rb-window-grip" id="rb-grip-a" x="${wa}" y="1" width="2" height="${H - 2}"/>`);
+    p.push(`<rect class="rb-window-grip" id="rb-grip-b" x="${wb - 2}" y="1" width="2" height="${H - 2}"/>`);
   }
 
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -303,12 +427,35 @@ function renderRibbon() {
   svg._x = x; svg._y0 = y0; svg._y1 = y1; svg._W = W;
 }
 
+/**
+ * Move the window rect without redrawing the ribbon.
+ *
+ * Scrolling the sheet moves this window on every frame. Rebuilding 24 term
+ * labels and a year of holiday runs at 60 Hz would make the sheet stutter, and
+ * the ribbon is supposed to track 1:1 (DESIGN.md, motion).
+ */
+function moveRibbonWindow() {
+  const svg = $('#ribbon-svg');
+  const win = $('#rb-window');
+  if (!svg._x || !win) return;
+  const r = range();
+  if (r.to < svg._y0 || r.from > svg._y1) return;
+  const a = svg._x(Math.max(r.from, svg._y0));
+  const b = svg._x(Math.min(r.to, svg._y1) + 1);
+  const w = Math.max(b - a, 3);
+  win.setAttribute('x', a);
+  win.setAttribute('width', w);
+  $('#rb-grip-a')?.setAttribute('x', a);
+  $('#rb-grip-b')?.setAttribute('x', a + w - 2);
+}
+
 // --- render: the rail ---------------------------------------------------
 function renderDayCard() {
   const n = state.focus;
   const info = dayInfo(n);
   const tc = termContext(n);
   const gz = ganzhiYear(info.lunar.year);
+  const mk = markIdx.get(n);
   const el = $('#day-card');
   el.dataset.st = info.status;
   if (n === today) el.dataset.today = '1'; else delete el.dataset.today;
@@ -332,6 +479,10 @@ function renderDayCard() {
     const nx = tc.next ? `，距 ${tc.next.name} ${tc.next.inDays} 天` : '';
     rows.push(['节气', `${tc.current.name} 第 ${tc.current.nth} 天${nx}`]);
   }
+  if (mk) {
+    rows.push(['标记', `<span class="tag-mark">${esc(labelName(mk))}</span>`
+      + `<span class="dc-mark-span"> · ${mdOf(mk.from)}—${mdOf(mk.to)} · ${runLength(mk)} 天</span>`]);
+  }
 
   el.innerHTML = `
     <div class="dc-top">
@@ -344,10 +495,30 @@ function renderDayCard() {
     <dl>${rows.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>`;
 }
 
+/**
+ * The ledger totals the *selected days*, not the span they sit in.
+ *
+ * With disjoint runs the two differ: three separate long weekends are 9 days,
+ * and the distance from the first to the last is 40. Summing per run is the
+ * only answer that stays true when the selection is in pieces.
+ */
+function sumRuns(runs) {
+  const acc = { total: 0, off: 0, statutory: 0, leave: 0, makeup: 0 };
+  for (const r of runs) {
+    const s = summarize(r.from, r.to);
+    acc.total += s.total; acc.off += s.off;
+    acc.statutory += s.statutory; acc.leave += s.leave; acc.makeup += s.makeup;
+  }
+  return acc;
+}
+
 function renderLedger() {
-  const r = state.sel || range();
-  const s = summarize(r.from, r.to);
-  const scope = state.sel ? '已选区间' : '当前视图';
+  const sel = state.runs;
+  const runs = sel.length ? sel : [range()];
+  const s = sumRuns(runs);
+  const scope = sel.length
+    ? (sel.length > 1 ? `已选 ${sel.length} 段` : '已选区间')
+    : '当前视图';
   const rows = [
     ['天数', `${s.total}`, false],
     ['休息', `${s.off}`, true],
@@ -355,12 +526,24 @@ function renderLedger() {
     ['需上班', `${s.leave}`, false],
   ];
   if (s.makeup) rows.push(['其中调休班', `${s.makeup}`, false]);
-  const longest = restRuns(r.from, r.to).reduce((a, b) => (b.length > (a?.length || 0) ? b : a), null);
+
+  const longest = runs
+    .flatMap((r) => restRuns(r.from, r.to))
+    .reduce((a, b) => (b.length > (a?.length || 0) ? b : a), null);
+
+  const marked = marksWithin(state.marks, runs[0].from, runs[runs.length - 1].to)
+    .filter((m) => runs.some((r) => m.from <= r.to && m.to >= r.from));
+  const markDays = totalDays(marked.map((m) => {
+    const r = runs.find((x) => m.from <= x.to && m.to >= x.from);
+    return { from: Math.max(m.from, r.from), to: Math.min(m.to, r.to) };
+  }));
+
   $('#ledger').innerHTML =
-    `<p class="lg-span">${scope} · ${mdOf(r.from)} — ${mdOf(r.to)}</p>` +
+    `<p class="lg-span">${scope} · ${spanText(runs)}</p>` +
     rows.map(([k, v, hot]) =>
       `<div class="lg-row"><span class="lg-k">${k}</span><span class="lg-v${hot ? ' hot' : ''}" data-num>${v}</span></div>`).join('') +
-    (longest ? `<div class="lg-row"><span class="lg-k">最长连休</span><span class="lg-v" data-num>${longest.length} 天${longest.clipped ? '+' : ''}</span></div>` : '');
+    (longest ? `<div class="lg-row"><span class="lg-k">最长连休</span><span class="lg-v" data-num>${longest.length} 天${longest.clipped ? '+' : ''}</span></div>` : '') +
+    (markDays ? `<div class="lg-row"><span class="lg-k">已标记</span><span class="lg-v" data-num>${markDays} 天</span></div>` : '');
 }
 
 function renderBridges() {
@@ -383,6 +566,61 @@ function renderBridges() {
     </button>`).join('');
 }
 
+/**
+ * The marks card: what the reader has spent, and the two ways out of here.
+ *
+ * Export writes a file; subscribe hands the calendar app a URL it re-reads on
+ * its own. They are not the same promise and the card must not blur them --
+ * marks are on this machine and a file is a copy, while the statutory feed is
+ * served and really does keep itself current.
+ */
+function renderMarksCard() {
+  const el = $('#marks-body');
+  const t = totals(state.marks);
+  const feed = feedBase();
+
+  const totalsHTML = t.length
+    ? `<div class="mk-totals">${t.map((row) => {
+        const l = labelOf(row.label);
+        return `<span class="mk-total"><b>${l.name}</b><span data-num>${row.days}</span> 天</span>`;
+      }).join('')}</div>`
+    : '<p class="empty">还没有标记。在日历上拖选几天，再选一个标签。</p>';
+
+  const recent = [...state.marks].sort((a, b) => b.from - a.from).slice(0, 6);
+  const listHTML = recent.length ? `<ul class="mk-list">${recent.map((m) => `
+    <li>
+      <button type="button" class="mk-run" data-goto="${m.from}" data-from="${m.from}" data-to="${m.to}">
+        <span class="mk-run-label">${esc(labelName(m))}</span>
+        <span class="mk-run-span">${mdOf(m.from)}${m.to !== m.from ? ` — ${mdOf(m.to)}` : ''}</span>
+        <span class="mk-run-days" data-num>${runLength(m)} 天</span>
+      </button>
+      <button type="button" class="mk-del" data-del-from="${m.from}" data-del-to="${m.to}"
+              aria-label="删除标记 ${esc(labelName(m))}">✕</button>
+    </li>`).join('')}</ul>` : '';
+
+  const more = state.marks.length > recent.length
+    ? `<p class="mk-more">另有 ${state.marks.length - recent.length} 段较早的标记。</p>` : '';
+
+  el.innerHTML = totalsHTML + listHTML + more + `
+    <div class="mk-acts">
+      <button type="button" class="btn" data-act="export-marks"${state.marks.length ? '' : ' disabled'}>导出我的标记 .ics</button>
+      <button type="button" class="btn" data-act="export-gov">导出本视图法定假日</button>
+    </div>
+    <p class="mk-sub">订阅后日历会自己更新：
+      <a href="${feed.webcal}/feed/cn-holidays.ics">法定节假日</a> ·
+      <a href="${feed.webcal}/feed/cn-terms.ics">节气与传统节日</a>
+      <button type="button" class="linkish" data-act="copy-feed"
+              data-url="${feed.https}/feed/cn-holidays.ics">复制链接</button>
+    </p>
+    <p class="mk-note">标记只存在这台设备的浏览器里，导出的 .ics 是一份副本，不会同步回来。</p>`;
+}
+
+/** Where the subscribable feeds live -- this deployment, not a hardcoded host. */
+function feedBase() {
+  const origin = location.origin.replace(/\/$/, '');
+  return { https: origin, webcal: origin.replace(/^https?:/, 'webcal:') };
+}
+
 function renderProvenance() {
   const r = range();
   const years = new Set();
@@ -399,6 +637,48 @@ function renderProvenance() {
 }
 
 /**
+ * The mark bar: what you do with a selection, next to the selection.
+ *
+ * It is always here, and it swaps its contents rather than appearing.
+ *
+ * The first version showed it only once days were selected, which reads well
+ * and is wrong: the bar sits above the sheet, so un-hiding it on the first
+ * pointerdown pushed every cell down by its height -- mid-drag, under the
+ * pointer. A drag that started on 9月7日 and ended on 9月16日 selected three
+ * days, because the rows had moved a row's worth while the pointer stood
+ * still. Same family as the 2026-08-24 re-render scar: the surface must not
+ * move under a drag. Holding the space also gives the gesture hint somewhere
+ * to live -- where the actions will be, rather than under the grid.
+ */
+function renderMarkBar() {
+  const sel = state.runs;
+  const hint = $('#mb-hint');
+  const live = $('#mb-live');
+  hint.hidden = !!sel.length;
+  live.hidden = !sel.length;
+  if (!sel.length) return;
+
+  const days = totalDays(sel);
+  $('#mb-span').innerHTML =
+    `<b data-num>${days}</b> 天 · <span class="mb-when">${spanText(sel)}</span>`;
+
+  // 清除标记 appears only when there is something to clear.
+  const anyMarked = sel.some((r) => {
+    for (let n = r.from; n <= r.to; n++) if (markIdx.has(n)) return true;
+    return false;
+  });
+  $('#mb-clear').hidden = !anyMarked;
+}
+
+function buildChips() {
+  $('#mb-chips').innerHTML = LABELS.map((l, i) => `
+    <button type="button" class="chip" data-label="${l.key}" data-kind="${l.kind}">
+      ${l.name}<kbd>${i + 1}</kbd>
+    </button>`).join('') + `
+    <button type="button" class="chip chip-custom" data-label="event" data-custom="1">自定义…</button>`;
+}
+
+/**
  * Update only what selection changes: the cell attributes and the rail.
  *
  * The grid must NOT be rebuilt here. Replacing innerHTML mid-drag destroys the
@@ -411,55 +691,121 @@ function flag(el, name, on) {
 }
 
 function paint() {
-  const sel = state.sel;
-  for (const el of document.querySelectorAll('#grid [data-day]')) {
+  const runs = state.runs;
+  for (const el of $$('#grid [data-day]')) {
     const n = Number(el.dataset.day);
-    const inSel = !!sel && n >= sel.from && n <= sel.to;
+    const r = runAt(runs, n);
     // setAttribute, not toggleAttribute: toggleAttribute writes an empty value
     // and every selector in app.css matches on ="1".
-    flag(el, 'data-sel', inSel);
-    flag(el, 'data-sel-start', inSel && n === sel.from);
-    flag(el, 'data-sel-end', inSel && n === sel.to);
+    flag(el, 'data-sel', !!r);
+    flag(el, 'data-sel-start', !!r && n === r.from);
+    flag(el, 'data-sel-end', !!r && n === r.to);
     flag(el, 'data-cursor', n === state.focus);
   }
   renderDayCard();
   renderLedger();
+  renderMarkBar();
+}
+
+/**
+ * Marks change the cells in place too.
+ *
+ * Re-rendering the sheet after a label would throw away the scroll position on
+ * an infinite surface, which is the one thing a reader cannot get back. Every
+ * cell already reserves the mark lane, so writing a label never reflows a row.
+ */
+function paintMarks() {
+  for (const el of $$('#grid [data-day]')) {
+    const n = Number(el.dataset.day);
+    const mk = markIdx.get(n);
+    if (!mk) {
+      el.removeAttribute('data-mark');
+      el.removeAttribute('data-mark-start');
+      el.removeAttribute('data-mark-end');
+      el.querySelector('.d-tag, .dr-tag')?.remove();
+      continue;
+    }
+    el.setAttribute('data-mark', mk.label);
+    flag(el, 'data-mark-start', n === mk.from);
+    flag(el, 'data-mark-end', n === mk.to);
+    // A cell writes into its reserved lane; a 撕历 row writes into its middle
+    // column. Same fact, two surfaces, and neither borrows the other's element.
+    const row = el.classList.contains('dayrow');
+    const cls = row ? 'dr-tag' : 'd-tag';
+    let tag = el.querySelector('.' + cls);
+    if (!tag) {
+      tag = document.createElement('span');
+      tag.className = cls;
+      (row ? el.querySelector('.dr-mid') : el).appendChild(tag);
+    }
+    // textContent, not innerHTML: the note is the reader's text.
+    tag.textContent = row ? labelName(mk) : tagTextFor(n, mk, dayInfo(n));
+  }
+  renderDayCard();
+  renderMarkBar();
 }
 
 // --- render -------------------------------------------------------------
 let raf = 0;
-function render() {
+function render(opts = {}) {
   cancelAnimationFrame(raf);
   raf = requestAnimationFrame(() => {
-    const r = range();
     const grid = $('#grid');
-    if (state.unit === 'day') grid.innerHTML = renderDays(r.from, r.to);
-    else if (state.layout === 'blocks') grid.innerHTML = renderBlocks(r.from, r.to);
-    else grid.innerHTML = renderFlow(r.from, r.to);
+    if (state.unit === 'day') {
+      const r = pageRange();
+      state.view = null;
+      grid.innerHTML = renderDays(r.from, r.to);
+    } else if (state.layout === 'blocks') {
+      const r = pageRange();
+      state.view = null;
+      grid.innerHTML = renderBlocks(r.from, r.to);
+    } else {
+      // the scrolling sheet: start from the page, then let the reader travel
+      const p = pageRange();
+      // No leading pad: the sheet begins where the reader asked it to and
+      // grows backwards only when they scroll up. Padding the top would mean
+      // scrolling down on first paint, past the masthead and the ribbon.
+      state.spine = {
+        from: weekStart(p.from),
+        to: weekStart(p.to) + SPINE_CHUNK * 7 + 6,
+      };
+      grid.innerHTML = renderFlow(state.spine.from, state.spine.to);
+      state.view = { from: p.from, to: p.to };
+    }
 
-    $('.range-title-main').textContent = rangeTitle(r.from, r.to);
-    $('.range-title-sub').textContent =
-      `${r.to - r.from + 1} 天 · ${isoOf(r.from)} — ${isoOf(r.to)}`;
-
-    const note = state.unit === 'month' && state.count > 1 && state.layout === 'flow'
-      ? '跨月连续排布：月份之间只有一条粗线，没有断行。'
+    paintTitle();
+    $('#grid-note').textContent = scrolling()
+      ? '连续排布：向下滚动即可一直往后翻，月份之间只有一条粗线。'
       : '';
-    $('#grid-note').textContent = note;
 
     renderRibbon();
     renderDayCard();
     renderLedger();
     renderBridges();
+    renderMarksCard();
+    renderMarkBar();
     renderProvenance();
     syncControls();
+
+    if (scrolling() && opts.scrollTo !== undefined) {
+      scrollRowToTop(weekStart(opts.scrollTo));
+      syncView();
+    }
   });
 }
 
+function paintTitle() {
+  const r = range();
+  $('.range-title-main').textContent = rangeTitle(r.from, r.to);
+  $('.range-title-sub').textContent =
+    `${r.to - r.from + 1} 天 · ${isoOf(r.from)} — ${isoOf(r.to)}`;
+}
+
 function syncControls() {
-  for (const b of document.querySelectorAll('[data-unit]')) {
+  for (const b of $$('[data-unit]')) {
     b.setAttribute('aria-pressed', String(b.dataset.unit === state.unit));
   }
-  for (const b of document.querySelectorAll('[data-layout]')) {
+  for (const b of $$('[data-layout]')) {
     b.setAttribute('aria-pressed', String(b.dataset.layout === state.layout));
     b.disabled = state.unit === 'day';
   }
@@ -478,9 +824,233 @@ function syncControls() {
   }
 }
 
+// --- the scrolling sheet ------------------------------------------------
+
+const sheetEl = () => $('#grid .gsheet');
+const rowEl = (week) => $(`#grid .gutter[data-week="${week}"]`);
+
+/** Where the sticky header stops covering the sheet. */
+function headerBottom() {
+  const gh = $('#grid .gh');
+  if (!gh) return 0;
+  const box = gh.getBoundingClientRect();
+  return box.bottom;
+}
+
+/**
+ * Extend the sheet at one end.
+ *
+ * Insert, never rebuild: existing rows keep their identity, so a drag in
+ * progress and the pointer capture on it both survive. Prepending also moves
+ * everything below it down, so the scroll position is corrected by exactly the
+ * height that was added -- otherwise the sheet jumps under the reader's eyes.
+ */
+function extendSpine(dir) {
+  const sheet = sheetEl();
+  if (!sheet || !state.spine) return false;
+
+  if (dir > 0) {
+    const from = state.spine.to + 1;
+    const to = from + SPINE_CHUNK * 7 - 1;
+    let prevMonth = dayInfo(state.spine.to - 6 + 3).m;
+    let html = '';
+    for (let w = from; w <= to; w += 7) {
+      const row = weekRowHTML(w, prevMonth);
+      html += row.html;
+      prevMonth = row.month;
+    }
+    sheet.insertAdjacentHTML('beforeend', html);
+    state.spine.to = to;
+  } else {
+    const to = state.spine.from - 1;
+    const from = to - SPINE_CHUNK * 7 + 1;
+    const firstRow = rowEl(state.spine.from);
+    let html = '';
+    let prevMonth = null;
+    for (let w = from; w <= to; w += 7) {
+      const row = weekRowHTML(w, prevMonth, { firstRow: w === from });
+      html += row.html;
+      prevMonth = row.month;
+    }
+    // Insert, then put the scroll back by exactly what was added. `.gsheet`
+    // sets overflow-anchor: none so the browser does not also try.
+    const before = sheet.offsetHeight;
+    sheet.querySelector('.gh').insertAdjacentHTML('afterend', html);
+    scrollBy(0, sheet.offsetHeight - before);
+    state.spine.from = from;
+    // The row that used to be first may now repeat the month above it.
+    if (firstRow) {
+      const repeats = Number(firstRow.dataset.month) === prevMonth;
+      firstRow.innerHTML = repeats ? '' : `<b>${firstRow.dataset.month}月</b>`;
+    }
+  }
+  pruneSpine(dir);
+  return true;
+}
+
+/** Keep the sheet finite. Trim the end the reader is travelling away from. */
+function pruneSpine(dir) {
+  const sheet = sheetEl();
+  const weeks = (state.spine.to - state.spine.from + 1) / 7;
+  if (!sheet || weeks <= SPINE_MAX) return;
+  const drop = Math.ceil(weeks - SPINE_MAX);
+  if (dir > 0) {
+    const before = sheet.offsetHeight;
+    for (let i = 0; i < drop; i++) {
+      const w = state.spine.from + i * 7;
+      const row = rowEl(w);
+      if (!row) break;
+      for (let k = 0; k < 7; k++) row.nextElementSibling?.remove();
+      row.remove();
+    }
+    state.spine.from += drop * 7;
+    scrollBy(0, sheet.offsetHeight - before);
+    const head = rowEl(state.spine.from);
+    if (head && !head.firstChild) head.innerHTML = `<b>${head.dataset.month}月</b>`;
+  } else {
+    for (let i = 0; i < drop; i++) {
+      const w = state.spine.to - 6 - i * 7;
+      const row = rowEl(w);
+      if (!row) break;
+      for (let k = 0; k < 7; k++) row.nextElementSibling?.remove();
+      row.remove();
+    }
+    state.spine.to -= drop * 7;
+  }
+}
+
+/**
+ * Put a week under the header. Instantly, never smoothly.
+ *
+ * A smooth scroll up the sheet crosses the top runway on its way, the scroll
+ * handler extends the spine backwards, and the compensating scrollBy that
+ * keeps the sheet from jumping cancels the animation and undoes the travel --
+ * 今天 pressed from 2027 grew the sheet by three chunks and stayed where it
+ * was. An instant scroll lands before any of that can fire, and the sheet is
+ * mechanical by design anyway: the ribbon tracks the pointer 1:1, and this
+ * moves the same way.
+ */
+function scrollRowToTop(week) {
+  const row = rowEl(week);
+  if (!row) return;
+  const top = row.getBoundingClientRect().top + scrollY - headerBottom() + 1;
+  scrollTo({ top: Math.max(top, 0), behavior: 'auto' });
+}
+
+/**
+ * Travel to a day: rebuild the sheet around it and put its week at the top.
+ *
+ * The spine grows by *scrolling*; asking for a date rebuilds it. Walking there
+ * eight weeks at a time is both slower and inexact -- each extension fires the
+ * scroll handler, which prepends and compensates, and the arrival drifts by
+ * however many rows got inserted on the way. A rebuild starts the sheet at the
+ * destination with no leading pad, so the target week is the first row and
+ * nothing can push it around.
+ */
+function goTo(day) {
+  state.anchor = anchorFor(day);
+  render({ scrollTo: day });
+}
+
+/**
+ * What is on screen, from the scroll position.
+ *
+ * Binary search over the rows rather than dividing by a row height: a week
+ * containing a month boundary carries the 2px stepped rule and is that much
+ * taller than its neighbours, and over two hundred rows a uniform-height guess
+ * drifts by half a row -- which shows up as a title naming the wrong month.
+ * Nine rect reads per scroll frame, not two hundred.
+ */
+function rowIndexAt(docY, rows) {
+  let lo = 0, hi = rows - 1, ans = 0;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const el = rowEl(state.spine.from + mid * 7);
+    if (!el) break;
+    if (el.getBoundingClientRect().top + scrollY <= docY) { ans = mid; lo = mid + 1; }
+    else hi = mid - 1;
+  }
+  return ans;
+}
+
+function syncView() {
+  if (!scrolling() || !state.spine) return;
+  const sheet = sheetEl();
+  const first = rowEl(state.spine.from);
+  if (!sheet || !first) return;
+
+  const rows = (state.spine.to - state.spine.from + 1) / 7;
+  // Clamped at 0: below 720px the header is not sticky, and once it has
+  // scrolled away its rect bottom is negative.
+  const topIdx = rowIndexAt(scrollY + Math.max(headerBottom(), 0), rows);
+  const botIdx = rowIndexAt(scrollY + innerHeight - 1, rows);
+
+  const from = state.spine.from + topIdx * 7;
+  const to = state.spine.from + botIdx * 7 + 6;
+  const prev = state.view;
+  state.view = { from, to };
+  if (!prev || prev.from !== from || prev.to !== to) {
+    paintTitle();
+    moveRibbonWindow();
+    const year = fromDayNumber(from).y;
+    if (year !== state.ribbonYear) { state.ribbonYear = year; renderRibbon(); syncControls(); }
+    if (!prev || fromDayNumber(prev.from).m !== fromDayNumber(from).m
+      || fromDayNumber(prev.from).y !== fromDayNumber(from).y) {
+      // The expensive half -- only when the month under the reader changes.
+      if (!state.runs.length) renderLedger();
+      renderBridges();
+      renderProvenance();
+    }
+  }
+}
+
+let scrollRaf = 0;
+addEventListener('scroll', () => {
+  if (scrollRaf) return;
+  scrollRaf = requestAnimationFrame(() => {
+    scrollRaf = 0;
+    if (!scrolling() || !state.spine) return;
+    const sheet = sheetEl();
+    if (!sheet) return;
+    const box = sheet.getBoundingClientRect();
+    // A drag is a promise to the cells under the pointer; extend below it (new
+    // nodes only) but never prune or shift the sheet while it is held.
+    if (box.bottom < innerHeight + RUNWAY) extendSpine(1);
+    // Backwards only once the sheet's top edge has left the screen. Correcting
+    // the scroll by the height inserted is right only when the insertion lands
+    // *above* what the reader is looking at; while the first row is still
+    // visible the insertion point is on screen, and compensating for it walks
+    // the view backwards a chunk at a time -- a jump to the top of a year-long
+    // sheet landed five months early. Above the fold, there is also nothing to
+    // build runway for: getting there is navigation, not scrolling.
+    if (!drag && box.top < 0 && box.top > -RUNWAY) extendSpine(-1);
+    syncView();
+  });
+}, { passive: true });
+
 // --- selection ----------------------------------------------------------
-function setSelection(a, b) {
-  state.sel = { from: Math.min(a, b), to: Math.max(a, b) };
+function setSelection(runs) {
+  state.runs = normalize(runs);
+  paint();
+}
+
+const selectRun = (a, b) => setSelection([{ from: Math.min(a, b), to: Math.max(a, b) }]);
+
+/** The run of days that reads as one thing at `day` -- what a double-click means. */
+function naturalRun(day) {
+  const mk = markIdx.get(day);
+  if (mk) return { from: mk.from, to: mk.to };
+  const info = dayInfo(day);
+  if (isRest(info.status)) {
+    let a = day, b = day;
+    while (isRest(dayInfo(a - 1).status)) a--;
+    while (isRest(dayInfo(b + 1).status)) b++;
+    return { from: a, to: b };
+  }
+  let a = day, b = day;
+  while (!isRest(dayInfo(a - 1).status)) a--;
+  while (!isRest(dayInfo(b + 1).status)) b++;
+  return { from: a, to: b };
 }
 
 let drag = null;
@@ -507,32 +1077,70 @@ function dayFromEvent(e) {
 }
 
 $('#grid').addEventListener('pointerdown', (e) => {
+  // A month label in the gutter selects its month -- the row header is the
+  // month's handle, and it is already the thing the eye uses to find one.
+  const gut = e.target.closest('.gutter');
+  if (gut && e.button === 0) {
+    e.preventDefault();
+    const mid = Number(gut.dataset.week) + 3;
+    selectRun(monthStart(mid), addMonths(monthStart(mid), 1) - 1);
+    state.focus = monthStart(mid);
+    paint();
+    return;
+  }
+
   const n = dayFromEvent(e);
   if (n === null || e.button !== 0) return;
   e.preventDefault();
   $('#grid').focus({ preventScroll: true });
+
   if (e.shiftKey) {
-    setSelection(state.focus, n);
-    paint();
+    // Extend from the cursor, keeping any other runs already selected.
+    const rest = state.runs.filter((r) => !(state.focus >= r.from && state.focus <= r.to));
+    setSelection([...rest, { from: Math.min(state.focus, n), to: Math.max(state.focus, n) }]);
     return;
   }
-  drag = { start: n, moved: false };
+
+  // ⌘ / Ctrl adds to the selection instead of replacing it; on a day that is
+  // already selected it takes that day's run back out, which is the one
+  // gesture every file manager and canvas shares.
+  const additive = e.metaKey || e.ctrlKey;
+  drag = {
+    start: n,
+    moved: false,
+    additive,
+    base: additive ? state.runs.map((r) => ({ ...r })) : [],
+    toggled: additive && runsContain(state.runs, n),
+  };
   state.focus = n;
-  state.sel = null;
-  paint();
+  if (additive) setSelection(toggleRun(state.runs, n, n));
+  else selectRun(n, n);
 });
 
 addEventListener('pointermove', (e) => {
   if (!drag) return;
   setEdgeScroll(e.clientY);
   const n = dayFromEvent(e);
-  if (n === null || n === drag.start && !drag.moved) return;
+  if (n === null || (n === drag.start && !drag.moved)) return;
   if (n !== drag.start) drag.moved = true;
-  if (drag.moved) { setSelection(drag.start, n); state.focus = n; paint(); }
+  if (!drag.moved) return;
+  const run = { from: Math.min(drag.start, n), to: Math.max(drag.start, n) };
+  state.focus = n;
+  setSelection(drag.additive
+    ? (drag.toggled ? subtractRun(drag.base, run.from, run.to) : addRun(drag.base, run))
+    : [run]);
 });
 
 addEventListener('pointerup', () => { drag = null; edgeScroll = 0; });
 addEventListener('pointercancel', () => { drag = null; edgeScroll = 0; });
+
+$('#grid').addEventListener('dblclick', (e) => {
+  const n = dayFromEvent(e);
+  if (n === null) return;
+  e.preventDefault();
+  const run = naturalRun(n);
+  setSelection(e.metaKey || e.ctrlKey ? addRun(state.runs, run) : [run]);
+});
 
 // --- keyboard -----------------------------------------------------------
 $('#grid').addEventListener('keydown', (e) => {
@@ -540,11 +1148,19 @@ $('#grid').addEventListener('keydown', (e) => {
   if (e.key in STEP) {
     e.preventDefault();
     const next = state.focus + (state.unit === 'day' ? Math.sign(STEP[e.key]) : STEP[e.key]);
-    if (e.shiftKey) setSelection(state.sel ? state.sel.from : state.focus, next);
-    else state.sel = null;
+    if (e.shiftKey) {
+      // Grow the run the cursor is in, leaving any other runs alone.
+      const cur = runAt(state.runs, state.focus);
+      const rest = state.runs.filter((r) => r !== cur);
+      const from = cur ? cur.from : state.focus;
+      setSelection([...rest, { from: Math.min(from, next), to: Math.max(from, next) }]);
+    } else {
+      state.runs = [];
+    }
     state.focus = next;
-    const r = range();
-    if (next < r.from || next > r.to) { reveal(next); render(); } else paint();
+    const v = range();
+    if (next < v.from || next > v.to) { reveal(next); if (!scrolling()) render(); else paint(); }
+    else paint();
     return;
   }
   if (e.key === 'Home' || e.key === 'End') {
@@ -558,17 +1174,44 @@ $('#grid').addEventListener('keydown', (e) => {
     step(e.key === 'PageUp' ? -1 : 1);
     return;
   }
-  if (e.key === 'Escape') { state.sel = null; paint(); return; }
+  if (e.key === 'Escape') { setSelection([]); return; }
   if (e.key === 't' || e.key === 'T') {
-    state.focus = today; state.anchor = anchorFor(today); state.ribbonYear = fromDayNumber(today).y;
-    render(); return;
+    goToToday(); return;
   }
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
-    setSelection(state.focus, state.focus);
-    paint();
+    selectRun(state.focus, state.focus);
+    return;
   }
 });
+
+/**
+ * 1-6 write a label across the selection; 0 or Delete takes it back off.
+ *
+ * On the document, not on the grid: accepting a 拼假 suggestion selects days
+ * but leaves focus on the button in the rail, and a shortcut that works only
+ * when you happen to have clicked the grid last is a shortcut that looks
+ * broken. The selection is the subject, so the selection is the condition.
+ */
+addEventListener('keydown', (e) => {
+  if (!state.runs.length || e.metaKey || e.ctrlKey || e.altKey) return;
+  const el = e.target;
+  if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return;
+  if (/^[1-6]$/.test(e.key)) {
+    e.preventDefault();
+    applyLabel(LABELS[Number(e.key) - 1].key);
+  } else if (e.key === '0' || e.key === 'Delete' || e.key === 'Backspace') {
+    e.preventDefault();
+    commitMarks(clearRuns(state.marks, state.runs));
+  }
+});
+
+function goToToday() {
+  state.focus = today;
+  state.ribbonYear = fromDayNumber(today).y;
+  if (scrolling()) { goTo(today); paint(); }
+  else { state.anchor = anchorFor(today); state.runs = []; render(); }
+}
 
 function anchorFor(day) {
   if (state.unit === 'week') return weekStart(day);
@@ -579,26 +1222,97 @@ function anchorFor(day) {
   return monthStart(day);
 }
 
+// --- marking ------------------------------------------------------------
+function applyLabel(key, note = '') {
+  if (!state.runs.length) return;
+  commitMarks(putMarks(state.marks, state.runs, { label: key, note }));
+}
+
+// --- export -------------------------------------------------------------
+/**
+ * A download, not an upload.
+ *
+ * The whole export path runs in this tab: the ICS text is built from the same
+ * engine that drew the grid, wrapped in a Blob, and handed to the browser. No
+ * request leaves the machine, which is the only way a calendar of someone's
+ * sick days can honestly be offered.
+ */
+function download(filename, text) {
+  const blob = new Blob([text], { type: 'text/calendar;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function say(msg) {
+  const el = $('#grid-note');
+  el.textContent = msg;
+  clearTimeout(say._t);
+  say._t = setTimeout(() => { el.textContent = ''; }, 4000);
+}
+
 // --- controls -----------------------------------------------------------
 document.addEventListener('click', (e) => {
+  const chip = e.target.closest('.chip');
+  if (chip) {
+    if (chip.dataset.custom) {
+      const note = prompt('写点什么？（留空则用「纪念」）', '');
+      if (note === null) return;
+      applyLabel('event', note.trim().slice(0, 40));
+    } else {
+      applyLabel(chip.dataset.label);
+    }
+    return;
+  }
+
   const btn = e.target.closest('button');
   if (!btn) return;
 
   if (btn.dataset.act === 'prev') step(-1);
   if (btn.dataset.act === 'next') step(1);
-  if (btn.dataset.act === 'today') {
-    state.focus = today;
-    state.anchor = anchorFor(today);
-    state.ribbonYear = fromDayNumber(today).y;
-    state.sel = null;
-    render();
-  }
-  if (btn.dataset.act === 'year-prev') { state.ribbonYear--; render(); }
-  if (btn.dataset.act === 'year-next') { state.ribbonYear++; render(); }
+  if (btn.dataset.act === 'today') goToToday();
+  if (btn.dataset.act === 'year-prev') { state.ribbonYear--; renderRibbon(); syncControls(); }
+  if (btn.dataset.act === 'year-next') { state.ribbonYear++; renderRibbon(); syncControls(); }
   if (btn.dataset.act === 'theme') {
     state.theme = state.theme === 'dark' ? 'light' : 'dark';
     localStorage.setItem('changli-theme', state.theme);
-    render();
+    document.documentElement.dataset.theme = state.theme;
+    renderRibbon();
+  }
+  if (btn.dataset.act === 'unmark') {
+    commitMarks(clearRuns(state.marks, state.runs));
+  }
+  if (btn.dataset.act === 'export-marks') {
+    download('长历-我的标记.ics', icsFromMarks(state.marks));
+    say(`已导出 ${state.marks.length} 段标记。在日历 App 里打开这个文件即可导入。`);
+  }
+  if (btn.dataset.act === 'export-gov') {
+    const r = range();
+    const y0 = fromDayNumber(r.from).y, y1 = fromDayNumber(r.to).y;
+    download(`长历-法定节假日-${y0}${y1 !== y0 ? `—${y1}` : ''}.ics`, icsFromStatutory(y0, y1));
+    say(`已导出 ${y0}${y1 !== y0 ? `—${y1}` : ''} 年的休与班。`);
+  }
+  if (btn.dataset.act === 'copy-feed') {
+    navigator.clipboard?.writeText(btn.dataset.url)
+      .then(() => say('订阅链接已复制。在 Google 日历里选「从网址添加日历」。'))
+      .catch(() => say(btn.dataset.url));
+  }
+  if (btn.dataset.delFrom) {
+    commitMarks(clearRuns(state.marks, [{
+      from: Number(btn.dataset.delFrom), to: Number(btn.dataset.delTo),
+    }]));
+  }
+  if (btn.dataset.goto) {
+    const from = Number(btn.dataset.from), to = Number(btn.dataset.to);
+    state.focus = from;
+    setSelection([{ from, to }]);
+    reveal(from);
+    $('#grid').focus({ preventScroll: true });
   }
   if (btn.dataset.unit) {
     // Keep the day the user was looking at, not the corner of the old view --
@@ -619,14 +1333,24 @@ document.addEventListener('click', (e) => {
     state.anchor = anchorFor(keep);
     render();
   }
-  if (btn.dataset.layout) { state.layout = btn.dataset.layout; render(); }
+  if (btn.dataset.layout) {
+    const r = range();
+    state.anchor = anchorFor(state.focus >= r.from && state.focus <= r.to ? state.focus : r.from);
+    state.layout = btn.dataset.layout;
+    render();
+  }
 
   const bridge = e.target.closest('.bridge');
   if (bridge) {
-    setSelection(Number(bridge.dataset.from), Number(bridge.dataset.to));
-    state.focus = Number(bridge.dataset.gapFrom);
-    reveal(state.sel.from);
-    render();
+    // Accepting a 拼假 suggestion selects the days you would burn, not the
+    // whole run: the leave is what you are about to mark, and the connected
+    // rest around it is what it buys.
+    const gapFrom = Number(bridge.dataset.gapFrom), gapTo = Number(bridge.dataset.gapTo);
+    setSelection([{ from: gapFrom, to: gapTo }]);
+    state.focus = gapFrom;
+    reveal(Number(bridge.dataset.from));
+    $('#grid').focus({ preventScroll: true });
+    paint();
   }
 });
 
@@ -648,18 +1372,19 @@ document.addEventListener('click', (e) => {
     svg.setPointerCapture(e.pointerId);
     svg.classList.add('dragging');
     // Grab inside the window: carry it. Outside: jump the window here first.
-    rdrag = { offset: day >= r.from && day <= r.to ? day - r.from : 0 };
-    if (!(day >= r.from && day <= r.to)) {
-      state.anchor = anchorFor(day);
-      render();
-    }
+    const inside = day >= r.from && day <= r.to;
+    rdrag = { offset: inside ? day - r.from : 0 };
+    if (!inside) goTo(day);
   });
 
   svg.addEventListener('pointermove', (e) => {
     if (!rdrag) return;
     const target = dayAt(e.clientX) - rdrag.offset;
-    const a = anchorFor(target);
-    if (a !== state.anchor) { state.anchor = a; render(); }
+    if (scrolling()) goTo(target);
+    else {
+      const a = anchorFor(target);
+      if (a !== state.anchor) { state.anchor = a; render(); }
+    }
   });
 
   const endDrag = (e) => {
@@ -681,4 +1406,5 @@ if (window.ResizeObserver) {
   ro.observe($('#ribbon'));
 }
 
+buildChips();
 render();

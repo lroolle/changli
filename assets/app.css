@@ -133,6 +133,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 .rb-holiday-edge { stroke: var(--st-holiday-ink); stroke-width: 1; fill: none; }
 .rb-makeup { fill: var(--st-makeup-ink); }
 .rb-holiday-name { fill: var(--st-holiday-ink); font-size: 9.5px; font-family: var(--font-body); }
+.rb-mark { fill: var(--mark-edge); }
 .rb-today { stroke: var(--accent); stroke-width: 1.5; }
 .rb-window {
   fill: var(--accent); fill-opacity: 0.10;
@@ -174,6 +175,13 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
   grid-template-columns: 2.9rem repeat(7, minmax(0, 1fr));
   border-top: var(--line-w) solid var(--line-strong);
   border-left: var(--line-w) solid var(--line);
+  /* The sheet prepends weeks above the viewport when the reader scrolls up,
+   * and corrects the scroll by exactly the height it inserted. The browser's
+   * own scroll anchoring does the same thing heuristically, and the two
+   * together corrected twice -- every prepend shoved the sheet down by eight
+   * rows, which read as 今天 landing two months late. One compensator, and it
+   * is the one that knows what it inserted. */
+  overflow-anchor: none;
 }
 .gsheet + .gsheet { margin-top: var(--space-6); }
 
@@ -218,7 +226,12 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 .cell {
   position: relative;
   min-height: 4.4rem;
-  padding: var(--space-2) var(--space-2) var(--space-2);
+  /* The bottom of every cell is the reader's lane -- a ruled line under the
+   * day, the way a printed diary leaves one. Reserving it on every cell (not
+   * only marked ones) is what lets a mark appear without growing the row, and
+   * the scrolling sheet depends on every row being exactly one height. */
+  --lane: 1.05rem;
+  padding: var(--space-2) var(--space-2) var(--lane);
   border-right: var(--line-w) solid var(--line);
   border-bottom: var(--line-w) solid var(--line);
   background: var(--st-workday-field);
@@ -308,6 +321,121 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 .cell[data-sel-start="1"]::before { --edge-l: 2px; }
 .cell[data-sel-end="1"]::before { --edge-r: -2px; }
 
+/* --- the reader's hand -------------------------------------------------
+ * A mark is not a fifth status role and carries no hue. It is drawn in a
+ * different material -- graphite over print -- in the lane every cell
+ * reserves, so the four status colours keep meaning exactly one thing each
+ * and the sheet still reads as one printing.
+ */
+.d-tag {
+  position: absolute; inset-inline: 0; bottom: 0;
+  height: var(--lane);
+  display: flex; align-items: center;
+  padding-inline: 4px;
+  font-family: var(--font-almanac);
+  font-size: 10px; line-height: 1; letter-spacing: 0.06em;
+  color: var(--mark-ink);
+  background: var(--mark-field);
+  border-top: var(--line-w) solid var(--mark-rule);
+  white-space: nowrap; overflow: hidden;
+  pointer-events: none;
+}
+/* The brace. A run opens and closes with a heavier stroke, which is what makes
+ * ten marked cells read as one ten-day thing instead of ten identical ones --
+ * the same job the stepped rule does for a month boundary. */
+.cell[data-mark-start="1"] .d-tag { border-inline-start: 2px solid var(--mark-edge); }
+.cell[data-mark-end="1"] .d-tag { border-inline-end: 2px solid var(--mark-edge); }
+
+/* --- the mark bar: what you do with a selection, next to the selection --- */
+.markbar {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--surface);
+  border: var(--line-w) solid var(--line);
+  border-left: 2px solid var(--mark-edge);
+}
+/* One height whether it is hinting or acting, so the sheet below never moves. */
+.markbar { min-height: 2.6rem; }
+.mb-live { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); flex: 1; }
+.mb-live[hidden], .mb-hint[hidden] { display: none; }
+.mb-hint { font-size: var(--text-xs); color: var(--fg-3); }
+.mb-span { font-size: var(--text-sm); color: var(--fg-2); }
+.mb-span b { font-family: var(--font-mono); color: var(--fg); font-size: var(--text-base); }
+.mb-when { color: var(--fg-3); }
+.mb-chips { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+.mb-clear { margin-inline-start: auto; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  font: inherit; font-size: var(--text-sm);
+  padding: var(--space-1) var(--space-2);
+  color: var(--fg); background: var(--bg);
+  border: var(--line-w) solid var(--line-strong);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--dur-micro) var(--ease-out);
+}
+.chip:hover { background: var(--mark-field); border-color: var(--mark-edge); }
+.chip kbd {
+  font-family: var(--font-mono); font-size: 10px; color: var(--fg-3);
+  border: 0; padding: 0; background: none;
+}
+.chip-custom { color: var(--fg-2); }
+
+/* --- the marks card ---------------------------------------------------- */
+.mk-totals { display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4); margin-bottom: var(--space-3); }
+.mk-total { font-size: var(--text-sm); color: var(--fg-3); }
+.mk-total b {
+  font-family: var(--font-almanac); font-weight: 600;
+  color: var(--fg); margin-inline-end: var(--space-2); letter-spacing: 0.04em;
+}
+.mk-total span { font-family: var(--font-mono); color: var(--mark-ink); font-weight: 600; }
+
+.mk-list { list-style: none; margin: 0 0 var(--space-3); padding: 0; }
+.mk-list li { display: flex; align-items: stretch; gap: var(--space-1); }
+.mk-run {
+  flex: 1; display: grid; grid-template-columns: 3.4rem minmax(0, 1fr) auto;
+  gap: var(--space-2); align-items: baseline; text-align: start;
+  font: inherit; font-size: var(--text-xs);
+  padding: var(--space-2) var(--space-1);
+  background: none; border: 0; border-bottom: var(--line-w) solid var(--line);
+  color: var(--fg-2); cursor: pointer;
+}
+.mk-run:hover { background: var(--mark-field); }
+.mk-run-label { font-family: var(--font-almanac); color: var(--mark-ink); font-weight: 600; }
+.mk-run-span { color: var(--fg-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mk-run-days { font-family: var(--font-mono); color: var(--fg-2); }
+.mk-del {
+  font: inherit; font-size: var(--text-xs); line-height: 1;
+  padding-inline: var(--space-2);
+  background: none; border: 0; border-bottom: var(--line-w) solid var(--line);
+  color: var(--fg-3); cursor: pointer;
+}
+.mk-del:hover { color: var(--accent); }
+.mk-more { font-size: var(--text-xs); color: var(--fg-3); margin: 0 0 var(--space-3); }
+.mk-acts { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.mk-sub { margin: var(--space-3) 0 0; font-size: var(--text-xs); color: var(--fg-3); line-height: var(--leading-cjk); }
+.mk-sub a { color: var(--fg-2); text-decoration: underline; text-decoration-color: var(--line-strong); }
+.mk-sub a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.mk-note { margin: var(--space-2) 0 0; font-size: var(--text-xs); color: var(--fg-3); line-height: var(--leading-cjk); }
+.linkish {
+  font: inherit; font-size: inherit; padding: 0;
+  background: none; border: 0; color: var(--fg-2); cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--line-strong);
+}
+.linkish:hover { color: var(--accent); }
+
+.day-card dd .tag-mark { font-family: var(--font-almanac); color: var(--mark-ink); font-weight: 600; }
+.dc-mark-span { color: var(--fg-3); font-size: var(--text-xs); }
+.dr-tag {
+  font-family: var(--font-almanac); font-size: var(--text-xs);
+  color: var(--mark-ink); padding-inline: var(--space-2);
+  border-left: 2px solid var(--mark-edge);
+}
+.swatch.s-mark { background: var(--mark-field); border-color: var(--mark-rule); border-left: 2px solid var(--mark-edge); }
+
 /* the cursor is only meaningful while the grid has focus; otherwise it would
  * sit on top of today's marker on first paint and read as a mis-coloured today */
 .grid:focus .cell[data-cursor="1"],
@@ -328,7 +456,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
   margin-bottom: 0;
 }
 .block .gsheet { grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 0; }
-.block .cell { min-height: 3.2rem; }
+.block .cell { min-height: 3.2rem; --lane: 0.9rem; }
 .block .d-num { font-size: var(--text-base); }
 .block .gh { grid-column: 1 / span 7; position: static; }
 .block .cell[data-mstart="1"] { border-top: var(--line-w) solid var(--line); }
@@ -472,7 +600,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
   .gsheet { grid-template-columns: 1.9rem repeat(7, minmax(0, 1fr)); }
   .gh, .gh-gutter { position: static; }
   .gutter b { top: 0; font-size: 10px; letter-spacing: 0; }
-  .cell { min-height: 3.5rem; padding: var(--space-1); }
+  .cell { min-height: 3.5rem; --lane: 0.95rem; padding: var(--space-1) var(--space-1) var(--lane); }
   .d-num { font-size: var(--text-base); }
   .d-label { font-size: 10px; }
   .rail { grid-template-columns: minmax(0, 1fr); }
@@ -483,7 +611,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
   .btn-icon { min-width: 44px; }
 }
 @media (max-width: 400px) {
-  .cell { min-height: 3.1rem; }
+  .cell { min-height: 3.1rem; --lane: 0.85rem; }
   .d-label { font-size: 9px; }
 }
 
@@ -491,6 +619,8 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 @media (pointer: coarse) {
   .btn { min-height: 44px; }
   .btn-icon { min-width: 44px; }
+  .chip { min-height: 44px; }
+  .mk-del { min-width: 44px; }
   .cell { min-height: 3.9rem; }
 }
 
@@ -504,6 +634,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; line-height: var(--leading-tight); }
 }
 
 @media print {
-  .masthead .controls, .ribbon-hint, .rail .bridges, .skip { display: none; }
+  .masthead .controls, .ribbon-hint, .rail .bridges, .skip,
+  .markbar, .keys, .mk-acts, .mk-sub { display: none; }
   .masthead, .rail { position: static; }
 }

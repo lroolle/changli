@@ -83,12 +83,24 @@
 <main class="stage">
   <section class="grid-wrap" aria-labelledby="range-h">
     <h2 id="range-h" class="range-title"><span class="range-title-main"></span><span class="range-title-sub"></span></h2>
+    <!-- Always present, never appearing: this strip sits above the sheet, so
+         un-hiding it mid-drag would push every cell down under the pointer. -->
+    <div class="markbar" id="markbar" role="toolbar" aria-label="为所选日期写标记">
+      <span class="mb-hint" id="mb-hint">拖动选择几天 · 双击选中整段假期 · 按住 ⌘ 再拖动可加选另一段</span>
+      <span class="mb-live" id="mb-live" hidden>
+        <span class="mb-span" id="mb-span"></span>
+        <span class="mb-chips" id="mb-chips"></span>
+        <button type="button" class="btn mb-clear" id="mb-clear" data-act="unmark" hidden>清除标记</button>
+      </span>
+    </div>
+
     <div id="grid" class="grid" tabindex="0" role="application"
-         aria-label="日历网格。方向键移动，回车选择，按住 Shift 选择区间。"></div>
+         aria-label="日历网格。方向键移动，回车选择，按住 Shift 选择区间，1-6 写标记。"></div>
     <p class="grid-note" id="grid-note" role="status"></p>
-    <p class="keys">拖动选择区间 · <kbd>↑↓←→</kbd> 移动 · <kbd>Shift</kbd>+方向键 选区间 ·
-       <kbd>Enter</kbd> 选中 · <kbd>Esc</kbd> 取消 · <kbd>T</kbd> 回到今天 ·
-       <kbd>PgUp</kbd>/<kbd>PgDn</kbd> 翻页</p>
+    <p class="keys">拖动选择区间 · <kbd>⌘</kbd>/<kbd>Ctrl</kbd>+拖动 加选另一段 ·
+       双击 选中整段假期 · 点月份 选整月 · <kbd>1</kbd>–<kbd>6</kbd> 写标记 ·
+       <kbd>0</kbd> 清除标记 · <kbd>↑↓←→</kbd> 移动 · <kbd>Shift</kbd>+方向键 选区间 ·
+       <kbd>Esc</kbd> 取消 · <kbd>T</kbd> 回到今天</p>
   </section>
 
   <aside class="rail" aria-label="详情与统计">
@@ -104,6 +116,11 @@
       <div id="bridges"></div>
     </section>
 
+    <section class="card marks" aria-labelledby="marks-h">
+      <h3 id="marks-h" class="card-h">我的标记</h3>
+      <div id="marks-body"></div>
+    </section>
+
     <section class="card legend" aria-labelledby="legend-h">
       <h3 id="legend-h" class="card-h">图例</h3>
       <ul class="legend-list">
@@ -111,6 +128,7 @@
         <li><span class="swatch s-makeup" aria-hidden="true"></span>班 · 调休上班</li>
         <li><span class="swatch s-weekend" aria-hidden="true"></span>周末</li>
         <li><span class="swatch s-workday" aria-hidden="true"></span>工作日</li>
+        <li><span class="swatch s-mark" aria-hidden="true"></span>我的标记 · 你写上去的</li>
       </ul>
       <p class="prov" id="prov"></p>
     </section>

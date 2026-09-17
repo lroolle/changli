@@ -6,14 +6,16 @@
   "license": "MIT",
   "scripts": {
     "start": "python3 -m http.server 8811",
-    "test": "node test/verify.js && node test/verify-rules.mjs",
+    "test": "node test/verify.js && node test/verify-rules.mjs && node test/verify-marks.mjs",
     "test:astro": "node test/verify.js",
     "test:rules": "node test/verify-rules.mjs",
     "mcp": "node mcp/server.mjs",
     "data:holidays": "node test/gen-holidays.mjs",
     "data:jurisdictions": "node test/gen-jurisdictions.mjs",
     "deploy": "npx -y wrangler@4 deploy",
-    "deploy:check": "npx -y wrangler@4 deploy --dry-run"
+    "deploy:check": "npx -y wrangler@4 deploy --dry-run",
+    "test:marks": "node test/verify-marks.mjs",
+    "data:ics": "node test/gen-ics.mjs"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,9 @@
     "agentic",
     "拼假",
     "农历",
-    "调休"
+    "调休",
+    "ics",
+    "icalendar",
+    "calendar-subscription"
   ]
 }

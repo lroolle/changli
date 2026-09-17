@@ -43,6 +43,10 @@ Protected functions (must not break, ever):
 - the ability to see more than one month without paging
 - today's position
 - keyboard traversal and selection
+- a mark, once written, survives a reload -- it is the only thing here the
+  reader authored
+- nothing leaves the machine: an export is built in the tab and handed to the
+  browser as a file
 
 ## The material
 
@@ -58,6 +62,7 @@ hex or `oklch()` outside that file is a defect.
 | Radius | `--radius: 0.125rem`, one corner language | This is a ruled sheet; corners are nearly square. |
 | Surfaces | 1px + 2px rules and tone steps | Structure before shadow. Shadow only on the rail; regions are ruled, never floated. |
 | Motion | 60 / 120 / 200 ms, `cubic-bezier(0.2,0,0,1)` | Mechanical. The ribbon tracks the pointer 1:1 with no easing. Reduced motion cuts everything. |
+| Marks | `--mark-ink / -rule / -field / -edge`, neutral, no hue | The sheet is printed; a mark is the reader's hand. Graphite over print, in a lane every cell reserves. It earns a token family, never a colour. See TASTE.md 2026-09-16. |
 
 ## The status program
 
@@ -69,6 +74,10 @@ Four roles. **Nothing else in the interface is allowed to carry colour.**
 | `makeup` | `--st-makeup-*` | 班 -- a weekend the notice turns into a working day | neutral field under 45-degree section hatching, 班 badge |
 | `weekend` | `--st-weekend-*` | ordinary Saturday or Sunday | quiet tinted field |
 | `workday` | `--st-workday-*` | everything else | bare paper |
+
+A personal mark is **not** a fifth role. It is a different material in its own
+lane -- see the Marks row above -- so that a day can be both 休 and 年假 without
+either fact dimming the other.
 
 A 节气 is **not** a fifth colour. It earns emphasis with the almanac
 face at full ink strength; ordinary lunar days sit back at `--fg-3`.
@@ -90,6 +99,16 @@ weekday columns, and every row is a real consecutive week.
   rule that makes the band agree with the label instead of fighting it.
 - `blocks` layout exists for people who want the familiar month card and
   reuses the same cells; it is the only place a blank pad cell may appear.
+- Every cell reserves a **lane** at its bottom edge (`--lane`) whether or not it
+  carries a mark. A ruled diary leaves one; here it also means writing a label
+  never grows a row, which the scrolling sheet depends on.
+- `flow` is a **spine**, not a page: weeks are inserted at whichever end the
+  reader approaches and pruned from the other, and the nav -- title, ribbon
+  window, ledger, 拼假 -- follows what is on screen rather than a page number.
+  The visible span is found by binary search over the rows, because a week
+  carrying a month rule is 2px taller than its neighbours and a uniform-height
+  guess drifts into naming the wrong month. Extensions insert; they never
+  rebuild, because a drag may be in flight across the sheet.
 
 ## Data, and what may be claimed
 
@@ -111,3 +130,6 @@ Two different kinds of truth, and the interface must not blur them.
 - 390 / 768 / 1440 captured; no horizontal scroll at 390; touch targets >= 44px
 - `node test/verify.js` passes -- a UI change should never move a date
 - the four status roles still mean exactly one thing each
+- a mark changes no row's height: write one on a day and nothing below it moves
+- `node test/verify-marks.mjs` passes -- the run algebra keeps both edges, and
+  an exported all-day event still ends the day *after* it ends
