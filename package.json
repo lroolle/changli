@@ -11,13 +11,15 @@
     "test:rules": "node test/verify-rules.mjs",
     "mcp": "node mcp/server.mjs",
     "data:holidays": "node test/gen-holidays.mjs",
-    "data:jurisdictions": "node test/gen-jurisdictions.mjs"
+    "data:jurisdictions": "node test/gen-jurisdictions.mjs",
+    "deploy": "npx -y wrangler@4 deploy",
+    "deploy:check": "npx -y wrangler@4 deploy --dry-run"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/lroolle/changli.git"
   },
-  "homepage": "https://github.com/lroolle/changli",
+  "homepage": "https://changli.claw-lab.com",
   "bin": {
     "changli-mcp": "./mcp/server.mjs"
   },

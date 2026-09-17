@@ -1,0 +1,14 @@
+.git
+.github
+.gitignore
+.assetsignore
+wrangler.jsonc
+node_modules
+test
+mcp
+data
+docs
+*.md
+LICENSE
+package.json
+.wrangler

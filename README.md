@@ -1,6 +1,6 @@
 # 长历 changli
 
-**A calendar that knows the rules.**
+**A calendar that knows the rules.** — [changli.claw-lab.com](https://changli.claw-lab.com)
 
 Everyone's time is governed by rules their software does not know. 调休 that
 turns a Saturday into a workday. Bavaria's holidays being different from
@@ -106,6 +106,29 @@ npm test
   1970–2070: **0 differences in 36,890 days and 2,424 solar terms.**
 - **39 solver anchors**, every one computable by hand. If the solver and a
   pencil disagree, the solver is wrong.
+
+## Running and deploying
+
+```
+npm start          # http://localhost:8811 -- no build, no dependencies
+npm test           # 394 astronomy anchors + 39 solver anchors
+```
+
+The site is three directories of static files, so it deploys as static assets
+on Cloudflare Workers -- no build step, no server. It is live at
+**[changli.claw-lab.com](https://changli.claw-lab.com)**; `*.workers.dev` is
+blocked on mainland networks, so the custom domain is the only address the
+audience for a 中国日历 can reach.
+
+```
+npm run deploy:check   # print the upload set, change nothing
+npm run deploy         # needs CLOUDFLARE_API_TOKEN (Workers Scripts: Edit)
+```
+
+`.assetsignore` keeps the deploy to what a browser needs -- `index.html`,
+`assets/`, `src/`. The rules corpus, MCP server, tests and docs stay in the
+repo and off the edge. Pushes to `main` that touch a served file republish
+through `.github/workflows/deploy.yml`, which runs `npm test` first.
 
 ## Regenerating data
 

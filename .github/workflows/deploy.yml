@@ -1,0 +1,38 @@
+name: deploy
+
+# The site is static: no build, no dependencies. Every push to main that
+# touches a served file republishes it. Tests gate the deploy because the
+# calendar's correctness is the product.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'src/**'
+      - '.assetsignore'
+      - 'wrangler.jsonc'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Mirrored to env so the deploy step can ask whether the token exists;
+    # the secrets context is not readable from an `if:`. Without it the run
+    # still verifies, it just doesn't publish.
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: verify
+        run: npm test
+      - name: deploy
+        if: env.CF_TOKEN != ''
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

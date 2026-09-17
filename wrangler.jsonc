@@ -1,0 +1,20 @@
+// Cloudflare Workers static assets. No Worker script: index.html, assets/
+// and src/ are served straight from the edge. Everything else in the repo
+// (data/, mcp/, test/, docs/, .git) is excluded by .assetsignore -- the
+// upload set is verifiable with:  wrangler deploy --dry-run
+{
+  "name": "changli",
+  "compatibility_date": "2026-09-16",
+  "assets": {
+    "directory": "."
+  },
+  // claw-lab.com is the lab zone. *.workers.dev is blocked on CN networks,
+  // so the custom domain is the only address the audience for a 中国日历
+  // can actually reach.
+  "routes": [
+    { "pattern": "changli.claw-lab.com", "custom_domain": true }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
